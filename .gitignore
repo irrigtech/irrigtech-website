@@ -1,0 +1,20 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.bak
+*.tmp
+.idea/
+.vscode/
+
+# Stale pre-rebrand preview snapshots — not part of the live site,
+# not linked from navigation, and contain outdated branding.
+# Kept on disk locally but not published.
+*-preview.html
+preview.html
+
+# Netlify / build artifacts (none expected for this static site,
+# but ignored defensively)
+.netlify/
+node_modules/

@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog — IrrigTech</title>
+<meta name="description" content="Field notes on soil health, irrigation, and sensor hardware from the IrrigTech team.">
+<meta property="og:title" content="Blog — IrrigTech">
+<meta property="og:description" content="Practical field notes on soil health, irrigation automation, and sensor hardware.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://irrigtech.com/blog.html">
+<meta property="og:url" content="https://irrigtech.com/blog.html">
+<meta property="og:site_name" content="IrrigTech">
+<link rel="icon" type="image/png" href="images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* Blog listing: dark-theme text over the transparent cards */
+  .blog-grid .device-card h3{
+    color:var(--ink);
+    text-shadow:0 1px 3px rgba(0,0,0,0.6);
+  }
+  .blog-grid .device-card p{
+    color:var(--ink-muted);
+    text-shadow:0 1px 3px rgba(0,0,0,0.5);
+  }
+  .blog-grid .device-card .eyebrow{
+    color:var(--accent-strong);
+    text-shadow:0 1px 3px rgba(0,0,0,0.5);
+  }
+  .blog-grid .device-card p.muted{ color:var(--ink-dim); }
+
+  /* Expandable full article — positioned directly below the picture */
+  .blog-grid .device-card .thumb{ order:0; }
+  .blog-grid .device-card details.post-full{ order:1; }
+  .blog-grid .device-card > *:not(.thumb):not(details.post-full){ order:2; }
+  .blog-grid .device-card details.post-full{ margin-top:0.15rem; }
+  .blog-grid .device-card details.post-full > summary{
+    cursor:pointer; list-style:none; width:max-content;
+    font-family:var(--font-mono); font-size:0.78rem; font-weight:600; letter-spacing:0.04em;
+    color:var(--accent-strong); text-shadow:0 1px 3px rgba(0,0,0,0.5);
+    display:inline-flex; align-items:center; gap:0.4rem; padding:0.2rem 0;
+  }
+  .blog-grid .device-card details.post-full > summary::-webkit-details-marker{ display:none; }
+  .blog-grid .device-card details.post-full > summary:hover{ color:var(--accent-bright); }
+  .blog-grid .device-card details.post-full > summary::before{ content:"\25B8"; display:inline-block; transition:transform 0.18s cubic-bezier(0.22,0.61,0.24,1); }
+  .blog-grid .device-card details.post-full[open] > summary::before{ transform:rotate(90deg); }
+  .blog-grid .device-card details.post-full[open] > summary{ margin-bottom:0.3rem; }
+  .blog-grid .device-card .post-body p{ margin-top:0.7rem; font-size:0.9rem; }
+  .blog-grid .device-card .post-body p:first-child{ margin-top:0; }
+  .blog-grid .device-card .post-body h4{
+    margin-top:1rem; font-size:0.98rem; color:var(--ink);
+    text-shadow:0 1px 3px rgba(0,0,0,0.55);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand-group">
+      <a href="index.html" class="brand">
+        <img src="images/irrigtech-logo-header.png" alt="IrrigTech — Smart Water. Smarter Growth." class="brand-logo brand-logo-full">
+        <img src="images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact">
+      </a>
+
+    </div>
+    <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+    <nav class="primary" id="primary-nav">
+      <a href="index.html">Home</a>
+      <a href="devices.html">Devices</a>
+      <a href="how-it-works.html">How it works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="btn btn-ghost">Talk to us</a>
+      <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap">
+      <div class="device-grid blog-grid">
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-soil-health.jpg" alt="A grower holding a clump of dark, healthy soil"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Soil Health</span>
+          <h3>Reading NPK Numbers Like a Field Scout</h3>
+          <p>Nitrogen, phosphorus and potassium readings mean very little on their own — here's how to read them against crop stage, not just a fixed target.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>A single NPK reading is a snapshot of what is dissolved and available in the root zone at that moment. It is not a measure of how much fertiliser is in the soil, and it is not a grade. Treated as a grade, it pushes growers toward two expensive mistakes: fertilising a number that was always going to recover on its own, and ignoring a number that looks fine today but is trending the wrong way.</p>
+              <p>The field-scout habit is to read three things together — the value, the direction, and the crop stage. A nitrogen reading of 35 ppm means one thing during early vegetative growth, when demand is climbing fast, and something very different two weeks before harvest, when the plant is winding down. Same number, same soil, opposite decisions.</p>
+              <h4>Direction beats any single value</h4>
+              <p>Continuous sensors give you a line, not a dot. A phosphorus level that sits low but flat all season is usually a soil-type characteristic you manage with a base application. A phosphorus level that was mid-range in May and has fallen steadily since is a developing deficiency, and catching that slope early is worth far more than reacting to the eventual low reading.</p>
+              <h4>Crop stage sets the target</h4>
+              <p>Most published NPK ranges are single numbers because a table has to be. In the field the useful target is a curve: higher through establishment and rapid growth, tapering as the crop moves into maturity. Tomatoes want strong potassium during fruit fill; wheat wants nitrogen front-loaded and then steady. Comparing a live reading to a fixed number ignores which part of that curve the plant is on.</p>
+              <p>Nutrient availability also moves with moisture and pH. A dry root zone shows low availability that a single irrigation can partly reverse. A pH drift of half a point changes how much phosphorus the plant can take up regardless of what is present. Reading the nutrient numbers next to the moisture and pH trace stops you dosing a problem that was really a water problem.</p>
+              <p>The routine: look at the trend line first, place it against the crop's current stage, check moisture and pH for anything that would distort the reading, and only then decide whether to act. Most of the time the answer is to keep watching. The readings earn their keep on the few occasions when the slope tells you something three weeks before the plant would have.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">12 Aug 2026 · 6 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-weather-station.jpg" alt="A field technician adjusting a weather station mast"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Hardware</span>
+          <h3>Why LoRa Beats WiFi for Farm-Scale Sensor Networks</h3>
+          <p>WiFi runs out of range at the edge of the yard. A look at why long-range, low-power radio is the right call for anything buried in a field.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>WiFi was designed for a house or an office: dozens of devices, mains power, and a router never more than a room or two away. A farm breaks every one of those assumptions. The sensors are hundreds of metres from any building, there is no power at the sensor, and the things in the way — soil, crop canopy, a metal shed, a rise in the ground — are exactly what 2.4 GHz radio struggles to pass through.</p>
+              <p>LoRa makes the opposite trade. It sends very small packets very slowly on a low frequency, and in return it gets range measured in kilometres and a power budget small enough to run a node for years on one battery.</p>
+              <h4>Range and obstacles</h4>
+              <p>A LoRa node at the far corner of a 40-hectare block can reach one gateway near the shed, line of sight or not. The low data rate is what buys that: the receiver can pull a signal out of the noise that WiFi would have lost entirely. For field data — a moisture value, a battery voltage, a valve state every few minutes — the low rate costs nothing, because there is nothing large to send.</p>
+              <h4>Power and network shape</h4>
+              <p>A WiFi node that keeps its radio associated draws too much to run on a small battery, and duty-cycling it brings reconnection delays and dropped readings. A LoRa node wakes, transmits a few bytes in a fraction of a second, and sleeps — the difference between changing batteries every few weeks and changing them once a season, or never with a small solar panel. And where WiFi wants every device on one local network, LoRa is a star: many cheap nodes, one gateway, and the gateway carries everything upstream over whatever backhaul the farm has.</p>
+              <p>WiFi still fits inside a packing shed or office, for a camera or a device that needs real bandwidth and has power. The mistake is stretching it into the field with repeaters and hoping. Each repeater is another mains point, another failure point, and another thing to climb to when it locks up. For anything buried in a field, battery-powered, and far from a building, long-range low-power radio is not a compromise — it is the design that matches the problem.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">04 Aug 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-drip-irrigation.jpg" alt="A drip irrigation valve and line running through a vineyard row"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Water Management</span>
+          <h3>The True Cost of a Missed Irrigation Cycle</h3>
+          <p>One skipped cycle rarely shows up immediately — it shows up three weeks later, in yield. Putting a number on what "just this once" actually costs.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>A missed cycle feels cheap in the moment. The crop looks the same that afternoon, the same the next morning, and the pump was going to cost money to run anyway. The cost is real, it is just deferred, and by the time it is visible the decision that caused it is weeks in the past.</p>
+              <h4>What actually happens</h4>
+              <p>When the root zone dries past the crop's comfort band, the plant closes stomata to conserve water. Closed stomata mean less carbon dioxide coming in, which means less photosynthesis, which means less growth that day and the next until the zone is rewetted and the plant recovers. During a sensitive stage — flowering, fruit set, grain fill — those lost days do not come back. The plant sets fewer fruit or fills fewer grains, and that number is locked in.</p>
+              <h4>Putting a figure on it</h4>
+              <p>Take a block doing 60 tonnes across the season. A single stress event during fruit fill that costs three to five percent of yield is roughly two to three tonnes. Against that, the saving from skipping the cycle was maybe an hour of pumping — a few dollars of energy. The trade is lopsided by two orders of magnitude, which is why it is worth engineering the skip out entirely rather than relying on someone remembering.</p>
+              <p>Missed cycles are almost never a decision to damage the crop. They are a fixed schedule that did not account for a hot spell, a controller that ran but a valve that did not open, a pump that tripped overnight, or a person needed somewhere else at the moment the block needed water. Every one of those is detectable.</p>
+              <p>A moisture sensor in the root zone turns "should have watered" into an alert before the plant is stressed, not after. A flow reading confirms water actually moved when the controller called for it — a cycle scheduled but delivered nothing is the most expensive kind, because the logs say everything is fine. Pair the two and a missed cycle becomes a message on a phone the same evening, while a catch-up run can still fix it. You cannot tell which cycle was the expensive one until harvest, so the only safe assumption is that the one you cannot verify might have been.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">28 Jul 2026 · 7 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-tomato-rows.jpg" alt="Young tomato plants staked in rows on a farm"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Automation</span>
+          <h3>Setting Per-Crop Thresholds: A Starting Point</h3>
+          <p>Default thresholds get you started, not finished. A practical baseline for tomato, wheat, and mixed vegetable fields before you tune your own.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Every automated system ships with default thresholds because it has to do something on day one. Those defaults are a conservative average across many crops and soils. They will not damage anything, and they are also not tuned to your field. The job in the first season is to move from the defaults to numbers that fit your soil, your crops, and your water.</p>
+              <h4>Start with moisture, by crop and stage</h4>
+              <p>A practical opening point for most row crops is to trigger irrigation when the root-zone reading falls to about half of the plant-available range, and to stop when it returns near the top of that range without going saturated. Shallow-rooted vegetables want a tighter band and more frequent, smaller cycles. Deeper-rooted grain crops tolerate a wider swing. If you know your soil's field capacity and wilting point, set the trigger a third of the way up from wilting; if you do not, start at the halfway mark and adjust.</p>
+              <h4>Nutrients and pH are alerts, not switches</h4>
+              <p>Nutrient readings should flag a human to look, not open a valve. Set the nitrogen alert to fire on a downward trend that would reach the crop's stage-appropriate minimum within a week or two, rather than on a fixed floor. Phosphorus and potassium move more slowly; a gentle slope over several readings is the signal. Keep pH inside a narrow band — for most crops around 6.0 to 7.0 in the root zone — and treat sustained drift outside it as a reason to check.</p>
+              <h4>Baselines to start from</h4>
+              <p>Tomato: moisture band 60–85% of available, strong potassium through fruit fill, pH 6.0–6.8. Wheat: wider moisture band, nitrogen front-loaded and alerted early, pH 6.0–7.0. Mixed vegetables: tight moisture band, frequent short cycles, watch nitrogen closely through leaf growth. These are starting points, not recommendations for your field.</p>
+              <p>Then tune with what happened. After each irrigation, look at how fast the zone dried back to the trigger. Drying too fast between cycles means the band is too wide or the cycle too short; barely moving means you are watering more often than the crop needs. Adjust one number at a time, wait several cycles, and read the result before the next change. By the end of a season you should have a small table — crop, stage, moisture band, nutrient alerts, pH range — that reflects your ground rather than a factory average.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">15 Jul 2026 · 8 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-solar-panels.jpg" alt="Solar panels installed at the edge of a farm field"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Hardware</span>
+          <h3>Battery vs. Solar: Powering Sensors Through a Full Season</h3>
+          <p>Solar isn't always the right default. Where a sealed battery actually outlasts a panel, and where it doesn't.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Solar looks like the obvious answer for a field sensor: free energy, no wires, set and forget. Often it is the right choice. But a panel adds cost, a charge circuit, a rechargeable cell that ages, and a physical object that collects dust, gets shaded by the crop it sits in, and gives thieves something to notice. For a lot of nodes, a single non-rechargeable battery sized for the season is simpler and more reliable.</p>
+              <h4>What a low-power node actually needs</h4>
+              <p>A LoRa sensor that wakes every few minutes, takes a reading, sends a few bytes, and sleeps draws a tiny average current — often well under a hundred microamps averaged over the day. A good primary lithium cell holds enough energy to run that for one to three years depending on reporting rate and temperature. If the node only has to last a growing season, a sealed battery with margin is the least complex thing that works.</p>
+              <h4>Where solar earns its place</h4>
+              <p>High reporting rates, a valve or pump actuator that draws real current, a camera, or a gateway that never sleeps — these need more energy than a sensible primary cell can carry, and a panel plus a rechargeable pack is the right call. Also anywhere access is genuinely hard: if reaching the node means a locked gate, a long walk, or a lift, stretching the maintenance interval is worth the extra parts.</p>
+              <h4>Where solar disappoints</h4>
+              <p>Nodes low in a dense canopy spend half the day shaded. Panels in dusty or dewy conditions lose output until someone wipes them. Winter latitudes give short, low-angle days exactly when you might still want data. A shaded or fouled panel with a flat rechargeable cell is worse than a primary battery that simply runs for a known time and is swapped on a schedule.</p>
+              <p>Sizing either one: for primary batteries, estimate average current from the datasheet, multiply by the hours in your season, add fifty percent margin for cold and self-discharge, and pick the next cell size up. For solar, size the panel for the worst week of light you expect, not the average, and size the pack to carry the node through the longest cloudy stretch on its own. A useful rule — sensors that sip power and last a season go on primary batteries; anything that actuates, streams, or must survive years without a visit gets solar.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">02 Jul 2026 · 4 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-case-notes.jpg" alt="A smiling grower on their farm"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Case Notes</span>
+          <h3>What Three Weeks of Early Warning Is Worth</h3>
+          <p>Notes from a pilot farm's north block: a phosphorus drop caught weeks before it would have shown in the plant, and what happened after.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>This is a single block on one pilot farm, not a controlled trial. It is written up because the shape of it keeps repeating: the value of the system was not a dramatic save, it was three weeks of notice.</p>
+              <h4>The block</h4>
+              <p>Roughly four hectares, mixed vegetables, on a sandy loam that drains fast and does not hold phosphorus well. Two sensor nodes in the root zone reporting moisture, NPK and pH every ten minutes, plus a flow meter on the supply line.</p>
+              <h4>What the data showed</h4>
+              <p>Through early spring the phosphorus trace sat in the low-mid range, flat. In the third week it began to slope down — not a cliff, a steady decline of a few percent per reading across several days. Moisture and pH were both steady, which ruled out the common distortions. The trend line, not any single reading, is what triggered the alert.</p>
+              <p>On this soil and this crop, a phosphorus slide like that reaches visible symptoms — dull colour, stalled growth in the youngest leaves — in about three weeks. By then the deficiency is established, the correction takes longer to act, and the growth lost in the meantime is gone. The grower's normal check was a lab test every few weeks; the timing of the next one would have missed the start of the slope entirely.</p>
+              <h4>What they did</h4>
+              <p>A modest phosphorus application through the fertigation line, split over two irrigations, started the day after the alert. The trace flattened within a week and recovered to the earlier range over the next two. No visible symptoms ever appeared. Cost was a bag of fertiliser and ten minutes at the controller.</p>
+              <p>There is no clean before-and-after yield number, because the whole point is that nothing visible happened. What the block bought was optionality: a cheap, early, unhurried correction instead of a late, larger one made under pressure with the crop already behind. Continuous readings are not valuable because they catch disasters — those are rare and usually obvious. They are valuable because they turn slow problems into early ones, and early problems are cheap.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">21 Jun 2026 · 6 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-designing-smart-system.jpg" alt="Designing a Smart Irrigation System"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Guides</span>
+          <h3>Designing a Smart Irrigation System</h3>
+          <p>A complete guide from sensors to automated control — how the pieces fit together on a real farm.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>A smart irrigation system is four layers stacked in order: sensing, communication, decision, and control. Design it in that order, because each layer depends on the one before it, and skipping ahead is how projects end up with a dashboard full of data and no way to act on it.</p>
+              <h4>Sensing</h4>
+              <p>Decide what you actually need to measure before buying anything. Root-zone moisture is the foundation — it drives almost every irrigation decision. Add NPK and pH where nutrient management matters, canopy or air temperature where frost or heat stress is a risk, and flow and pressure on the supply line so you can verify delivery. Place sensors at a depth that represents where the crop draws water, and put at least two per management zone so one bad probe does not drive a bad decision.</p>
+              <h4>Communication</h4>
+              <p>Field nodes need a way home that does not depend on mains power or a nearby building. Long-range low-power radio to a gateway near the shed covers most farm geometries on a small battery. The gateway then carries everything upstream over cellular or wired backhaul. Give the gateway a reliable power source, because it is the single point everything passes through.</p>
+              <h4>Decision</h4>
+              <p>This is where readings become instructions. Set per-crop, per-stage thresholds for moisture, and treat nutrient and pH readings as alerts for a person rather than triggers for a valve. Start from conservative defaults, then tune against how each zone dries between cycles. The decision layer should log why it did what it did, so you can audit a bad call later.</p>
+              <h4>Control</h4>
+              <p>Actuators close the loop: valve controllers on each zone, a pump controller on the supply, optionally a dosing unit on the fertigation line. Every actuator should report its actual state back, not just accept a command, so the system knows a valve opened rather than assuming it did. Always leave a manual override.</p>
+              <p>Put it together gradually: instrument one or two zones fully, run the decision layer in advisory mode for a few weeks so you can see what it would have done, then let it actuate once you trust it, and expand zone by zone. The common mistakes are all avoidable — buying sensors with no plan to act on them, one probe per zone, a gateway on a battery that dies mid-season, and no flow verification so scheduled-but-undelivered cycles go unnoticed.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">27 Aug 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-flow-monitoring.jpg" alt="Flow Monitoring for Smart Irrigation"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Monitoring</span>
+          <h3>Flow Monitoring for Smart Irrigation</h3>
+          <p>Track every zone and catch a blocked line before it becomes a dead patch of field.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Moisture sensors tell you what the soil has. Flow monitoring tells you what the system actually delivered. Those are different questions, and the gap between them is where most irrigation failures hide.</p>
+              <h4>What a flow meter adds</h4>
+              <p>A controller that calls for a 30-minute cycle assumes water moved for 30 minutes at the design rate. A flow reading confirms it. If the meter shows zero during a scheduled cycle, a valve did not open or the pump did not start, and you know that evening instead of when the crop wilts. If it shows half the expected rate, a line is partly blocked or a filter is loading up. If it shows more than expected, something is open that should not be, or a line has burst.</p>
+              <h4>Per-zone, not just total</h4>
+              <p>A single meter on the main line catches gross failures. A meter per zone — or a meter plus known valve states — lets you compare each zone against its own normal. Zone 4 pulling 20% less than its usual rate for this crop and pressure is an early blockage, visible long before it becomes a dry patch.</p>
+              <h4>Pressure alongside flow</h4>
+              <p>Flow and pressure together separate causes. High pressure with low flow points to a restriction downstream — a closed or clogged emitter line. Low pressure with low flow points upstream — pump, supply, or a big leak before the zone. Either reading alone is ambiguous; together they usually tell you where to walk. Flow when every valve is meant to be closed means a leak or a stuck valve, and that is an alert you want at 2 a.m., not a discovery at 7.</p>
+              <p>Drip systems live or die on filtration. Flow trending down across several cycles at steady pressure is a filter loading up on schedule — clean it before it chokes. A sharp drop is debris past the filter starting to plug emitters, a bigger job if you miss it. Set it up by establishing a baseline rate for each zone at normal pressure, alert on meaningful deviations rather than noise, and always alert on any flow during a no-cycle window. Every cycle the controller schedules should be one you can confirm was delivered.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">24 Aug 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-choosing-right-system.jpg" alt="Choosing the Right Irrigation System"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Guides</span>
+          <h3>Choosing the Right Irrigation System</h3>
+          <p>Matching drip, sprinkler, or center pivot to your farm, crops, and water resources.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>There is no single best irrigation method. Drip, sprinkler, and centre pivot each fit a particular combination of crop, field shape, soil, water supply, and budget, and the right question is which combination you have — not which system is most advanced.</p>
+              <h4>Drip</h4>
+              <p>Water goes straight to the root zone through emitters, so evaporation and wind losses are minimal and application uniformity is high. It suits row crops, orchards, vineyards, and anything on a trellis, and it is the only sensible choice where water is scarce or expensive. The costs are filtration — drip is unforgiving of dirty water — and maintenance, because emitters clog and lines need flushing. Best where crop value is high and water is limited.</p>
+              <h4>Sprinkler</h4>
+              <p>Overhead sprinklers cover ground quickly and handle close-spaced crops, pasture, and germination irrigation where you need to wet the whole surface. They tolerate lower water quality than drip. The trade is evaporation and wind drift, less uniformity on gusty days, and wet foliage that can raise disease pressure on susceptible crops. Best for dense plantings, cooler climates, and fields where drip's per-plant plumbing would be impractical.</p>
+              <h4>Centre pivot</h4>
+              <p>A pivot automates sprinkler irrigation over large, relatively flat, regular fields — cereals, forage, potatoes. Labour per hectare is very low once installed and application is even. But the capital cost is high, the circle wastes corners unless you add a corner arm, and it needs a field with few obstacles. Best for broad-acre row crops on big blocks with the water flow to feed it.</p>
+              <p>Match to what you have: scarce or costly water pushes you toward drip; sandy soil that drains fast wants frequent light applications rather than heavy sprinkler sets; heavy clay wants slow application to avoid runoff; small irregular fields rule out pivots. Whatever the method, the instrumentation is the same — root-zone moisture to decide when, flow and pressure to confirm delivery, per-zone control to apply the right amount in the right place. The delivery hardware changes with the field; the sensing and decision layer does not.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">21 Aug 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-what-is-smart-irrigation.jpg" alt="What Is Smart Irrigation?"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Guides</span>
+          <h3>What Is Smart Irrigation?</h3>
+          <p>A plain-language look at how sensors, controllers, and automation work together.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Smart irrigation means watering based on what the field actually needs right now, measured directly, instead of watering on a fixed calendar and hoping. The smart part is a feedback loop: measure the soil, compare it to what the crop wants, act, and measure again.</p>
+              <h4>Measure</h4>
+              <p>Sensors in the root zone report how much water is available to the plant, and often the nutrient levels and pH as well. A small weather station adds rainfall, temperature, and evaporative demand. Together these describe the field's state every few minutes, not once a week when someone walks it.</p>
+              <h4>Compare</h4>
+              <p>The system holds a target for each crop and growth stage — a moisture band it should stay within, nutrient levels that should not drift below a point. Each new reading is checked against that target, and nothing happens while the field is inside the band.</p>
+              <h4>Act, then measure again</h4>
+              <p>When moisture falls to the trigger, the controller opens the valves for that zone and runs until the root zone is back near the top of the band, then closes them. If automation is off, it sends an alert instead and a person decides. After every cycle the system checks that water actually flowed, and watches how fast the zone dries back toward the trigger — that dry-back rate is feedback on whether the settings are right.</p>
+              <p>It replaces a time-clock that runs the same minutes every day regardless of rain or heat, a soil test whose result is weeks old by the time you read it, and a person guessing from the look of the crop, which only shows stress after it has already cost something. To run it you need root-zone moisture sensing, a way to get the data back from the field, a controller with per-zone valves, and somewhere the readings and decisions are logged. Start with one zone in advisory mode and expand once you trust what it recommends.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">18 Aug 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-data-driven-decisions.jpg" alt="Data-Driven Farming Decisions"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Automation</span>
+          <h3>Data-Driven Farming Decisions</h3>
+          <p>Turning field readings into concrete actions — irrigate this zone, inspect that one.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Collecting field data is the easy part. The value only appears when a reading changes what someone does that day. A dashboard that is looked at and admired but not acted on has cost money and returned nothing.</p>
+              <h4>From reading to action</h4>
+              <p>Every metric the system tracks should map to a specific decision. Root-zone moisture below the trigger for a zone means irrigate that zone now, or approve the cycle the system is proposing. A nutrient trace sloping toward its stage minimum means schedule a fertigation adjustment and check the affected zone on foot. Flow lower than the zone's baseline at normal pressure means inspect the filter and the line before the next cycle. pH drifting outside the band means sample and investigate, because it distorts everything else. If a reading does not map to an action, it is noise on the screen.</p>
+              <h4>Trends over snapshots</h4>
+              <p>A single number invites overreaction. The useful signal is direction and rate: is this zone drying faster than last week, is this nutrient falling steadily or just bouncing around, did flow step down suddenly or drift. Decisions made on the slope are earlier and cheaper than decisions made on the eventual bad value.</p>
+              <h4>Zone by zone</h4>
+              <p>Whole-field averages hide the thing you need to see. One zone drying faster than its neighbours points to a soil difference, a partly blocked line, or a valve not opening fully. Comparing each zone to its own history, and to the zones around it, is where most early problems show up.</p>
+              <p>After acting, check that the action worked — the zone rewetted, the nutrient trace flattened, the flow returned to baseline. If it did not, the problem is different from what you thought. Most days the right decision is to do nothing, because the field is inside its bands; the system earns its place on the few days it turns a vague worry into a specific, timely instruction: this zone, this line, today.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">15 Aug 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-ai-iot-future.jpg" alt="AI + IoT: The Future of Irrigation"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Hardware</span>
+          <h3>AI + IoT: The Future of Irrigation</h3>
+          <p>Smarter predictions and automatic decisions, from satellite crop health to soil moisture trends.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>The current generation of smart irrigation reacts: a reading crosses a threshold, the system responds. The next step is anticipation — using the history of a field, the weather forecast, and wider data sources to act before the threshold is crossed.</p>
+              <h4>What IoT provides</h4>
+              <p>The groundwork is a dense, continuous record: years of root-zone moisture, nutrient traces, flow, weather, and what was done in response, per zone. That history is the training material. Without it, "AI" has nothing to learn from; with it, patterns a person would never spot across dozens of zones and several seasons become usable.</p>
+              <h4>What models add</h4>
+              <p>A model trained on a field's own data can forecast how fast a zone will dry given the coming weather, and propose a cycle a day ahead so the crop never reaches stress. It can flag a zone whose dry-back pattern is quietly changing, which often means a developing line problem. It can combine satellite crop-health imagery with ground sensors to point scouting at the parts of a block that are changing, not the whole field.</p>
+              <h4>Where it helps most</h4>
+              <p>Large operations with many zones, where the number of small daily decisions is beyond what one person can track well. Crops with sharp sensitive windows, where a day of early warning is worth a lot. Regions with variable weather, where a forecast-aware schedule beats a fixed one by a wide margin.</p>
+              <p>The honest limits: a model is only as good as the field record behind it, and a new installation has none, so the first season is still threshold-based while data accumulates. Forecasts are uncertain, so predictive cycles need conservative margins and a person able to override. And a recommendation the grower does not understand will not be trusted, so the useful systems explain their reasoning. The near-term picture is not an autonomous farm — it is the same sensors and valves, with a decision layer that shifts from "act when a limit is reached" to "act when a limit is about to be reached".</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">13 Aug 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-drip-maintenance.jpg" alt="Drip Irrigation Maintenance"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Water Management</span>
+          <h3>Drip Irrigation Maintenance</h3>
+          <p>Routine filter cleaning, pressure tests, and line flushing keep a drip system reliable all season.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Drip systems fail slowly and quietly. An emitter does not stop all at once; it narrows over weeks until a section of row is getting half what it should, and by the time the crop shows it, several cycles have been lost. Maintenance is about catching that drift before it reaches the plant.</p>
+              <h4>Filtration first</h4>
+              <p>Every drip system is only as reliable as its filter. Clean filters on a schedule — weekly during heavy use, more often if your water carries sediment or organic matter. A flow reading that trends down across cycles at steady pressure is usually a filter loading up on time; clean it before it chokes the system. A sudden drop means debris has got past and is reaching emitters.</p>
+              <h4>Pressure checks</h4>
+              <p>Walk the system with a gauge at the start of the season and periodically after, comparing pressure at the head, mid-line, and far end of each zone. A larger-than-designed drop from head to end means a restriction — a partly closed valve, a crushed line, or a filter issue. Pressure higher than spec stresses fittings and blows emitters off the line.</p>
+              <h4>Line flushing</h4>
+              <p>Open the ends of lateral lines and let them run until the water comes out clean. Do this at season start, at least once mid-season, and at season end. Flushing clears the fine sediment and biofilm that settles in the last few metres of every line, which is where clogging starts.</p>
+              <p>Where water is hard or high in iron or organic load, periodic acid or chlorine treatment through the injection point keeps scale and biological growth from building up inside emitters — follow the water-test recommendations rather than guessing. Spot-check emitter output with a catch cup at the head, middle, and end of a zone; if the far end delivers noticeably less, flush the zone or correct the pressure. At season end, flush everything, drain lines that could freeze, clean and dry filters, and note which zones needed the most attention — those are the ones to watch first next year.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">17 Jun 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-reduce-farming-costs.jpg" alt="Reduce Farming Costs"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Automation</span>
+          <h3>Reduce Farming Costs</h3>
+          <p>Automation cuts water, labor, and energy costs — often by more than a third.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Farm operating costs are full of small, repeated inefficiencies that individually look too minor to fix. Automation goes after them in aggregate, and the total is usually larger than any single line item suggests.</p>
+              <h4>Water</h4>
+              <p>A fixed schedule waters whether or not the crop needs it, and over-application is the norm because it feels safer. Watering to a measured root-zone target instead typically cuts water use by a third or more, because most of the removed volume was going past the roots or evaporating off the surface. On metered or pumped supply that is a direct cost saving.</p>
+              <h4>Labour and energy</h4>
+              <p>Someone drives out to open and close valves, check tank levels, and walk lines. Automated valves and remote monitoring remove most of those trips, and free the person's time for work that needs judgement. Pumps are often the biggest energy cost on an irrigated farm, and a pump running a fixed schedule runs longer than required — cutting applied water cuts pump hours proportionally, and shifting runs into off-peak billing windows adds more. A well-tuned system commonly trims pumping energy by a quarter to a third.</p>
+              <h4>Inputs and avoided losses</h4>
+              <p>Fertiliser applied on a calendar goes onto zones that did not need it yet. Dosing to measured nutrient levels, zone by zone, removes that over-application and reduces leaching. Then there are the costs that never show up as a bill: a missed cycle during fruit fill, a leak that ran for three days, a blocked line that left a dead patch. Continuous monitoring turns each of those into a same-day alert.</p>
+              <p>Across pilot blocks the combined effect — water, labour, energy, inputs, and avoided losses — has landed around a third off monthly operating cost, with water and labour the largest shares. Payback on the hardware is usually one to two seasons, shorter where water or energy is expensive. Meter one zone, run it for a month against your own records, and the numbers for your farm will be clear enough to decide on.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">13 Jun 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-lower-costs-automation.jpg" alt="Field diagram showing sensors, valves, and a tablet dashboard reporting a 38% cut in monthly operating cost"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Automation</span>
+          <h3>Lower Costs With Irrigation Automation</h3>
+          <p>Where the savings actually come from — water, labor, energy, and fertilizer — when scheduling and valves run on sensor data instead of a fixed clock.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Most irrigation cost is not in any single big expense — it is spread across routine that no one questions. Someone drives out to open a valve. A diesel pump runs longer than the crop needs. Water sheets past the root zone while no one is watching. Fertiliser goes on by the calendar, including to zones that were not ready for it. Each of these looks too small to bother with; added up, they are most of the operating cost of running water on a farm.</p>
+              <h4>Where the savings land</h4>
+              <p>On a typical row-crop block, moving scheduling and valve control onto measured root-zone data cuts monthly water use by around 42%, labour by around 48%, pumping energy by around 35%, and fertiliser by around 30% — a combined drop near 38% in operating cost. Water and labour are the biggest shares. The moisture sensor decides when to water, the controller decides how long, the flow meter confirms it happened, and the whole loop runs without a truck leaving the shed.</p>
+              <h4>Why each number moves</h4>
+              <p>Water falls because over-application was the default and most of the removed volume was leaving the root zone anyway. Labour falls because the valve trips, tank checks, and line walks are automated. Energy falls because pump hours track applied water, and shifting pump runs into off-peak billing windows adds more. Fertiliser falls because dosing follows measured nutrient levels zone by zone instead of a blanket calendar, which also cuts leaching losses.</p>
+              <p>What the hardware is really paid for is not the routine it does — it is the mistakes it prevents: no missed cycle during fruit fill, no leak running for three days unnoticed, no blocked line leaving a dead patch. Those avoided losses do not appear on an invoice, but they are often the largest part of the return. To check it for your farm, meter one zone, put it on sensor-driven control, and compare a month against your own logs — water volume, pump hours, trips made, fertiliser applied. Payback on the equipment is usually one to two seasons, and once one zone's numbers are clear you can roll the same setup across the farm.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">11 Jun 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-landscape-irrigation.jpg" alt="Smart Landscape Irrigation"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Guides</span>
+          <h3>Smart Landscape Irrigation</h3>
+          <p>Efficient, sensor-driven watering for gardens, parks, and outdoor spaces.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>The same feedback loop that runs a farm block works for a garden, a park, a sports field, or a commercial landscape — often with a clearer payback, because urban water is expensive and over-watering is the norm.</p>
+              <h4>The problem it solves</h4>
+              <p>Most landscape irrigation runs on a time clock: the same zones for the same minutes, several times a week, adjusted a couple of times a year if at all. It waters through rain, waters shaded beds the same as full-sun turf, and keeps running when a head breaks and floods a path. Nobody notices until the water bill or a soggy corner.</p>
+              <h4>What smart control changes</h4>
+              <p>A soil-moisture sensor in each distinct area — sunny turf, shaded bed, tree pit — lets the controller water each only when it has actually dried to its target. A rain sensor or a local forecast feed skips cycles when rain is coming or has fallen. Flow monitoring on the supply catches a broken head or a cut line as an alert instead of a discovery.</p>
+              <h4>Zoning by need</h4>
+              <p>Turf, shrub beds, and trees have very different water needs and rooting depths. Grouping them into separate zones with their own sensors and schedules is where most of the saving comes from — the shaded bed that was being watered like open turf might need a third as much.</p>
+              <p>Landscape retrofits commonly cut water use by 20 to 50 percent, with the high end on sites that were badly over-watering, and the controller and sensors pay back quickly on metered municipal water. To start: map the site into zones by sun, soil, and plant type; put a moisture sensor in a representative spot in each; add a rain skip; set conservative targets; watch how each zone dries for a couple of weeks and tighten from there. Keep a manual override for new plantings and hot spells.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">09 Jun 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-greenhouse-irrigation.jpg" alt="Smart Greenhouse Irrigation"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Guides</span>
+          <h3>Smart Greenhouse Irrigation</h3>
+          <p>Zone-by-zone precision watering for tomatoes, lettuce, and basil under one roof.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>A greenhouse concentrates every irrigation variable into a small, controlled space — and then adds a few of its own. Light, temperature, and humidity swing hard between a sunny afternoon and a cold night, transpiration with them, so a fixed schedule is even further off than it would be outdoors.</p>
+              <h4>Zoning under one roof</h4>
+              <p>A single house often runs several crops or growth stages at once: mature tomatoes on the trellis, a tray of seedlings, a bed of basil. Each has a different root volume, a different target moisture band, and a different tolerance for wet feet. Splitting the house into independently controlled zones — each with its own moisture sensor and valve — is the core of getting it right. Watering the seedlings on the tomato schedule drowns them; watering the tomatoes on the seedling schedule starves them.</p>
+              <h4>Substrate matters</h4>
+              <p>Greenhouse crops are frequently in rockwool, coir, or pots rather than field soil, and those media hold and release water very differently. Small container volumes dry fast and have little buffer, so the useful approach is frequent, small pulses triggered by a sensor in the block or slab, aiming to keep the medium in a narrow band and get a measured small runoff fraction on each irrigation.</p>
+              <h4>Climate coupling and fertigation</h4>
+              <p>Because transpiration tracks solar radiation closely, many growers drive irrigation partly off a light integral — accumulate a set amount of radiation, then irrigate — with the moisture sensor as the check. Nearly all greenhouse irrigation carries nutrient solution, so EC and pH of the feed and the runoff are part of the loop; drift in runoff EC tells you the crop is taking up more or less than you are supplying.</p>
+              <p>To start: divide the house by crop and stage, put a moisture (and ideally EC) sensor in a representative container or slab per zone, set narrow bands and short cycles, and watch runoff volume and EC. The payoff is steadier growth, less disease from saturated media, and water and nutrient use that matches what the plants are doing hour to hour.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">05 Jun 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-common-problems.jpg" alt="Common Irrigation Problems"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Water Management</span>
+          <h3>Common Irrigation Problems</h3>
+          <p>Clogged filters, cracked connectors, and low pressure — simple fixes for the issues that come up most.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Most irrigation faults are not exotic. A handful of the same problems account for the majority of callouts, and nearly all of them announce themselves in flow and pressure data before they show up in the crop.</p>
+              <h4>Clogged filters</h4>
+              <p>The single most common issue on any system drawing surface or bore water. Symptom: flow trending down across cycles while pressure upstream of the filter climbs. Fix: clean or backflush on a schedule rather than waiting for the drop. Match filter type and mesh to your water — screen for sand, disc or media for organic load.</p>
+              <h4>Emitter blockage and low pressure</h4>
+              <p>Blocked emitters show as a zone delivering less than its baseline at normal pressure, with dry patches at the far end of lines — flush laterals, spot-replace plugged emitters, treat the water if scale recurs. Low pressure across every zone points to a failing pump, a partly closed valve, an undersized line, or an upstream leak. Flow and pressure together locate it: low both means upstream; low pressure with normal flow means a big leak.</p>
+              <h4>Cracked fittings and bad valves</h4>
+              <p>UV and temperature cycling make poly fittings brittle over a few seasons — a wet spot that never dries, or flow recorded when all valves are closed, means replace the fitting, not re-clamp it. A solenoid that has failed or a perished diaphragm shows as a scheduled cycle with zero flow, or continuous flow into a zone that should be off. This is why actuators should report their real state, not just accept the command.</p>
+              <p>Air in lines causes pressure spikes and erratic emitter output; fit air-relief valves at high points and fill the main gradually. The through-line for all of it: instrument the supply. A flow meter and a pressure gauge per zone turn a field-walk mystery into a labelled alert that tells you which zone and, usually, which kind of fault.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">01 Jun 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-leak-detection.jpg" alt="Irrigation Leak Detection"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Water Management</span>
+          <h3>Irrigation Leak Detection</h3>
+          <p>Catching a pipeline leak from flow and pressure data, before water is wasted for days.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>A leak on an irrigation main can run for days before anyone sees it — the water soaks away underground, the crop nearby looks fine or even better, and the loss only surfaces on the meter or when a section of field goes soft. Continuous flow and pressure data closes that gap to hours.</p>
+              <h4>The clearest signal: flow when nothing should be flowing</h4>
+              <p>Between scheduled cycles, with every valve commanded closed, the flow meter should read zero. Anything above zero in that window is a leak, a valve not seating, or an unauthorised draw. An alert on any no-cycle flow is the single highest-value leak detector you can set.</p>
+              <h4>During a cycle, watch the rate</h4>
+              <p>A zone that suddenly pulls more than its established baseline at normal pressure has developed a break — a split lateral, a blown fitting, a cracked riser. A step change mid-cycle is a fitting letting go in real time. Compare every cycle against that zone's normal, not a global number. Pressure adds the location: a leak upstream shows as low pressure with high flow; a leak downstream of an open valve shows as a local pressure drop with elevated flow in that zone only.</p>
+              <h4>Slow leaks need trend analysis</h4>
+              <p>A pinhole or weeping joint might only add a few percent to a cycle's volume — within day-to-day noise. Catch these by baselining volume per zone per cycle at standard conditions and flagging a sustained upward drift. A zone quietly using five percent more every cycle for a fortnight is leaking somewhere.</p>
+              <p>Night is when leaks hide, so set the tightest thresholds for the unscheduled hours and route those alerts to a phone. A burst at 1 a.m. caught at 1:15 is a valve closed remotely and a repair in daylight; the same burst found at 7 a.m. is six hours of water gone and a saturated block.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">28 May 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-solar-powered.jpg" alt="Solar-Powered Irrigation"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Hardware</span>
+          <h3>Solar-Powered Irrigation</h3>
+          <p>Reliable watering for remote fields with no easy access to grid power.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>For a field with no grid connection, the options have historically been a diesel pump and a fuel run every few days, or nothing. Solar changes the economics: a panel array, a controller, and either a battery bank or a tank for storage can run irrigation on a remote block with no ongoing fuel cost and very little attendance.</p>
+              <h4>Two ways to store the energy</h4>
+              <p>Battery storage keeps the system running on demand at any hour, which matters for night irrigation or precise timing, but the battery bank is the most expensive and shortest-lived part. Water storage — pump to an elevated tank or dam while the sun is up, irrigate by gravity or a small pump later — is cheaper and more durable, at the cost of needing the head and the tank volume. Many remote installs use water storage as the primary buffer and a small battery only for the controller and sensors.</p>
+              <h4>Sizing for the worst week</h4>
+              <p>Size the panel array and storage for the least sunlight you expect during the irrigation season, not the average. An array that just covers a bright day will fall short through a cloudy spell exactly when the crop still needs water. Add margin for panel soiling and ageing. Solar pump controllers handle the variable input, ramping the pump with available power, so a well-matched system delivers most of its daily volume around midday and the schedule is built around that profile.</p>
+              <p>Panels need occasional cleaning, batteries need shade and ventilation and eventual replacement, and the array is a visible asset in a remote spot so mounting and basic security matter. The instrumentation is the same as any smart system — root-zone moisture, flow and pressure, tank level, all on low-power radio back to a gateway. Solar just removes the fuel and the grid, which on a remote block is most of the running cost and most of the hassle.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">24 May 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-lora-large-farms.jpg" alt="LoRa for Large Farms"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Hardware</span>
+          <h3>LoRa for Large Farms</h3>
+          <p>Long-range, low-power connectivity that covers a whole farm without WiFi dead zones.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>On a large farm the connectivity problem is geometry. Sensors and valves are spread across hundreds or thousands of hectares, most of them nowhere near a building or a power point, and the terrain and crop canopy in between is exactly what short-range radio cannot punch through. LoRa is built for that shape.</p>
+              <h4>One gateway, many nodes, long reach</h4>
+              <p>A single LoRa gateway placed with reasonable height near the shed or on a tank stand can hear nodes several kilometres out, across rises and through canopy, because the low data rate lets the receiver dig the signal out of the noise. A big property might need two or three gateways for folds in the land or very long runs, but not the dozens of access points and repeaters a WiFi mesh would demand.</p>
+              <h4>Battery life measured in seasons</h4>
+              <p>Each node wakes briefly, sends a few bytes, and sleeps. Average current is tiny, so a primary cell lasts a season or more and a small solar panel makes it indefinite. Across hundreds of nodes, that is the difference between a manageable maintenance schedule and a full-time job changing batteries. Bringing a new device online is a provisioning step — no coverage survey, no cabling, no mains point — and the gateway carries the aggregate traffic upstream over cellular or a wired link.</p>
+              <p>Where it needs care: LoRa's capacity is small, fine for readings every few minutes from thousands of nodes but not for anything chatty or large. Reporting intervals and payload sizes have to be chosen with the shared airtime in mind, dense deployments benefit from a managed network server, and firmware updates over the air are slow and planned. For the job it is designed for — small periodic messages from many battery-powered devices over a large area — it covers a whole farm with a handful of gateways and no dead zones.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">20 May 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-mobile-app.jpg" alt="Smart Irrigation Mobile App"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Automation</span>
+          <h3>Smart Irrigation Mobile App</h3>
+          <p>Monitor every zone and adjust watering from a phone, wherever you are.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>The value of a mobile app in a smart irrigation system is not the novelty of watching your farm from a phone — it is that the person who needs to make a decision is almost never standing at the controller when the decision comes up.</p>
+              <h4>What it should show at a glance</h4>
+              <p>Current moisture, nutrient, and pH readings per zone against their target bands. Which zones are irrigating now and which are queued. Any open alerts — a missed cycle, flow out of range, a low tank, a node gone quiet. A good home screen answers "is anything wrong?" in two seconds and "what is each zone doing?" in ten.</p>
+              <h4>What it should let you do</h4>
+              <p>Approve or skip a proposed cycle. Start a manual cycle on a zone that needs water now. Adjust a threshold. Acknowledge and silence an alert once it is dealt with. Anything that would previously have meant a drive to the shed.</p>
+              <h4>Alerts are the core feature</h4>
+              <p>Push notifications turn the system from something you have to check into something that tells you when it needs you. The important design choice is restraint: alert on things that need action within hours — no-cycle flow, a stress trigger, a burst — and keep routine status off the notification channel so the alerts that do arrive are always worth reading.</p>
+              <p>Fieldwork happens where signal is poor, so the app should hold the last known state, queue commands you issue, and sync on reconnect with a clear view of what is pending. On a farm with staff, roles matter — everyone views, some run manual cycles, a few change thresholds — and a change log of who adjusted what and when saves a lot of confusion later. The app is the interface layer; done well, a threshold tweak takes fifteen seconds from anywhere and a developing problem reaches you the same hour.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">16 May 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-tank-level-monitoring.jpg" alt="Remote Tank-Level Monitoring"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Monitoring</span>
+          <h3>Remote Tank-Level Monitoring</h3>
+          <p>Know exactly how much water is left without walking out to check.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>A storage tank or dam is the buffer the whole irrigation system draws on, and running it dry mid-cycle is one of the more damaging failures — the pump can cavitate or run dry, the cycle delivers nothing, and the crop misses water it was scheduled to get. A level sensor and a radio link remove the guesswork.</p>
+              <h4>What to measure</h4>
+              <p>A continuous level reading — from a pressure transducer at the bottom, an ultrasonic sensor at the top, or a float — reported every few minutes, and converted to volume and to hours of irrigation remaining at the current draw. That last number is the one that matters when you are planning the day.</p>
+              <h4>What it tells you beyond "how full"</h4>
+              <p>The rate of change is as useful as the level. A tank filling slower than the inflow should provide points to a supply problem — a bore dropping, a float valve stuck, a blocked intake. A tank falling faster than the scheduled irrigation accounts for points to a leak or an unauthorised draw. Level plus flow-in plus flow-out is a small water balance you can actually close.</p>
+              <h4>Alerts worth setting</h4>
+              <p>A low-level warning with enough margin to react before the next cycle would empty it. A critical cut-off that pauses irrigation and protects the pump. A no-inflow alert when the tank should be filling and is not. A rising-level alert past full, meaning an overflow wasting water and possibly eroding a bank.</p>
+              <p>With level in the loop, the controller can hold non-urgent cycles until the tank recovers, prioritise the zones that need water most when supply is tight, and schedule filling for off-peak power. Setup is modest — one sensor per tank, a low-power radio node, and calibration for the tank's shape so the reading converts to real volume.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">12 May 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-smart-systems.jpg" alt="Smart Irrigation Systems"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Guides</span>
+          <h3>Smart Irrigation Systems</h3>
+          <p>Efficient watering built on the same intelligent technology running through this whole system.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>A smart irrigation system is four jobs working together — sense the field, send the readings, decide what to do, and act on it — and everything else is detail hung off that frame.</p>
+              <h4>Sense</h4>
+              <p>Soil-moisture probes in the root zone are the foundation, reporting how much water the plant can actually reach. Add NPK and pH where nutrients are managed actively, and a small weather station for rainfall and evaporative demand. Two probes per zone, not one, so a single bad reading does not drive a bad decision.</p>
+              <h4>Send</h4>
+              <p>Field devices are far from power and buildings, so they use long-range low-power radio to a gateway near the shed, which carries everything up to the dashboard over cellular or a wired link. Because the radio is long-range there are no WiFi dead zones at the edge of the field, and because it sips power, nodes run a season or more on a battery.</p>
+              <h4>Decide and act</h4>
+              <p>The controller compares each reading against per-crop, per-stage thresholds. Moisture below the trigger for a zone proposes a cycle; nutrient and pH readings raise an alert for a person rather than acting on their own. Valve controllers then open only the zones that need water, for only as long as the root zone requires, and a flow meter confirms each cycle was delivered and catches leaks or clogged lines early. Actuators report their real state, so the system knows a valve opened rather than assuming it.</p>
+              <p>The result is watering that follows the crop and the weather instead of a fixed clock: less waste, fewer stress events, steadier yield, and a full record of what happened in every zone. The same four parts scale from a single greenhouse to a whole farm — you add zones, not a new kind of system. Start with one or two zones in advisory mode, confirm the recommendations match what you would have done, then hand over control and expand.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">08 May 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-benefits-automation.jpg" alt="Benefits of Automated Irrigation"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Automation</span>
+          <h3>Benefits of Automated Irrigation</h3>
+          <p>Save water, time, and cost — the case for letting the system act on your thresholds.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Automated irrigation means the system acts on your thresholds without waiting for a person: when a zone dries to its trigger, the valve opens; when the root zone is refilled, it closes. The benefits follow from removing the human step from the routine part while keeping them in the loop for judgement.</p>
+              <h4>Water and time saved</h4>
+              <p>A person irrigating by feel over-applies, because under-watering has visible consequences and over-watering usually does not. Acting on a measured target keeps each zone inside its band and stops the cycle when the soil is full, removing the third or so of applied water that was draining past the roots. The valve trips, the tank checks, the "did that cycle run?" drive — automation absorbs all of it, and those hours no longer have to happen at a fixed time regardless of what else needs doing.</p>
+              <h4>Fewer stress events</h4>
+              <p>A fixed schedule cannot respond to a heat spell or a broken valve. An automated system watering to sensor data catches the first and, with flow confirmation, the second — before the crop is set back. Avoided stress during a sensitive stage is often worth more than all the water savings combined.</p>
+              <h4>Consistency and a record</h4>
+              <p>The system applies the same logic to every zone every day. It does not forget the back block or misjudge, and over a season that evenness shows up as a more uniform crop. Every reading, decision, and cycle is logged, so when something goes wrong you can see what the field was doing and what the system did.</p>
+              <p>What automation does not do: replace walking the crop, or make nutrient and pH calls on its own — those stay with a person. Machine handles the repetitive, measurable, time-critical part; human handles the judgement. Start in advisory mode, confirm the system proposes what you would have done, then let it act.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">04 May 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-soil-moisture-sensors.jpg" alt="Soil-Moisture Sensors"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Soil Health</span>
+          <h3>Soil-Moisture Sensors</h3>
+          <p>Smarter watering starts with knowing exactly how wet the root zone already is.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Every irrigation decision comes back to one question: how much water can the crop actually reach right now? A soil-moisture sensor answers it directly, instead of inferring it from the calendar, the weather, or the look of the leaves.</p>
+              <h4>What they measure</h4>
+              <p>Most field sensors report volumetric water content — the fraction of soil volume that is water — by sensing the soil's dielectric constant, which changes sharply with moisture. Some report tension, how hard the plant has to pull, which maps more directly to stress. Either way the useful output is where the reading sits between the soil's field capacity (full) and its lower limit (crop starts to struggle).</p>
+              <h4>Placement is most of the accuracy</h4>
+              <p>Put the sensor in the active root zone, at a depth where the crop is actually drawing water — often two depths, shallow and deep, to watch the wetting front move. Keep it away from emitters so it reads the bulk soil, not a wet spot. Firm the soil back around it so there are no air gaps. Two sensors per management zone guard against one bad probe.</p>
+              <h4>Read the trace, not the number</h4>
+              <p>The shape over time matters more than any single value: a smooth decline between irrigations, a sharp rise when water is applied, a plateau near field capacity. How fast the zone dries back to the trigger tells you whether the settings match demand. Barely moving means you are watering too often; dropping fast and far means the band is too wide.</p>
+              <p>Factory calibration is close for typical mineral soils; sandy, heavy clay, or high-organic soils benefit from a quick site check at known wet and dry states. The moisture trace is the foundation of every smart system — what the controller triggers on, what the nutrient and pH readings are interpreted against, and what tells you whether the last cycle worked.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">30 Apr 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-drip-irrigation-guide.jpg" alt="Drip Irrigation"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Water Management</span>
+          <h3>Drip Irrigation</h3>
+          <p>Benefits, components, and where a drip system makes the most sense on a farm.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Drip delivers water in small, frequent amounts directly to the root zone through emitters spaced along a line. Because almost none is lost to evaporation, wind, or runoff, it is the most efficient common irrigation method — application uniformity of 90 percent or more is normal, against 60–75 for many sprinkler setups.</p>
+              <h4>The components</h4>
+              <p>A pump and pressure regulation to hold a steady supply. Filtration sized to the water source — drip is intolerant of sediment and organic matter. A mainline and sub-mains feeding lateral lines. Emitters, inline or on-line, pressure-compensating if the ground slopes so every plant gets the same rate. Air-relief and flush valves at ends and high points. Optionally an injection point for fertigation.</p>
+              <h4>Where it makes the most sense</h4>
+              <p>High-value crops that justify the plumbing and maintenance — vegetables, orchards, vineyards, berries. Water that is scarce, expensive, or pumped. Sloping or irregular ground where sprinkler uniformity suffers. Saline water, because drip keeps salts moving away from the root zone. Windy sites where sprinkler drift is a real loss.</p>
+              <h4>Where it struggles</h4>
+              <p>Very dirty water without serious filtration. Crops that need the whole soil surface wet, like broadcast germination. Sites where rodents or machinery repeatedly damage exposed lines. Very low-value broad-acre crops where the per-hectare cost does not pay back.</p>
+              <p>Run it well with filtration maintenance on a schedule, line flushing at season start and mid-season, periodic emitter checks with a catch cup, and water treatment where scale or biofilm recurs. Instrument it like any smart system — root-zone moisture to trigger, flow and pressure per zone to confirm delivery and catch clogging early.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">26 Apr 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-sprinkler-irrigation.jpg" alt="Sprinkler Irrigation"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Water Management</span>
+          <h3>Sprinkler Irrigation</h3>
+          <p>A complete guide to sprinkler coverage, pressure, and when it beats drip.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Sprinkler irrigation applies water overhead as simulated rainfall, through fixed sprays, rotors, travelling guns, or a pivot. It wets the whole surface, handles close-spaced and broadcast crops, and tolerates lower water quality than drip, which is why it remains the default for pasture, cereals, turf, and germination irrigation.</p>
+              <h4>Coverage and uniformity</h4>
+              <p>The key design number is distribution uniformity — how evenly water lands across the wetted area. It depends on sprinkler spacing relative to throw radius (head-to-head coverage, roughly 50–60 percent of diameter spacing), nozzle selection, and operating pressure. Under-spaced or wrongly pressured heads leave dry rings and wet overlaps that show up in the crop as stripes.</p>
+              <h4>Pressure is critical</h4>
+              <p>Every sprinkler has a design pressure window. Too low and the stream does not break into droplets properly, throwing water in a doughnut with a dry centre. Too high and it atomises into fine mist that drifts and evaporates. A pressure gauge at the zone and a flow reading confirm the system is running in its window and that all heads are actually operating.</p>
+              <h4>Losses to plan around</h4>
+              <p>Evaporation and wind drift, worst in hot, dry, windy conditions — irrigating at night or early morning cuts this substantially. Wet foliage can raise disease pressure on susceptible crops. Runoff on heavy soils or slopes if application rate exceeds infiltration; the fix is shorter, more frequent sets or lower-rate nozzles.</p>
+              <p>It beats drip for dense or broadcast plantings, for germination and frost protection which need surface wetting, for lower crop values that do not justify drip's cost, and for water too dirty for drip filtration to handle economically. Run it with the same instrumentation as any smart system — root-zone moisture to decide when, flow and pressure per zone to confirm every head is at its design point.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">22 Apr 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-reduce-water-waste.jpg" alt="Reduce Water Waste"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Water Management</span>
+          <h3>Reduce Water Waste</h3>
+          <p>How real-time soil and flow data conserve every drop instead of guessing.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Most irrigation water that is "wasted" is not spilled — it is applied to soil that was already wet enough, and it drains below the roots carrying nutrients with it. It looks like irrigation. It just did not reach the crop. Real-time soil and flow data is how you tell the difference.</p>
+              <h4>Where the waste is</h4>
+              <p>Over-application is the big one: watering on a schedule that does not know the soil is still near field capacity. Then evaporation from wet surfaces, wind drift from overhead systems run in the heat of the day, runoff where the application rate beats infiltration, leaks and stuck valves, and cycles that run through or straight after rain.</p>
+              <h4>Soil data stops over-application</h4>
+              <p>A moisture sensor in the root zone lets the system water only when the soil has actually dried to the trigger, and stop when it is refilled — not before, not well after. That single change removes most of the drainage loss, because the volume that used to go past the roots simply is not applied.</p>
+              <h4>Flow data stops the invisible waste</h4>
+              <p>A meter that reads flow when every valve should be closed catches leaks and stuck valves the same day. Per-zone baselines catch a burst as an above-normal rate and a partial blockage as a below-normal one. Cycles that ran but delivered nothing get flagged instead of hiding in the logs.</p>
+              <p>Shift overhead irrigation to low-wind, low-evaporation hours, match application rate to the soil's infiltration rate so nothing runs off, and feed a rain gauge or forecast into the schedule. The measure of success is simple: applied water per zone trending down while the moisture trace stays inside its band and yield holds. If water use drops and the crop is unchanged, the difference was waste.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">18 Apr 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-iot-modern-agriculture.jpg" alt="IoT in Modern Agriculture"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Hardware</span>
+          <h3>IoT in Modern Agriculture</h3>
+          <p>Connected sensors and controllers are becoming standard equipment, not a novelty.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>Connected sensors and controllers have moved from pilot projects to standard equipment on a lot of farms, for the same reason any tool gets adopted: the cost came down, the reliability went up, and the payback got obvious.</p>
+              <h4>What "IoT" means here</h4>
+              <p>Low-cost devices in the field — soil probes, weather stations, valve and pump controllers, tank and flow sensors — each with a small radio, reporting to a gateway that carries the data to a dashboard and takes commands back. Nothing exotic; the shift is that a sensor now costs little enough to put dozens across a farm, and batteries last long enough that maintaining them is realistic.</p>
+              <h4>What it changes day to day</h4>
+              <p>Decisions that used to be made on a weekly walk or a hunch are made on current data: irrigate this zone now, this nutrient is trending down, this line is losing pressure. Problems that used to surface in the crop weeks later surface as an alert the same day. Records that used to live in someone's memory are logged automatically and can be reviewed across seasons.</p>
+              <h4>Where the value concentrates</h4>
+              <p>Irrigation, because water and pumping are large controllable costs and the sensors pay back fast. Nutrient management, because early warning of a deficiency is worth far more than the sensor. Anything remote or spread out, because the alternative is a lot of driving.</p>
+              <p>It is not automatic profit. A sensor with no plan to act on its readings is a cost; a gateway on a failing battery is worse than none. The farms that get value start small, tie every metric to a decision, and expand what works — but the direction is settled: connected instrumentation is becoming part of the base equipment of a farm, like a soil test or a moisture meter.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">14 Apr 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-best-methods.jpg" alt="Best Irrigation Methods"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Guides</span>
+          <h3>Best Irrigation Methods</h3>
+          <p>The right watering method changes by crop — what works for orchards won't suit row crops.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>There is no single best irrigation method — the right one changes with the crop, the soil, the water, and the field. What suits an orchard will not suit a wheat paddock, and forcing one system across all of a mixed farm usually means something is being watered badly.</p>
+              <h4>By crop</h4>
+              <p>Tree crops, vines, and trellised vegetables suit drip: permanent plantings, defined root zones, high value, and a real benefit from keeping foliage dry. Broadcast and close-spaced crops — cereals, pasture, forage — suit sprinklers or a pivot, because you need the whole surface wet and per-plant plumbing is impractical. Field vegetables sit in between; many do well on drip tape laid and lifted each season.</p>
+              <h4>By soil</h4>
+              <p>Sandy soils drain fast and hold little, so they want frequent light applications — drip, or short sprinkler sets — rather than heavy irrigations that drain straight through. Heavy clay infiltrates slowly, so the application rate has to stay below that or water runs off. Shallow soils over rock behave like small containers and need the same frequent-small approach.</p>
+              <h4>By water and field shape</h4>
+              <p>Scarce or expensive water pushes hard toward drip. Dirty water pushes toward sprinklers unless you invest in filtration. Saline water favours drip, which flushes salts past the roots. Large flat regular blocks suit a pivot; small, sloping, or irregular fields rule pivots out and often make sprinkler uniformity hard, leaving drip.</p>
+              <p>Whatever the delivery method, the control layer is constant: root-zone moisture decides when, flow and pressure confirm delivery, per-zone valves apply the right amount in the right place. Choose the delivery hardware for the field; keep the sensing and decision-making the same everywhere so the whole farm is managed on one set of numbers.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">10 Apr 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-automate-schedule.jpg" alt="Automate Your Watering Schedule"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Automation</span>
+          <h3>Automate Your Watering Schedule</h3>
+          <p>Zone-by-zone timing that adjusts to weather instead of running on a fixed clock.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>A fixed watering schedule is a guess that was right on the day it was set and drifts further off with every change in the weather. Automating the schedule means the timing follows the field's actual demand — hotter week, more water; rain, skip; one zone drying faster, water it sooner.</p>
+              <h4>From clock to trigger</h4>
+              <p>The starting move is to stop scheduling by time and start scheduling by soil-moisture trigger: each zone gets a lower threshold that calls for water and an upper target that stops it. The cycle length is whatever it takes to move the root zone from one to the other, and it changes on its own as conditions change.</p>
+              <h4>Weather in the loop</h4>
+              <p>A rain gauge or a local forecast feed lets the system skip or shorten a cycle when rain is coming or has fallen, instead of watering into a wet sky. Evaporative demand from a small weather station lets it anticipate a hot spell rather than react a day late.</p>
+              <h4>Zone by zone</h4>
+              <p>Different soils, aspects, and crops across a farm dry at different rates. Automated per-zone scheduling waters the fast-drying block on the sunny slope more often than the sheltered one, without anyone tracking it. Whole-farm schedules cannot do this; they compromise on an average that suits no zone.</p>
+              <p>Keep guardrails: a maximum frequency and volume per zone so a faulty sensor cannot irrigate non-stop, a manual override for new plantings or chemigation, and a log of every cycle with the reading that triggered it. The result is a schedule that no longer needs seasonal re-tuning by hand — it tracks the weather and the crop continuously and tells you when something is off.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">06 Apr 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-sensor-nodes.jpg" alt="Sensor Nodes in Smart Farming"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Hardware</span>
+          <h3>Sensor Nodes in Smart Farming</h3>
+          <p>The distributed hardware that collects the field data every other decision depends on.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>A sensor node is the small, self-contained device that does the actual measuring in the field — the thing every other part of a smart system depends on for data. Understanding what is inside one, and what makes a good one, is worth doing before you buy a hundred of them.</p>
+              <h4>What is in the box</h4>
+              <p>One or more sensing elements — moisture, temperature, NPK, pH, sometimes all in one probe. A low-power microcontroller that wakes on a timer, takes the readings, and formats a short message. A radio, usually LoRa, to send it to the gateway. A battery, often a primary lithium cell, sometimes with a small solar panel. A sealed, UV-stable enclosure, because the node lives outdoors for years.</p>
+              <h4>What makes a good one</h4>
+              <p>Genuinely low sleep current, because that sets battery life — microamps matter. A tunable reporting interval, so you are not spending power and airtime on data you will not use. Robust sealing rated for burial or splash as appropriate. A way to update firmware in the field. And clear diagnostics — battery voltage, signal strength, last-seen time — reported alongside the sensor data so you know which nodes need attention.</p>
+              <h4>Deployment</h4>
+              <p>Place nodes where the reading represents the zone, not a corner case. Record each node's location and what it monitors. Put at least two per management zone. Check signal strength to the gateway at install time, not after the crop has grown up around it.</p>
+              <p>Nodes drift and fail — a probe fouls, a seal ages, a battery ends. The diagnostics channel is how you catch that: a node whose readings have gone flat or noisy, or whose battery is sagging, gets scheduled for a visit before it goes dark. A well-run network treats nodes as consumables on a maintenance rotation, not install-and-forget.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">02 Apr 2026 · 5 min read</p>
+        </article>
+
+        <article class="device-card">
+          <div class="thumb"><img src="images/blog-field-gateway-hub.jpg" alt="Field Gateway"></div>
+          <span class="eyebrow" style="margin-bottom:0.2rem;">Hardware</span>
+          <h3>Field Gateway</h3>
+          <p>The communication hub that carries every sensor and valve's data back to the dashboard.</p>
+          <details class="post-full">
+            <summary>Read article</summary>
+            <div class="post-body">
+              <p>The field gateway is the hub every sensor node and valve controller talks to, and the single point where the farm's field data crosses from long-range radio onto the internet. Everything upstream — the dashboard, the alerts, the decision logic — depends on it staying up.</p>
+              <h4>What it does</h4>
+              <p>It listens continuously for LoRa messages from every node in range, timestamps and forwards them to the platform over its backhaul (cellular, ethernet, or a longer-range link), and relays commands back out to controllers. On larger sites it also runs a network server that schedules node airtime so hundreds of devices share the band without colliding.</p>
+              <h4>Why it is the critical component</h4>
+              <p>A node that misses a reading is a small gap. A gateway that goes down is every node dark at once — no alerts, no automation — until someone notices. So the gateway gets the attention the nodes do not: a reliable power source rather than a small battery, mounted with height and a clear view for radio range, in an enclosure rated for permanent outdoor use.</p>
+              <h4>Placement</h4>
+              <p>Central to the node field where possible, elevated on the shed, a mast, or a tank stand. One gateway covers most farms; add a second or third for folds in the land, very long runs, or dense node counts, and let them share the load.</p>
+              <p>Worth having: local buffering so a backhaul outage does not lose data, a watchdog that restarts a hung radio or modem, and the gateway's own health reported upstream — power source, backhaul status, node count, uptime. Treated as infrastructure and powered properly, a gateway runs for years; treated like a node, it becomes the thing that takes the whole system down.</p>
+            </div>
+          </details>
+          <p class="muted" style="margin-top:0.25rem; font-family:var(--font-mono); font-size:0.75rem;">29 Mar 2026 · 5 min read</p>
+        </article>
+
+      </div>
+
+      <div class="note" style="margin-top:2.5rem;">This blog illustrates the kind of content a live IrrigTech site would publish. IrrigTech is a concept preview built to plan a real site's structure and content — these posts are placeholders, not published articles.</div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="brand"><img src="images/irrigtech-icon.png" width="24" height="24" alt="" style="display:inline-block; vertical-align:-6px;"> IrrigTech</div>
+      <p class="muted" style="margin-top:0.9rem; font-size:0.9rem; max-width:26ch;">Real-time soil intelligence for growers who'd rather prevent a bad season than react to one.</p>
+      <a href="mailto:contact@irrigtech.com" class="footer-email">Email: contact@irrigtech.com</a>
+      <a href="https://wa.me/923451616967?text=Hello%20IrrigTech%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20your%20team." target="_blank" rel="noopener noreferrer" class="footer-whatsapp"><svg class="whatsapp-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.45 1.29 4.9L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.67-.78-3.08-1.27-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17 0-1.5.79-2.24 1.07-2.55.28-.3.6-.38.8-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.3-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/></svg>WhatsApp: +92 345 1616967</a>
+      <a href="index.html" class="footer-domain">irrigtech.com</a>
+    </div>
+    <div><h4>Product</h4><ul>
+      <li><a href="iot-sensor-node.html">IoT Sensor Node</a></li>
+      <li><a href="soil-moisture-sensor.html">Soil Moisture Sensor</a></li>
+      <li><a href="smart-valve-controller.html">Smart Valve Controller</a></li>
+      <li><a href="pump-controller.html">Pump Controller</a></li>
+      <li><a href="field-gateway.html">Field Gateway</a></li>
+    </ul></div>
+    <div><h4>Company</h4><ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul></div>
+    <div><h4>Get started</h4><ul>
+      <li><a href="contact.html">Start Your Project</a></li>
+      <li><a href="pricing.html">View pricing</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 IrrigTech, Inc.</span>
+    <div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
+    <span class="pulse"><span class="dot"></span>All systems operational</span>
+  </div>
+</footer>
+
+<a href="https://wa.me/923451616967?text=Hello%20IrrigTech%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20your%20team." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with IrrigTech on WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.45 1.29 4.9L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.67-.78-3.08-1.27-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17 0-1.5.79-2.24 1.07-2.55.28-.3.6-.38.8-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.3-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/></svg>
+  <span class="whatsapp-float-label">Chat on WhatsApp</span>
+</a>
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', function(){
+    var nav = document.getElementById('primary-nav');
+    var open = nav.classList.toggle('open');
+    this.classList.toggle('is-open', open);
+    this.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+</body>
+</html>
