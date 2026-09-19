@@ -59,10 +59,10 @@
 <main>
   <section>
     <div class="wrap contact-grid">
-      <form name="project-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
+      <form name="project-inquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" id="contact-form">
         <input type="hidden" name="form-name" value="project-inquiry">
         <p class="hp-field" aria-hidden="true"><label>Laissez ce champ vide : <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-        <div class="field"><label for="name">Nom complet *</label><input id="name" name="name" type="text" required></div>
+        <div class="field"><label for="name">Nom complet *</label><input id="name" name="full-name" type="text" required></div>
         <div class="field"><label for="email">E-mail *</label><input id="email" name="email" type="email" required></div>
         <div class="field"><label for="company">Entreprise / Exploitation</label><input id="company" name="company" type="text"></div>
         <div class="field"><label for="country">Pays</label><input id="country" name="country" type="text"></div>
@@ -85,10 +85,10 @@
             <option>Autre</option>
           </select>
         </div>
-        <div class="field"><label for="message">Description du projet *</label><textarea id="message" name="message" required></textarea></div>
+        <div class="field"><label for="message">Description du projet *</label><textarea id="message" name="project-description" required></textarea></div>
         <div class="field">
           <label for="quantity">Quantité envisagée</label>
-          <select id="quantity" name="quantity">
+          <select id="quantity" name="expected-quantity">
             <option value="" selected>Pas encore déterminée</option>
             <option>Prototype</option>
             <option>1–10</option>
@@ -99,7 +99,7 @@
         </div>
         <div class="field">
           <label for="stage">Étape du projet</label>
-          <select id="stage" name="stage">
+          <select id="stage" name="project-stage">
             <option value="" selected>Pas encore déterminée</option>
             <option>Idée / Concept</option>
             <option>Cahier des charges prêt</option>
@@ -109,8 +109,8 @@
           </select>
         </div>
         <button type="submit" class="btn btn-primary" id="contact-submit">Envoyer la demande de projet</button>
-        <div class="form-success" id="form-success">Merci. Votre demande de projet a bien été reçue. L'équipe d'ingénierie d'IrrigTech étudiera vos besoins et vous recontactera prochainement.</div>
-        <div class="form-error" id="form-error">Une erreur s'est produite et votre demande n'a pas pu être envoyée. Veuillez réessayer, ou écrivez-nous directement à <a href="mailto:contact@irrigtech.com">contact@irrigtech.com</a>.</div>
+        <div class="form-success" id="form-success" role="status" aria-live="polite">Merci. Votre demande de projet a bien été reçue. L'équipe d'ingénierie d'IrrigTech étudiera vos besoins et vous recontactera prochainement.</div>
+        <div class="form-error" id="form-error" role="alert" aria-live="assertive">Une erreur s'est produite et votre demande n'a pas pu être envoyée. Veuillez réessayer, ou écrivez-nous directement à <a href="mailto:contact@irrigtech.com">contact@irrigtech.com</a>.</div>
       </form>
       <div class="contact-info-col">
         <span class="eyebrow">Demandes de projet</span>
@@ -191,15 +191,26 @@
     successEl.classList.remove('show');
     errorEl.classList.remove('show');
 
+    var encodedPairs = [];
+    new FormData(form).forEach(function(value, key){
+      encodedPairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(value));
+    });
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(new FormData(form)).toString()
+      body: encodedPairs.join('&')
     }).then(function(response){
-      if (!response.ok) { throw new Error('Form submission failed with status ' + response.status); }
+      if (!response.ok) {
+        return response.text().then(function(bodyText){
+          console.error('[IrrigTech contact form] Netlify response', response.status, response.statusText, bodyText.slice(0, 500));
+          throw new Error('Form submission failed with status ' + response.status + ' ' + response.statusText);
+        });
+      }
       successEl.classList.add('show');
       form.reset();
     }).catch(function(error){
+      console.error('[IrrigTech contact form] submission error:', error);
       errorEl.classList.add('show');
     }).finally(function(){
       submitBtn.disabled = false;
