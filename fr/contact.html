@@ -59,15 +59,17 @@
 <main>
   <section>
     <div class="wrap contact-grid">
-      <form id="contact-form">
-        <div class="field"><label for="name">Nom complet *</label><input id="name" type="text" required></div>
-        <div class="field"><label for="email">E-mail *</label><input id="email" type="email" required></div>
-        <div class="field"><label for="company">Entreprise / Exploitation</label><input id="company" type="text"></div>
-        <div class="field"><label for="country">Pays</label><input id="country" type="text"></div>
-        <div class="field"><label for="phone">WhatsApp / Téléphone</label><input id="phone" type="tel"></div>
+      <form name="project-inquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
+        <input type="hidden" name="form-name" value="project-inquiry">
+        <p class="hp-field" aria-hidden="true"><label>Laissez ce champ vide : <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <div class="field"><label for="name">Nom complet *</label><input id="name" name="name" type="text" required></div>
+        <div class="field"><label for="email">E-mail *</label><input id="email" name="email" type="email" required></div>
+        <div class="field"><label for="company">Entreprise / Exploitation</label><input id="company" name="company" type="text"></div>
+        <div class="field"><label for="country">Pays</label><input id="country" name="country" type="text"></div>
+        <div class="field"><label for="phone">WhatsApp / Téléphone</label><input id="phone" name="phone" type="tel"></div>
         <div class="field">
           <label for="project-type">Type de projet *</label>
-          <select id="project-type" required>
+          <select id="project-type" name="project-type" required>
             <option value="" disabled selected>Sélectionnez un type de projet</option>
             <option>Irrigation intelligente</option>
             <option>Automatisation agricole</option>
@@ -83,10 +85,10 @@
             <option>Autre</option>
           </select>
         </div>
-        <div class="field"><label for="message">Description du projet *</label><textarea id="message" required></textarea></div>
+        <div class="field"><label for="message">Description du projet *</label><textarea id="message" name="message" required></textarea></div>
         <div class="field">
           <label for="quantity">Quantité envisagée</label>
-          <select id="quantity">
+          <select id="quantity" name="quantity">
             <option value="" selected>Pas encore déterminée</option>
             <option>Prototype</option>
             <option>1–10</option>
@@ -97,7 +99,7 @@
         </div>
         <div class="field">
           <label for="stage">Étape du projet</label>
-          <select id="stage">
+          <select id="stage" name="stage">
             <option value="" selected>Pas encore déterminée</option>
             <option>Idée / Concept</option>
             <option>Cahier des charges prêt</option>
@@ -106,8 +108,9 @@
             <option>Préparation à la production</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-primary">Envoyer la demande de projet</button>
-        <div class="form-success" id="form-success">Ouverture de votre client de messagerie avec cette demande déjà remplie — envoyez-la et notre équipe d'ingénierie vous recontactera.</div>
+        <button type="submit" class="btn btn-primary" id="contact-submit">Envoyer la demande de projet</button>
+        <div class="form-success" id="form-success">Merci. Votre demande de projet a bien été reçue. L'équipe d'ingénierie d'IrrigTech étudiera vos besoins et vous recontactera prochainement.</div>
+        <div class="form-error" id="form-error">Une erreur s'est produite et votre demande n'a pas pu être envoyée. Veuillez réessayer, ou écrivez-nous directement à <a href="mailto:contact@irrigtech.com">contact@irrigtech.com</a>.</div>
       </form>
       <div class="contact-info-col">
         <span class="eyebrow">Demandes de projet</span>
@@ -176,31 +179,32 @@
   });
   document.getElementById('contact-form').addEventListener('submit', function(e){
     e.preventDefault();
-    var name = document.getElementById('name').value.trim();
-    var email = document.getElementById('email').value.trim();
-    var company = document.getElementById('company').value.trim();
-    var country = document.getElementById('country').value.trim();
-    var phone = document.getElementById('phone').value.trim();
-    var projectType = document.getElementById('project-type').value;
-    var message = document.getElementById('message').value.trim();
-    var quantity = document.getElementById('quantity').value;
-    var stage = document.getElementById('stage').value;
+    var form = e.target;
+    var submitBtn = document.getElementById('contact-submit');
+    var successEl = document.getElementById('form-success');
+    var errorEl = document.getElementById('form-error');
 
-    var body = 'Nom : ' + name + '\nE-mail : ' + email +
-      (company ? '\nEntreprise / Exploitation : ' + company : '') +
-      (country ? '\nPays : ' + country : '') +
-      (phone ? '\nWhatsApp / Téléphone : ' + phone : '') +
-      '\nType de projet : ' + projectType +
-      (quantity ? '\nQuantité envisagée : ' + quantity : '') +
-      (stage ? '\nÉtape du projet : ' + stage : '') +
-      '\n\nDescription du projet :\n' + message;
+    if (submitBtn.disabled) return;
+    submitBtn.disabled = true;
+    var originalLabel = submitBtn.textContent;
+    submitBtn.textContent = 'Envoi en cours…';
+    successEl.classList.remove('show');
+    errorEl.classList.remove('show');
 
-    var mailto = 'mailto:contact@irrigtech.com' +
-      '?subject=' + encodeURIComponent('Demande de projet — ' + (projectType || name || 'IrrigTech site')) +
-      '&body=' + encodeURIComponent(body);
-
-    document.getElementById('form-success').classList.add('show');
-    window.location.href = mailto;
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    }).then(function(response){
+      if (!response.ok) { throw new Error('Form submission failed with status ' + response.status); }
+      successEl.classList.add('show');
+      form.reset();
+    }).catch(function(error){
+      errorEl.classList.add('show');
+    }).finally(function(){
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalLabel;
+    });
   });
 </script>
 </body>

@@ -421,6 +421,10 @@ footer .muted{ color:rgba(255,255,255,0.72); }
 .include-card ul li::before{ content:"\2022"; position:absolute; left:0; color:var(--accent-strong); }
 .form-success{ display:none; background:var(--accent-soft); border:1px solid var(--accent); color:var(--accent-strong); padding:0.9rem 1.1rem; border-radius:6px; font-size:0.9rem; margin-top:1rem; }
 .form-success.show{ display:block; }
+.form-error{ display:none; background:var(--warn-soft); border:1px solid var(--warn); color:var(--warn); padding:0.9rem 1.1rem; border-radius:6px; font-size:0.9rem; margin-top:1rem; }
+.form-error.show{ display:block; }
+.btn:disabled{ opacity:0.6; cursor:not-allowed; }
+.hp-field{ position:absolute; left:-9999px; top:-9999px; }
 
 .table-wrap{ overflow-x:auto; }
 
