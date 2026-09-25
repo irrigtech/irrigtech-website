@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Devices — IrrigTech</title>
-<meta name="description" content="IoT Sensor Node, Soil Moisture Sensor, Smart Valve Controller, Pump Controller, and Field Gateway — the five devices behind IrrigTech's irrigation system.">
-<meta property="og:title" content="Devices — IrrigTech">
-<meta property="og:description" content="Five field-hardened devices for real-time soil sensing, pump and valve automation, and connectivity.">
+<title>Hardware — Field Scanner Drone, Sensors &amp; Controllers | IrrigTech</title>
+<meta name="description" content="IrrigTech hardware: Field Scanner Drone (prototype), IoT Sensor Node, Soil Moisture Sensor, Smart Valve Controller, Pump Controller, and Field Gateway.">
+<meta property="og:title" content="Hardware — Field Scanner Drone, Sensors &amp; Controllers | IrrigTech">
+<meta property="og:description" content="Field-hardened sensors and controllers for real-time soil and irrigation monitoring, plus the IrrigTech Field Scanner Drone in prototype.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://irrigtech.com/devices.html">
 <link rel="alternate" hreflang="en" href="https://irrigtech.com/devices.html">
@@ -15,6 +15,9 @@
 <link rel="alternate" hreflang="x-default" href="https://irrigtech.com/devices.html">
 <meta property="og:url" content="https://irrigtech.com/devices.html">
 <meta property="og:site_name" content="IrrigTech">
+<meta property="og:image" content="https://irrigtech.com/images/hero-cornfield.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://irrigtech.com/images/hero-cornfield.jpg">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,22 +33,23 @@
         <img src="images/irrigtech-logo-header.png" alt="IrrigTech — Smart Water. Smarter Growth." class="brand-logo brand-logo-full">
         <img src="images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact">
       </a>
-      
+
     </div>
     <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
     <nav class="primary" id="primary-nav">
       <a href="index.html">Home</a>
-      <a href="devices.html" class="active">Devices</a>
+      <a href="platform.html">Platform</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="devices.html" class="active">Hardware</a>
+      <a href="software.html">Software</a>
       <a href="how-it-works.html">How it works</a>
-      <a href="pricing.html">Pricing</a>
       <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
       <div class="lang-switch" aria-label="Language selector"><a href="/devices.html" hreflang="en" class="active">EN</a><span class="lang-sep">/</span><a href="/de/devices.html" hreflang="de">DE</a><span class="lang-sep">/</span><a href="/fr/devices.html" hreflang="fr">FR</a></div>
-      <a href="contact.html" class="btn btn-ghost">Talk to us</a>
-      <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+      <a href="contact.html" class="btn btn-ghost">Discuss Your Project</a>
+      <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
     </div>
   </div>
 </header>
@@ -53,7 +57,7 @@
 <div class="page-hero"><div class="wrap">
   <span class="eyebrow">Hardware</span>
   <h1>Built for the field, not the lab</h1>
-  <p>Five devices, each sealed, solar-friendly, and designed to survive a season buried in soil or bolted to a manifold. Each one has its own spec sheet — pick a device below.</p>
+  <p>Five shipping devices, sealed and solar-friendly, plus the Field Scanner Drone in prototype. Each one has its own spec sheet — pick a device below.</p>
 </div></div>
 
 <main>
@@ -62,35 +66,35 @@
       <div class="device-grid">
 
         <div class="device-card">
-          <div class="thumb"><img src="images/iot-sensor-node.png" alt="IrrigTech IoT Sensor Node with soil and air probes"></div>
+          <div class="thumb"><img src="images/iot-sensor-node.png" srcset="images/iot-sensor-node-480.png 480w, images/iot-sensor-node.png 840w" sizes="(max-width: 900px) 90vw, 380px" alt="IrrigTech IoT Sensor Node with soil and air probes" loading="lazy" decoding="async"></div>
           <span class="glyph">01</span>
           <h3>IoT Sensor Node</h3>
           <p>Multi-probe platform reading soil moisture, EC, pH, and air temperature/humidity on one ESP32 hub.</p>
           <div class="table-wrap"><table class="spec-table">
             <tr><th>Sensors</th><td>Moisture, EC, pH, air temp/humidity</td></tr>
-            <tr><th>Power</th><td>Battery / solar, up to 2yr</td></tr>
+            <tr><th>Power</th><td>Battery / solar — multi-season target</td></tr>
             <tr><th>Rating</th><td>IP65</td></tr>
           </table></div>
-          <div class="price-tag" style="margin-top:0.75rem;">from $400 / node</div>
+          <div class="price-tag" style="margin-top:0.75rem;"><a href="contact.html" style="color:var(--accent);">Request a prototype quote →</a></div>
           <a href="iot-sensor-node.html" class="link">View full spec sheet →</a>
         </div>
 
         <div class="device-card">
-          <div class="thumb"><img src="images/soil-moisture-sensor.png" alt="IrrigTech Soil Moisture Sensor Node staked in a crop row"></div>
+          <div class="thumb"><img src="images/soil-moisture-sensor.png" srcset="images/soil-moisture-sensor-480.png 480w, images/soil-moisture-sensor.png 780w" sizes="(max-width: 900px) 90vw, 380px" alt="IrrigTech Soil Moisture Sensor Node staked in a crop row" loading="lazy" decoding="async"></div>
           <span class="glyph">02</span>
           <h3>Soil Moisture Sensor</h3>
           <p>Dedicated capacitive moisture probe — the low-cost way to place many points across one field.</p>
           <div class="table-wrap"><table class="spec-table">
             <tr><th>Measures</th><td>Soil moisture, soil temperature</td></tr>
-            <tr><th>Accuracy</th><td>±3% VWC, ±0.5°C</td></tr>
+            <tr><th>Accuracy</th><td>±3% VWC, ±0.5°C (typical, field conditions)</td></tr>
             <tr><th>Rating</th><td>IP65</td></tr>
           </table></div>
-          <div class="price-tag" style="margin-top:0.75rem;">from $300 / sensor</div>
+          <div class="price-tag" style="margin-top:0.75rem;"><a href="contact.html" style="color:var(--accent);">Request a prototype quote →</a></div>
           <a href="soil-moisture-sensor.html" class="link">View full spec sheet →</a>
         </div>
 
         <div class="device-card">
-          <div class="thumb"><img src="images/smart-valve-controller.png" alt="IrrigTech Smart Valve Controller at a drip irrigation manifold"></div>
+          <div class="thumb"><img src="images/smart-valve-controller.png" srcset="images/smart-valve-controller-480.png 480w, images/smart-valve-controller.png 840w" sizes="(max-width: 900px) 90vw, 380px" alt="IrrigTech Smart Valve Controller at a drip irrigation manifold" loading="lazy" decoding="async"></div>
           <span class="glyph">03</span>
           <h3>Smart Valve Controller</h3>
           <p>Opens and closes irrigation valves on a schedule, by weather, or automatically off sensor data.</p>
@@ -99,12 +103,12 @@
             <tr><th>Output</th><td>12V DC latching solenoid</td></tr>
             <tr><th>Power</th><td>9–24V DC, battery/solar</td></tr>
           </table></div>
-          <div class="price-tag" style="margin-top:0.75rem;">from $1500 / controller</div>
+          <div class="price-tag" style="margin-top:0.75rem;"><a href="contact.html" style="color:var(--accent);">Request a prototype quote →</a></div>
           <a href="smart-valve-controller.html" class="link">View full spec sheet →</a>
         </div>
 
         <div class="device-card">
-          <div class="thumb"><img src="images/pump-controller.png" alt="IrrigTech Pump Controller mounted beside an irrigation pump"></div>
+          <div class="thumb"><img src="images/pump-controller.png" srcset="images/pump-controller-480.png 480w, images/pump-controller.png 890w" sizes="(max-width: 900px) 90vw, 380px" alt="IrrigTech Pump Controller mounted beside an irrigation pump" loading="lazy" decoding="async"></div>
           <span class="glyph">04</span>
           <h3>Pump Controller</h3>
           <p>Starts, stops, and protects your pump — dry-run, overload, and voltage protection built in.</p>
@@ -113,22 +117,35 @@
             <tr><th>Max load</th><td>30A @ 250VAC</td></tr>
             <tr><th>Rating</th><td>IP65</td></tr>
           </table></div>
-          <div class="price-tag" style="margin-top:0.75rem;">from $1500 / controller</div>
+          <div class="price-tag" style="margin-top:0.75rem;"><a href="contact.html" style="color:var(--accent);">Request a prototype quote →</a></div>
           <a href="pump-controller.html" class="link">View full spec sheet →</a>
         </div>
 
         <div class="device-card">
-          <div class="thumb"><img src="images/field-gateway.png" alt="IrrigTech LoRa Field Gateway mounted on a pole with antenna"></div>
+          <div class="thumb"><img src="images/field-gateway.png" srcset="images/field-gateway-480.png 480w, images/field-gateway.png 820w" sizes="(max-width: 900px) 90vw, 380px" alt="IrrigTech LoRa Field Gateway mounted on a pole with antenna" loading="lazy" decoding="async"></div>
           <span class="glyph">05</span>
           <h3>Field Gateway</h3>
           <p>Collects every node on the farm over LoRa and pushes it to your dashboard over WiFi, Ethernet, or 4G.</p>
           <div class="table-wrap"><table class="spec-table">
             <tr><th>Model</th><td>LFG-01</td></tr>
-            <tr><th>LoRa range</th><td>Up to 15km, open field</td></tr>
+            <tr><th>LoRa range</th><td>Up to 15km, line-of-sight — terrain dependent</td></tr>
             <tr><th>Rating</th><td>IP65</td></tr>
           </table></div>
-          <div class="price-tag" style="margin-top:0.75rem;">from $2000 / gateway</div>
+          <div class="price-tag" style="margin-top:0.75rem;"><a href="contact.html" style="color:var(--accent);">Request a prototype quote →</a></div>
           <a href="field-gateway.html" class="link">View full spec sheet →</a>
+        </div>
+
+        <div class="device-card">
+          <span class="glyph">06</span>
+          <span class="status-badge status-prototype" style="margin-top:0.4rem;">Prototype</span>
+          <h3>Field Scanner Drone</h3>
+          <p>Autonomous field scanning with RGB and multispectral imaging, optional thermal, and GNSS/RTK positioning. Design target — not yet a shipping product.</p>
+          <div class="table-wrap"><table class="spec-table">
+            <tr><th>Imaging</th><td>RGB, multispectral; thermal optional</td></tr>
+            <tr><th>Positioning</th><td>GNSS / RTK</td></tr>
+            <tr><th>Missions</th><td>Scheduled, auto-generated flight path</td></tr>
+          </table></div>
+          <a href="platform.html" class="link">See platform overview →</a>
         </div>
 
       </div>
@@ -158,14 +175,14 @@
       <li><a href="contact.html">Contact</a></li>
     </ul></div>
     <div><h4>Get started</h4><ul>
-      <li><a href="contact.html">Start Your Project</a></li>
+      <li><a href="contact.html">Request a Consultation</a></li>
       <li><a href="pricing.html">View pricing</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 IrrigTech, Inc.</span>
+    <span>© 2026 IrrigTech — a project by Pak-EL LAB</span>
     <div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-    <span class="pulse"><span class="dot"></span>All systems operational</span>
+
   </div>
 </footer>
 

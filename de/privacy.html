@@ -14,6 +14,9 @@
 <link rel="alternate" hreflang="x-default" href="https://irrigtech.com/privacy.html">
 <meta property="og:url" content="https://irrigtech.com/de/privacy.html">
 <meta property="og:site_name" content="IrrigTech">
+<meta property="og:image" content="https://irrigtech.com/images/hero-cornfield.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://irrigtech.com/images/hero-cornfield.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="/images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,17 +38,18 @@
     <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Menü"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
     <nav class="primary" id="primary-nav">
       <a href="/de/">Startseite</a>
-      <a href="/de/devices.html">Geräte</a>
+      <a href="/de/platform.html">Plattform</a>
+      <a href="/de/solutions.html">Lösungen</a>
+      <a href="/de/devices.html">Hardware</a>
+      <a href="/de/software.html">Software</a>
       <a href="/de/how-it-works.html">So funktioniert's</a>
-      <a href="/de/pricing.html">Preise</a>
       <a href="/de/about.html">Über uns</a>
-      <a href="/de/blog.html">Blog</a>
       <a href="/de/contact.html">Kontakt</a>
     </nav>
     <div class="nav-actions">
       <div class="lang-switch" aria-label="Language selector"><a href="/privacy.html" hreflang="en">EN</a><span class="lang-sep">/</span><a href="/de/privacy.html" hreflang="de" class="active">DE</a><span class="lang-sep">/</span><a href="/fr/privacy.html" hreflang="fr">FR</a></div>
-      <a href="/de/contact.html" class="btn btn-ghost">Sprechen Sie mit uns</a>
-      <a href="/de/contact.html" class="btn btn-primary">Projekt starten</a>
+      <a href="/de/contact.html" class="btn btn-ghost">Ihr Projekt besprechen</a>
+      <a href="/de/contact.html" class="btn btn-primary">Beratung anfragen</a>
     </div>
   </div>
 </header>
@@ -60,36 +64,38 @@
   <section>
     <div class="wrap legal">
 
-      <h2>Geltungsbereich</h2>
-      <p>Diese Erklärung beschreibt, welche Daten IrrigTech bei der Nutzung unserer Website, unseres Dashboards und unserer Feldhardware (IoT-Sensorknoten, Bodenfeuchtesensor, Smarter Ventilcontroller, Pumpencontroller und Feld-Gateway) erhebt und wie diese Informationen genutzt, gespeichert und weitergegeben werden.</p>
+      <div class="note" style="margin-bottom:1.5rem;">IrrigTech, von Pak-EL LAB, ist derzeit ein Ingenieurprojekt im Prototyp-/frühen Einsatzstadium. Diese Website verfügt heute über keine Nutzerkonten, kein öffentliches Dashboard-Login und keine Live-Gerätetelemetrie — die einzigen personenbezogenen Daten, die diese Website erhebt, sind die Angaben, die Sie über das untenstehende Kontaktformular übermitteln, sowie übliche Hosting-Protokolle.</div>
 
-      <h2>Welche Daten wir erheben</h2>
+      <h2>Geltungsbereich</h2>
+      <p>Diese Erklärung beschreibt, was IrrigTech bei der Nutzung dieser Website erhebt und wie diese Informationen genutzt, gespeichert und weitergegeben werden. Sie wird erweitert, sobald Dashboard- und Feldhardware-Daten zu aktiven, kostenpflichtigen Teilen des Dienstes werden.</p>
+
+      <h2>Welche Daten wir heute erheben</h2>
       <ul>
-        <li><strong>Kontodaten</strong> — Name, E-Mail-Adresse sowie Betriebs- und Feldangaben, die Sie bei der Anmeldung eingeben.</li>
-        <li><strong>Felddaten</strong> — Bodenfeuchte, NPK-, pH- und Temperaturwerte sowie Gerätestatusmeldungen, die von Ihrer Hardware übermittelt werden.</li>
-        <li><strong>Nutzungsdaten</strong> — wie Sie mit dem Dashboard interagieren, zur Verbesserung des Produkts.</li>
-        <li><strong>Angaben aus dem Kontaktformular</strong> — alles, was Sie uns über ein Formular auf dieser Website senden.</li>
+        <li><strong>Kontaktformular-Übermittlungen</strong> — Name, E-Mail-Adresse, Unternehmen, Telefonnummer und Projektdetails, die Sie auf der Seite <a href="/de/contact.html" style="color:var(--accent);">Kontakt</a> eingeben. Diese werden über Netlify Forms übermittelt und per E-Mail an unser Team zugestellt.</li>
+        <li><strong>Direkte Nachrichten</strong> — alles, was Sie uns per E-Mail oder WhatsApp senden.</li>
+        <li><strong>Grundlegende Hosting-Protokolle</strong> — Standard-Server-Protokolle (wie IP-Adresse und Anfragezeit), die von unserem Hosting-Anbieter Netlify aus Sicherheits- und Zuverlässigkeitsgründen gespeichert werden.</li>
       </ul>
+      <p>Wir betreiben derzeit keine Nutzerkonten, kein öffentliches Dashboard und kein System, das Live-Felddaten von Kundenhardware erfasst. Sobald diese Teile der Plattform live gehen, wird diese Erklärung zuerst aktualisiert und beschreibt genau, was erhoben wird (für Pilotprojekte legen wir dies projektbezogen schriftlich fest, bevor ein Gerät Daten meldet).</p>
 
       <h2>Wie wir die Daten verwenden</h2>
-      <p>Felddaten sind die Grundlage für Ihr Dashboard, Benachrichtigungen und alle von Ihnen aktivierten Automatisierungsregeln. Kontodaten ermöglichen es uns, Ihr Konto zu verwalten und auf Supportanfragen zu reagieren. Wir verkaufen weder Feld- noch Kontodaten an Dritte.</p>
+      <p>Angaben aus dem Kontaktformular und Direktnachrichten werden ausschließlich genutzt, um auf Ihre Anfrage zu antworten und, falls Sie Kunde werden, um dieses Projekt durchzuführen. Wir verkaufen diese Informationen nicht an Dritte.</p>
 
       <h2>Speicherdauer</h2>
-      <p>Sensordaten werden für die Dauer Ihres Abonnements gespeichert (die jeweiligen Speicherfristen finden Sie unter Preise). Sie können Ihren Feldverlauf jederzeit über die Kontoeinstellungen exportieren oder löschen.</p>
+      <p>Wir bewahren Kontaktformular-Übermittlungen und zugehörige Korrespondenz so lange auf, wie es angemessen ist, um Ihnen zu antworten oder ein Projekt durchzuführen, und löschen oder archivieren sie anschließend.</p>
 
       <h2>Weitergabe</h2>
-      <p>Wir geben Daten nur dann an Auftragsverarbeiter weiter, wenn dies für den Betrieb des Dienstes erforderlich ist — etwa an Cloud-Hosting- und SMS-/Push-Benachrichtigungsanbieter —, und zwar auf Grundlage von Verträgen, die deren Nutzung auf diesen Zweck beschränken.</p>
+      <p>Wir geben Daten nur dann an Auftragsverarbeiter weiter, wenn dies für den Betrieb dieser Website und die Beantwortung Ihrer Anfrage erforderlich ist — derzeit unser Hosting-Anbieter (Netlify) und, falls Sie uns dort kontaktieren, WhatsApp/Meta —, jeweils im Rahmen von deren eigenen Nutzungsbedingungen.</p>
 
       <h2>Sicherheit</h2>
-      <p>Daten werden bei der Übertragung zwischen Feldgeräten und Dashboard verschlüsselt (TLS über MQTT). Der Kontozugriff ist durch eine authentifizierte Anmeldung geschützt, mit rollenbasierten Berechtigungen für Betriebe mit mehreren Nutzern.</p>
+      <p>Kontaktformular-Übermittlungen werden über eine verschlüsselte (HTTPS) Verbindung gesendet. Wir fragen über diese Website nicht nach Passwörtern, Zahlungsdaten oder anderen sensiblen Zugangsdaten.</p>
 
       <h2>Ihre Rechte</h2>
-      <p>Sie können eine Kopie Ihrer Daten anfordern, uns um deren Berichtigung bitten oder die Löschung Ihres Kontos samt zugehörigem Feldverlauf verlangen, indem Sie uns unten kontaktieren.</p>
+      <p>Sie können eine Kopie der über Sie gespeicherten Informationen anfordern, uns um deren Berichtigung bitten oder deren Löschung verlangen, indem Sie uns unten kontaktieren.</p>
 
       <h2>Kontakt</h2>
       <p>Fragen zu dieser Erklärung: <a href="mailto:contact@irrigtech.com" style="color:var(--accent);">contact@irrigtech.com</a></p>
 
-      <div class="note">Diese Seite veranschaulicht die Datenschutzerklärung, die ein produktives IrrigTech-Angebot veröffentlichen würde. IrrigTech ist eine Konzeptvorschau zur Planung der Struktur und Inhalte einer echten Website — es werden hier tatsächlich keine Konto- oder Felddaten erhoben.</div>
+      <div class="note">Die endgültige Rechtsformulierung — einschließlich Speicherfristen und der Liste der Auftragsverarbeiter — sollte vom Website-Betreiber geprüft und bestätigt werden, bevor auf diese Erklärung vertraut wird.</div>
     </div>
   </section>
 </main>
@@ -100,7 +106,7 @@
       <div class="brand"><img src="/images/irrigtech-icon.png" width="24" height="24" alt="" style="display:inline-block; vertical-align:-6px;"> IrrigTech</div>
       <p class="muted" style="margin-top:0.9rem; font-size:0.9rem; max-width:26ch;">Echtzeit-Bodenintelligenz für Landwirte, die einer schlechten Saison lieber vorbeugen als nachträglich reagieren.</p>
       <a href="mailto:contact@irrigtech.com" class="footer-email">E-Mail: contact@irrigtech.com</a>
-      <a href="https://wa.me/923451616967?text=Hello%20IrrigTech%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20your%20team." target="_blank" rel="noopener noreferrer" class="footer-whatsapp"><svg class="whatsapp-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.45 1.29 4.9L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.67-.78-3.08-1.27-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17 0-1.5.79-2.24 1.07-2.55.28-.3.6-.38.8-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.3-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/></svg>WhatsApp: +92 345 1616967</a>
+      <a href="https://wa.me/923451616967?text=Hallo%20IrrigTech%2C%20ich%20m%C3%B6chte%20ein%20Projekt%20mit%20Ihrem%20Team%20besprechen." target="_blank" rel="noopener noreferrer" class="footer-whatsapp"><svg class="whatsapp-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.45 1.29 4.9L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.67-.78-3.08-1.27-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17 0-1.5.79-2.24 1.07-2.55.28-.3.6-.38.8-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.3-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/></svg>WhatsApp: +92 345 1616967</a>
       <a href="/de/" class="footer-domain">irrigtech.com</a>
     </div>
     <div><h4>Produkte</h4><ul>
@@ -116,18 +122,18 @@
       <li><a href="/de/contact.html">Kontakt</a></li>
     </ul></div>
     <div><h4>Erste Schritte</h4><ul>
-      <li><a href="/de/contact.html">Projekt starten</a></li>
+      <li><a href="/de/contact.html">Beratung anfragen</a></li>
       <li><a href="/de/pricing.html">Preise ansehen</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 IrrigTech, Inc.</span>
+    <span>© 2026 IrrigTech – ein Projekt von Pak-EL LAB</span>
     <div class="footer-legal"><a href="/de/privacy.html">Datenschutz</a><a href="/de/terms.html">AGB</a></div>
-    <span class="pulse"><span class="dot"></span>Alle Systeme funktionsfähig</span>
+
   </div>
 </footer>
 
-<a href="https://wa.me/923451616967?text=Hello%20IrrigTech%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20your%20team." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Mit IrrigTech auf WhatsApp chatten">
+<a href="https://wa.me/923451616967?text=Hallo%20IrrigTech%2C%20ich%20m%C3%B6chte%20ein%20Projekt%20mit%20Ihrem%20Team%20besprechen." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Mit IrrigTech auf WhatsApp chatten">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.45 1.29 4.9L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.67-.78-3.08-1.27-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17 0-1.5.79-2.24 1.07-2.55.28-.3.6-.38.8-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.3-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/></svg>
   <span class="whatsapp-float-label">Auf WhatsApp chatten</span>
 </a>

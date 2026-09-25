@@ -14,6 +14,9 @@
 <link rel="alternate" hreflang="x-default" href="https://irrigtech.com/privacy.html">
 <meta property="og:url" content="https://irrigtech.com/privacy.html">
 <meta property="og:site_name" content="IrrigTech">
+<meta property="og:image" content="https://irrigtech.com/images/hero-cornfield.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://irrigtech.com/images/hero-cornfield.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,22 +33,23 @@
         <img src="images/irrigtech-logo-header.png" alt="IrrigTech — Smart Water. Smarter Growth." class="brand-logo brand-logo-full">
         <img src="images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact">
       </a>
-      
+
     </div>
     <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
     <nav class="primary" id="primary-nav">
       <a href="index.html">Home</a>
-      <a href="devices.html">Devices</a>
+      <a href="platform.html">Platform</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="devices.html">Hardware</a>
+      <a href="software.html">Software</a>
       <a href="how-it-works.html">How it works</a>
-      <a href="pricing.html">Pricing</a>
       <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
       <div class="lang-switch" aria-label="Language selector"><a href="/privacy.html" hreflang="en" class="active">EN</a><span class="lang-sep">/</span><a href="/de/privacy.html" hreflang="de">DE</a><span class="lang-sep">/</span><a href="/fr/privacy.html" hreflang="fr">FR</a></div>
-      <a href="contact.html" class="btn btn-ghost">Talk to us</a>
-      <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+      <a href="contact.html" class="btn btn-ghost">Discuss Your Project</a>
+      <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
     </div>
   </div>
 </header>
@@ -60,36 +64,38 @@
   <section>
     <div class="wrap legal">
 
-      <h2>What this covers</h2>
-      <p>This policy explains what IrrigTech collects when you use our website, dashboard, and field hardware (IoT Sensor Node, Soil Moisture Sensor, Smart Valve Controller, Pump Controller, and Field Gateway), and how that information is used, stored, and shared.</p>
+      <div class="note" style="margin-bottom:1.5rem;">IrrigTech, by Pak-EL LAB, is currently a prototype/early-deployment engineering project. This website does not have user accounts, a public dashboard login, or live device telemetry today — the only personal data this site collects is what you submit through the contact form below, plus standard hosting logs.</div>
 
-      <h2>Information we collect</h2>
+      <h2>What this covers</h2>
+      <p>This policy explains what IrrigTech collects when you use this website, and how that information is used, stored, and shared. It will be expanded to cover dashboard and field-hardware data once those are live, billable parts of the service.</p>
+
+      <h2>Information we collect today</h2>
       <ul>
-        <li><strong>Account details</strong> — name, email, farm and field information you enter when you sign up.</li>
-        <li><strong>Field data</strong> — soil moisture, NPK, pH, temperature, and device status readings sent by your hardware.</li>
-        <li><strong>Usage data</strong> — how you interact with the dashboard, for improving the product.</li>
-        <li><strong>Contact form submissions</strong> — anything you send us through a form on this site.</li>
+        <li><strong>Contact form submissions</strong> — the name, email, company, phone, and project details you enter on the <a href="contact.html" style="color:var(--accent);">Contact</a> page. These are submitted via Netlify Forms and delivered to our team by email.</li>
+        <li><strong>Direct messages</strong> — anything you send us by email or WhatsApp.</li>
+        <li><strong>Basic hosting logs</strong> — standard server logs (such as IP address and request time) kept by our hosting provider, Netlify, for security and reliability.</li>
       </ul>
+      <p>We do not currently operate user accounts, a public dashboard, or a system that ingests live field-sensor data from customer hardware. When those parts of the platform go live, this policy will be updated first, and it will describe exactly what is collected (for pilot deployments we design that per project, in writing, before any device reports data).</p>
 
       <h2>How we use it</h2>
-      <p>Field data drives your dashboard, alerts, and any automation rules you turn on. Account details let us run your account and respond to support requests. We don't sell field or account data to third parties.</p>
+      <p>Contact form and direct-message details are used only to respond to your inquiry and, if you become a customer, to run that project. We don't sell this information to third parties.</p>
 
       <h2>Data retention</h2>
-      <p>Sensor readings are kept for the length of your subscription plan (see Pricing for retention windows). You can export or delete your field history at any time from account settings.</p>
+      <p>We keep contact-form submissions and related correspondence for as long as reasonably needed to respond to you or deliver a project, and then delete or archive them.</p>
 
       <h2>Sharing</h2>
-      <p>We share data with sub-processors only where needed to run the service — for example, cloud hosting and SMS/push notification providers — under contracts that limit their use of it to that purpose.</p>
+      <p>We share data with sub-processors only where needed to operate this site and respond to you — currently our hosting provider (Netlify) and, if you message us there, WhatsApp/Meta — under their own terms of service.</p>
 
       <h2>Security</h2>
-      <p>Data in transit between field devices and the dashboard is encrypted (TLS over MQTT). Account access is protected by authenticated login, with role-based permissions for multi-user farms.</p>
+      <p>Contact form submissions are sent over an encrypted (HTTPS) connection. We don't ask for passwords, payment details, or other sensitive credentials through this site.</p>
 
       <h2>Your rights</h2>
-      <p>You can request a copy of your data, ask us to correct it, or ask us to delete your account and associated field history, by contacting us below.</p>
+      <p>You can request a copy of the information we hold about you, ask us to correct it, or ask us to delete it, by contacting us below.</p>
 
       <h2>Contact</h2>
       <p>Questions about this policy: <a href="mailto:contact@irrigtech.com" style="color:var(--accent);">contact@irrigtech.com</a></p>
 
-      <div class="note">This page illustrates the privacy policy a live IrrigTech product would publish. IrrigTech is a concept preview built to plan a real site's structure and content — no account data or field readings are actually collected here.</div>
+      <div class="note">Final legal wording — including data-retention periods and sub-processor list — should be reviewed and confirmed by the site owner before this policy is relied upon.</div>
     </div>
   </section>
 </main>
@@ -116,14 +122,14 @@
       <li><a href="contact.html">Contact</a></li>
     </ul></div>
     <div><h4>Get started</h4><ul>
-      <li><a href="contact.html">Start Your Project</a></li>
+      <li><a href="contact.html">Request a Consultation</a></li>
       <li><a href="pricing.html">View pricing</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 IrrigTech, Inc.</span>
+    <span>© 2026 IrrigTech — a project by Pak-EL LAB</span>
     <div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-    <span class="pulse"><span class="dot"></span>All systems operational</span>
+
   </div>
 </footer>
 

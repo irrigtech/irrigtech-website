@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Appareils — IrrigTech</title>
-<meta name="description" content="Nœud de capteurs IoT, capteur d'humidité du sol, contrôleur de vanne intelligent, contrôleur de pompe et passerelle de terrain — les cinq appareils du système d'irrigation IrrigTech.">
-<meta property="og:title" content="Appareils — IrrigTech">
-<meta property="og:description" content="Cinq appareils renforcés pour le terrain, dédiés à la détection du sol en temps réel, à l'automatisation des pompes et des vannes, et à la connectivité.">
+<title>Matériel — Drone de balayage, capteurs et contrôleurs | IrrigTech</title>
+<meta name="description" content="Matériel IrrigTech : drone de balayage de terrain (prototype), nœud de capteurs IoT, capteur d'humidité du sol, contrôleur de vanne intelligent, contrôleur de pompe et passerelle de terrain.">
+<meta property="og:title" content="Matériel — Drone de balayage, capteurs et contrôleurs | IrrigTech">
+<meta property="og:description" content="Capteurs et contrôleurs renforcés pour le terrain, dédiés à la détection du sol et à l'irrigation en temps réel, ainsi que le drone de balayage de terrain IrrigTech en prototype.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://irrigtech.com/fr/devices.html">
 <link rel="alternate" hreflang="en" href="https://irrigtech.com/devices.html">
@@ -15,6 +15,9 @@
 <link rel="alternate" hreflang="x-default" href="https://irrigtech.com/devices.html">
 <meta property="og:url" content="https://irrigtech.com/fr/devices.html">
 <meta property="og:site_name" content="IrrigTech">
+<meta property="og:image" content="https://irrigtech.com/images/hero-cornfield.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://irrigtech.com/images/hero-cornfield.jpg">
 <link rel="icon" type="image/png" href="/images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,22 +33,23 @@
         <img src="/images/irrigtech-logo-header.png" alt="IrrigTech — Eau intelligente. Croissance intelligente." class="brand-logo brand-logo-full">
         <img src="/images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact">
       </a>
-      
+
     </div>
     <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
     <nav class="primary" id="primary-nav">
       <a href="/fr/">Accueil</a>
-      <a href="/fr/devices.html" class="active">Appareils</a>
+      <a href="/fr/platform.html">Plateforme</a>
+      <a href="/fr/solutions.html">Solutions</a>
+      <a href="/fr/devices.html" class="active">Matériel</a>
+      <a href="/fr/software.html">Logiciel</a>
       <a href="/fr/how-it-works.html">Fonctionnement</a>
-      <a href="/fr/pricing.html">Tarifs</a>
       <a href="/fr/about.html">À propos</a>
-      <a href="/fr/blog.html">Blog</a>
       <a href="/fr/contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
       <div class="lang-switch" aria-label="Language selector"><a href="/devices.html" hreflang="en">EN</a><span class="lang-sep">/</span><a href="/de/devices.html" hreflang="de">DE</a><span class="lang-sep">/</span><a href="/fr/devices.html" hreflang="fr" class="active">FR</a></div>
-      <a href="/fr/contact.html" class="btn btn-ghost">Nous contacter</a>
-      <a href="/fr/contact.html" class="btn btn-primary">Démarrer votre projet</a>
+      <a href="/fr/contact.html" class="btn btn-ghost">Discuter de votre projet</a>
+      <a href="/fr/contact.html" class="btn btn-primary">Demander une consultation</a>
     </div>
   </div>
 </header>
@@ -53,7 +57,7 @@
 <div class="page-hero"><div class="wrap">
   <span class="eyebrow">Matériel</span>
   <h1>Conçu pour le terrain, pas pour le laboratoire</h1>
-  <p>Cinq appareils, tous étanches, compatibles solaire, et conçus pour tenir une saison entière enterrés dans le sol ou fixés à un collecteur. Chacun dispose de sa propre fiche technique — choisissez un appareil ci-dessous.</p>
+  <p>Cinq appareils en production, tous étanches, compatibles solaire, et conçus pour tenir une saison entière enterrés dans le sol ou fixés à un collecteur, ainsi que le drone de balayage de terrain en prototype. Chacun dispose de sa propre fiche technique — choisissez un appareil ci-dessous.</p>
 </div></div>
 
 <main>
@@ -62,49 +66,49 @@
       <div class="device-grid">
 
         <div class="device-card">
-          <div class="thumb"><img src="/images/iot-sensor-node.png" alt="Nœud de capteurs IoT IrrigTech avec sondes de sol et d'air"></div>
+          <div class="thumb"><img src="/images/iot-sensor-node.png" srcset="/images/iot-sensor-node-480.png 480w, /images/iot-sensor-node.png 840w" sizes="(max-width: 900px) 90vw, 380px" alt="Nœud de capteurs IoT IrrigTech avec sondes de sol et d'air" loading="lazy" decoding="async"></div>
           <span class="glyph">01</span>
           <h3>Nœud de capteurs IoT</h3>
           <p>Plateforme multi-sondes mesurant l'humidité du sol, l'EC, le pH, ainsi que la température et l'humidité de l'air, sur un seul concentrateur ESP32.</p>
           <div class="table-wrap"><table class="spec-table">
             <tr><th>Capteurs</th><td>Humidité, EC, pH, température/humidité de l'air</td></tr>
-            <tr><th>Alimentation</th><td>Batterie / solaire, jusqu'à 2 ans</td></tr>
+            <tr><th>Alimentation</th><td>Batterie / solaire — objectif multi-saisons</td></tr>
             <tr><th>Indice de protection</th><td>IP65</td></tr>
           </table></div>
-          <div class="price-tag" style="margin-top:0.75rem;">à partir de $400 / nœud</div>
+          <div class="price-tag" style="margin-top:0.75rem;"><a href="/fr/contact.html" style="color:var(--accent);">Demander un devis prototype →</a></div>
           <a href="/fr/iot-sensor-node.html" class="link">Voir la fiche technique complète →</a>
         </div>
 
         <div class="device-card">
-          <div class="thumb"><img src="/images/soil-moisture-sensor.png" alt="Capteur d'humidité du sol IrrigTech planté dans un rang de culture"></div>
+          <div class="thumb"><img src="/images/soil-moisture-sensor.png" srcset="/images/soil-moisture-sensor-480.png 480w, /images/soil-moisture-sensor.png 780w" sizes="(max-width: 900px) 90vw, 380px" alt="Capteur d'humidité du sol IrrigTech planté dans un rang de culture" loading="lazy" decoding="async"></div>
           <span class="glyph">02</span>
           <h3>Capteur d'humidité du sol</h3>
           <p>Sonde capacitive dédiée à l'humidité — la solution économique pour multiplier les points de mesure sur un même champ.</p>
           <div class="table-wrap"><table class="spec-table">
             <tr><th>Mesures</th><td>Humidité du sol, température du sol</td></tr>
-            <tr><th>Précision</th><td>±3 % VWC, ±0,5 °C</td></tr>
+            <tr><th>Précision</th><td>±3 % VWC, ±0,5 °C (typique, conditions de terrain)</td></tr>
             <tr><th>Indice de protection</th><td>IP65</td></tr>
           </table></div>
-          <div class="price-tag" style="margin-top:0.75rem;">à partir de $300 / capteur</div>
+          <div class="price-tag" style="margin-top:0.75rem;"><a href="/fr/contact.html" style="color:var(--accent);">Demander un devis prototype →</a></div>
           <a href="/fr/soil-moisture-sensor.html" class="link">Voir la fiche technique complète →</a>
         </div>
 
         <div class="device-card">
-          <div class="thumb"><img src="/images/smart-valve-controller.png" alt="Contrôleur de vanne intelligent IrrigTech sur un collecteur d'irrigation goutte-à-goutte"></div>
+          <div class="thumb"><img src="/images/smart-valve-controller.png" srcset="/images/smart-valve-controller-480.png 480w, /images/smart-valve-controller.png 840w" sizes="(max-width: 900px) 90vw, 380px" alt="Contrôleur de vanne intelligent IrrigTech sur un collecteur d'irrigation goutte-à-goutte" loading="lazy" decoding="async"></div>
           <span class="glyph">03</span>
           <h3>Contrôleur de vanne intelligent</h3>
           <p>Ouvre et ferme les vannes d'irrigation selon un calendrier, en fonction de la météo, ou automatiquement à partir des données des capteurs.</p>
           <div class="table-wrap"><table class="spec-table">
             <tr><th>Vannes</th><td>Options 1 / 2 / 4 / 6 / 8</td></tr>
-            <tr><th>Sortie</th><td>Électrovanne à maintien 12V DC</td></tr>
+            <tr><th>Sortie</th><td>Électrovanne bistable 12V DC</td></tr>
             <tr><th>Alimentation</th><td>9–24V DC, batterie/solaire</td></tr>
           </table></div>
-          <div class="price-tag" style="margin-top:0.75rem;">à partir de $1500 / contrôleur</div>
+          <div class="price-tag" style="margin-top:0.75rem;"><a href="/fr/contact.html" style="color:var(--accent);">Demander un devis prototype →</a></div>
           <a href="/fr/smart-valve-controller.html" class="link">Voir la fiche technique complète →</a>
         </div>
 
         <div class="device-card">
-          <div class="thumb"><img src="/images/pump-controller.png" alt="Contrôleur de pompe IrrigTech installé à côté d'une pompe d'irrigation"></div>
+          <div class="thumb"><img src="/images/pump-controller.png" srcset="/images/pump-controller-480.png 480w, /images/pump-controller.png 890w" sizes="(max-width: 900px) 90vw, 380px" alt="Contrôleur de pompe IrrigTech installé à côté d'une pompe d'irrigation" loading="lazy" decoding="async"></div>
           <span class="glyph">04</span>
           <h3>Contrôleur de pompe</h3>
           <p>Démarre, arrête et protège votre pompe — protections contre la marche à sec, la surcharge et les surtensions intégrées.</p>
@@ -113,22 +117,35 @@
             <tr><th>Charge max.</th><td>30A @ 250VAC</td></tr>
             <tr><th>Indice de protection</th><td>IP65</td></tr>
           </table></div>
-          <div class="price-tag" style="margin-top:0.75rem;">à partir de $1500 / contrôleur</div>
+          <div class="price-tag" style="margin-top:0.75rem;"><a href="/fr/contact.html" style="color:var(--accent);">Demander un devis prototype →</a></div>
           <a href="/fr/pump-controller.html" class="link">Voir la fiche technique complète →</a>
         </div>
 
         <div class="device-card">
-          <div class="thumb"><img src="/images/field-gateway.png" alt="Passerelle de terrain LoRa IrrigTech installée sur un mât avec antenne"></div>
+          <div class="thumb"><img src="/images/field-gateway.png" srcset="/images/field-gateway-480.png 480w, /images/field-gateway.png 820w" sizes="(max-width: 900px) 90vw, 380px" alt="Passerelle de terrain LoRa IrrigTech installée sur un mât avec antenne" loading="lazy" decoding="async"></div>
           <span class="glyph">05</span>
           <h3>Passerelle de terrain</h3>
           <p>Collecte les données de tous les nœuds de l'exploitation via LoRa et les transmet à votre tableau de bord par WiFi, Ethernet ou 4G.</p>
           <div class="table-wrap"><table class="spec-table">
             <tr><th>Modèle</th><td>LFG-01</td></tr>
-            <tr><th>Portée LoRa</th><td>Jusqu'à 15 km, en champ ouvert</td></tr>
+            <tr><th>Portée LoRa</th><td>Jusqu'à 15 km, en visibilité directe — selon le terrain</td></tr>
             <tr><th>Indice de protection</th><td>IP65</td></tr>
           </table></div>
-          <div class="price-tag" style="margin-top:0.75rem;">à partir de $2000 / passerelle</div>
+          <div class="price-tag" style="margin-top:0.75rem;"><a href="/fr/contact.html" style="color:var(--accent);">Demander un devis prototype →</a></div>
           <a href="/fr/field-gateway.html" class="link">Voir la fiche technique complète →</a>
+        </div>
+
+        <div class="device-card">
+          <span class="glyph">06</span>
+          <span class="status-badge status-prototype" style="margin-top:0.4rem;">Prototype</span>
+          <h3>Drone de balayage de terrain</h3>
+          <p>Balayage autonome des parcelles avec imagerie RGB et multispectrale, thermique en option, et positionnement GNSS/RTK. Objectif de conception — pas encore un produit commercialisé.</p>
+          <div class="table-wrap"><table class="spec-table">
+            <tr><th>Imagerie</th><td>RGB, multispectrale ; thermique en option</td></tr>
+            <tr><th>Positionnement</th><td>GNSS / RTK</td></tr>
+            <tr><th>Missions</th><td>Planifiées, trajectoire de vol générée automatiquement</td></tr>
+          </table></div>
+          <a href="/fr/platform.html" class="link">Voir l'aperçu de la plateforme →</a>
         </div>
 
       </div>
@@ -142,7 +159,7 @@
       <div class="brand"><img src="/images/irrigtech-icon.png" width="24" height="24" alt="" style="display:inline-block; vertical-align:-6px;"> IrrigTech</div>
       <p class="muted" style="margin-top:0.9rem; font-size:0.9rem; max-width:26ch;">L'intelligence du sol en temps réel, pour les producteurs qui préfèrent prévenir une mauvaise saison plutôt que d'y réagir.</p>
       <a href="mailto:contact@irrigtech.com" class="footer-email">E-mail : contact@irrigtech.com</a>
-      <a href="https://wa.me/923451616967?text=Hello%20IrrigTech%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20your%20team." target="_blank" rel="noopener noreferrer" class="footer-whatsapp"><svg class="whatsapp-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.45 1.29 4.9L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.67-.78-3.08-1.27-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17 0-1.5.79-2.24 1.07-2.55.28-.3.6-.38.8-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.3-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/></svg>WhatsApp : +92 345 1616967</a>
+      <a href="https://wa.me/923451616967?text=Bonjour%20IrrigTech%2C%20je%20souhaite%20discuter%20d%27un%20projet%20avec%20votre%20%C3%A9quipe." target="_blank" rel="noopener noreferrer" class="footer-whatsapp"><svg class="whatsapp-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.45 1.29 4.9L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.67-.78-3.08-1.27-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17 0-1.5.79-2.24 1.07-2.55.28-.3.6-.38.8-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.3-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/></svg>WhatsApp : +92 345 1616967</a>
       <a href="/fr/" class="footer-domain">irrigtech.com</a>
     </div>
     <div><h4>Produits</h4><ul>
@@ -158,18 +175,18 @@
       <li><a href="/fr/contact.html">Contact</a></li>
     </ul></div>
     <div><h4>Commencer</h4><ul>
-      <li><a href="/fr/contact.html">Démarrer votre projet</a></li>
+      <li><a href="/fr/contact.html">Demander une consultation</a></li>
       <li><a href="/fr/pricing.html">Voir les tarifs</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 IrrigTech, Inc.</span>
+    <span>© 2026 IrrigTech – un projet de Pak-EL LAB</span>
     <div class="footer-legal"><a href="/fr/privacy.html">Confidentialité</a><a href="/fr/terms.html">Conditions</a></div>
-    <span class="pulse"><span class="dot"></span>Tous les systèmes sont opérationnels</span>
+
   </div>
 </footer>
 
-<a href="https://wa.me/923451616967?text=Hello%20IrrigTech%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20your%20team." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Discuter avec IrrigTech sur WhatsApp">
+<a href="https://wa.me/923451616967?text=Bonjour%20IrrigTech%2C%20je%20souhaite%20discuter%20d%27un%20projet%20avec%20votre%20%C3%A9quipe." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Discuter avec IrrigTech sur WhatsApp">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.45 1.29 4.9L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.67-.78-3.08-1.27-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17 0-1.5.79-2.24 1.07-2.55.28-.3.6-.38.8-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.3-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/></svg>
   <span class="whatsapp-float-label">Discuter sur WhatsApp</span>
 </a>

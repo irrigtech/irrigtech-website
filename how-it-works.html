@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>How it works — IrrigTech</title>
-<meta name="description" content="How IrrigTech turns a buried soil sensor into an irrigation or dosing decision, in five steps.">
-<meta property="og:title" content="How it works — IrrigTech">
-<meta property="og:description" content="From installed sensor to an automatic valve or dosing action — the full pipeline.">
+<title>How It Works — IrrigTech Smart Field Intelligence</title>
+<meta name="description" content="How field data moves from drone scans and field nodes through IrrigTech Cloud to AI-assisted analysis, field maps, alerts and your farm's digital record.">
+<meta property="og:title" content="How It Works — IrrigTech Smart Field Intelligence">
+<meta property="og:description" content="The complete IrrigTech workflow — from field scanning and sensor data to AI-assisted analysis, field maps, and decisions you can act on.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://irrigtech.com/how-it-works.html">
 <link rel="alternate" hreflang="en" href="https://irrigtech.com/how-it-works.html">
@@ -15,6 +15,9 @@
 <link rel="alternate" hreflang="x-default" href="https://irrigtech.com/how-it-works.html">
 <meta property="og:url" content="https://irrigtech.com/how-it-works.html">
 <meta property="og:site_name" content="IrrigTech">
+<meta property="og:image" content="https://irrigtech.com/images/hero-cornfield.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://irrigtech.com/images/hero-cornfield.jpg">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,50 +33,99 @@
         <img src="images/irrigtech-logo-header.png" alt="IrrigTech — Smart Water. Smarter Growth." class="brand-logo brand-logo-full">
         <img src="images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact">
       </a>
-      
+
     </div>
     <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
     <nav class="primary" id="primary-nav">
       <a href="index.html">Home</a>
-      <a href="devices.html">Devices</a>
+      <a href="platform.html">Platform</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="devices.html">Hardware</a>
+      <a href="software.html">Software</a>
       <a href="how-it-works.html" class="active">How it works</a>
-      <a href="pricing.html">Pricing</a>
       <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
       <div class="lang-switch" aria-label="Language selector"><a href="/how-it-works.html" hreflang="en" class="active">EN</a><span class="lang-sep">/</span><a href="/de/how-it-works.html" hreflang="de">DE</a><span class="lang-sep">/</span><a href="/fr/how-it-works.html" hreflang="fr">FR</a></div>
-      <a href="contact.html" class="btn btn-ghost">Talk to us</a>
-      <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+      <a href="contact.html" class="btn btn-ghost">Discuss Your Project</a>
+      <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
     </div>
   </div>
 </header>
 
 <div class="page-hero"><div class="wrap">
-  <span class="eyebrow">Process</span>
-  <h1>From buried sensor to a decision you can act on</h1>
-  <p>Five steps, running continuously, all season.</p>
+  <span class="eyebrow">Operating workflow</span>
+  <h1>From the field to a decision you can act on</h1>
+  <p>How drone scans, field nodes, and irrigation sensors become a map, an alert, and a record — end to end.</p>
 </div></div>
 
 <main>
   <section>
-    <div class="wrap" style="max-width:52rem;">
-      <div class="flow-list">
-        <div class="flow-item"><span class="n">1</span><div><h3>Install the nodes</h3><p>Sensor nodes go in at root depth across each field — typically one per 0.5–1 hectare depending on soil variability.</p></div></div>
-        <div class="flow-item"><span class="n">2</span><div><h3>Nodes report to the gateway</h3><p>Every few minutes, each node radios its reading to the nearest gateway over LoRa, then up to the cloud.</p></div></div>
-        <div class="flow-item"><span class="n">3</span><div><h3>The dashboard checks thresholds</h3><p>Readings are compared against the targets you set per crop — a tomato field and a wheat field don't want the same NPK range.</p></div></div>
-        <div class="flow-item"><span class="n">4</span><div><h3>You get alerted, or it self-corrects</h3><p>A push notification goes to your phone — or, if automation is on, the dosing controller opens the right valve without anyone touching a tap.</p></div></div>
-        <div class="flow-item"><span class="n">5</span><div><h3>You review the trend</h3><p>Every reading is kept, so you can see what worked across a season, not just react to today's number.</p></div></div>
+    <div class="wrap">
+      <div class="s-head">
+        <span class="eyebrow">Complete workflow</span>
+        <h2>How data moves through IrrigTech</h2>
+        <p>Every source in the field feeds the same pipeline, so a drone scan and a soil reading end up on the same map.</p>
+      </div>
+      <div class="pipeline">
+        <div class="pipeline-step"><span class="pipeline-icon">01</span><h4>Field</h4><p>Drone scans, field nodes, and irrigation sensors all cover the same physical field.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">02</span><h4>Data collection</h4><p>Imagery, soil readings, and flow/pressure data are captured and geotagged.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">03</span><h4>Transfer</h4><p>LoRa, WiFi, or cellular carries data back — with store-and-forward sync where signal is limited.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">04</span><h4>IrrigTech Cloud</h4><p>Readings and imagery are organized against the correct field and timestamp.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">05</span><h4>AI-assisted analysis</h4><span class="status-badge status-development" style="margin-top:-0.1rem;">In development</span><p>Models flag anomalies and patterns worth a closer look — decision support, not a diagnosis.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">06</span><h4>Field map / dashboard</h4><p>Results are laid over the field boundary so you can see where, not just what.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">07</span><h4>Alerts</h4><p>Thresholds you set per crop and zone decide what's worth a notification.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">08</span><h4>Field record</h4><p>Every scan, reading, and alert is attached to that field's permanent history.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">09</span><h4>Your action</h4><p>You or your agronomist decide what happens next — inspect, irrigate, or treat.</p></div>
       </div>
     </div>
   </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="s-head">
+        <span class="eyebrow">Field Scanner Drone <span class="status-badge status-prototype">Prototype</span></span>
+        <h2>Automatic scanning workflow</h2>
+        <p>Once a field boundary is defined, repeat scans can run on a schedule without a pilot in the field.</p>
+      </div>
+      <div class="pipeline">
+        <div class="pipeline-step"><span class="pipeline-icon">01</span><h4>Schedule</h4><p>You set how often a field should be scanned.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">02</span><h4>Generate mission</h4><p>A flight path is generated automatically from the stored field boundary.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">03</span><h4>Autonomous scan</h4><p>The drone flies the mission and returns automatically when finished.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">04</span><h4>Data collection</h4><p>RGB, and where equipped, multispectral or thermal imagery is captured and geotagged.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">05</span><h4>Sync</h4><p>Imagery uploads to IrrigTech Cloud once connectivity is available.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">06</span><h4>AI-assisted analysis</h4><p>Imagery is processed for anomalies, stress indicators, and change over time.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">07</span><h4>Field map</h4><p>A geotagged map highlights areas that may be worth a closer look.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">08</span><h4>Alert</h4><p>Significant changes since the last scan can trigger a notification.</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">09</span><h4>Historical comparison</h4><p>Each scan is stored against the field record, so trends build over time.</p></div>
+      </div>
+      <div class="status-note">This workflow describes the Field Scanner Drone's design target. Autonomous mission generation and AI-assisted analysis are in development — ground verification is recommended before acting on any flagged area. See <a href="devices.html" style="color:var(--accent);">Hardware</a> for current status.</div>
+    </div>
+  </section>
+
   <section style="padding-top:0;">
     <div class="wrap" style="max-width:52rem;">
-      <span class="eyebrow">Dashboard preview</span>
+      <span class="eyebrow">Sensor monitoring <span class="status-badge status-available">Available</span></span>
       <h2 style="margin-top:0.4rem;">Nitrogen, tracked across the week</h2>
       <div class="chart">
-        <div class="chart-head"><span>FIELD 02 · NITROGEN (ppm)</span><span>TARGET 30–45</span></div>
+        <div class="chart-head"><span>SAMPLE · FIELD 02 · NITROGEN (ppm)</span><span>TARGET 30–45</span></div>
         <div class="bars">
           <div class="bar"><span>41</span><b style="height:58%"></b><span class="day">Mon</span></div>
           <div class="bar"><span>37</span><b style="height:52%"></b><span class="day">Tue</span></div>
@@ -84,7 +136,7 @@
           <div class="bar"><span>38</span><b style="height:53%"></b><span class="day">Sun</span></div>
         </div>
       </div>
-      <p class="muted" style="margin-top:2.2rem; font-size:0.9rem;">Friday's dip below target triggered an automatic dosing cycle — nitrogen recovered by Saturday.</p>
+      <p class="muted" style="margin-top:2.2rem; font-size:0.9rem;">Friday's dip below target triggered an alert — a top-up brought nitrogen back into range by Saturday.</p>
     </div>
   </section>
 </main>
@@ -93,7 +145,7 @@
   <div class="footer-grid">
     <div>
       <div class="brand"><img src="images/irrigtech-icon.png" width="24" height="24" alt="" style="display:inline-block; vertical-align:-6px;"> IrrigTech</div>
-      <p class="muted" style="margin-top:0.9rem; font-size:0.9rem; max-width:26ch;">Real-time soil intelligence for growers who'd rather prevent a bad season than react to one.</p>
+      <p class="muted" style="margin-top:0.9rem; font-size:0.9rem; max-width:26ch;">Smart Field Intelligence — drone scanning, field sensors, and irrigation data in one platform.</p>
       <a href="mailto:contact@irrigtech.com" class="footer-email">Email: contact@irrigtech.com</a>
       <a href="https://wa.me/923451616967?text=Hello%20IrrigTech%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20your%20team." target="_blank" rel="noopener noreferrer" class="footer-whatsapp"><svg class="whatsapp-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.45 1.29 4.9L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.67-.78-3.08-1.27-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17 0-1.5.79-2.24 1.07-2.55.28-.3.6-.38.8-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.3-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/></svg>WhatsApp: +92 345 1616967</a>
       <a href="index.html" class="footer-domain">irrigtech.com</a>
@@ -111,14 +163,14 @@
       <li><a href="contact.html">Contact</a></li>
     </ul></div>
     <div><h4>Get started</h4><ul>
-      <li><a href="contact.html">Start Your Project</a></li>
+      <li><a href="contact.html">Request a Consultation</a></li>
       <li><a href="pricing.html">View pricing</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 IrrigTech, Inc.</span>
+    <span>© 2026 IrrigTech — a project by Pak-EL LAB</span>
     <div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-    <span class="pulse"><span class="dot"></span>All systems operational</span>
+
   </div>
 </footer>
 

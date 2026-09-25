@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>IrrigTech — Real-time soil intelligence for growers</title>
-<meta name="description" content="IrrigTech pairs waterproof soil sensors with a live dashboard, catching nutrient gaps and water stress days before they show in the crop.">
-<meta property="og:title" content="IrrigTech — Real-time soil intelligence for growers">
-<meta property="og:description" content="Waterproof soil sensors and a live dashboard that catch nutrient gaps and water stress before they hit yield.">
+<title>IrrigTech — Smart Field Intelligence: Drone, Sensors, AI &amp; Smart Irrigation</title>
+<meta name="description" content="IrrigTech combines drone field scanning, field IoT nodes, soil monitoring, and smart irrigation with AI-assisted analysis and farm management software — one platform, from field data to decisions.">
+<meta property="og:title" content="IrrigTech — Smart Field Intelligence">
+<meta property="og:description" content="Drone scanning, field sensors, irrigation intelligence, and farm management software — helping growers see field conditions earlier and manage resources more efficiently.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://irrigtech.com/">
 <link rel="alternate" hreflang="en" href="https://irrigtech.com/">
@@ -15,11 +15,24 @@
 <link rel="alternate" hreflang="x-default" href="https://irrigtech.com/">
 <meta property="og:url" content="https://irrigtech.com/">
 <meta property="og:site_name" content="IrrigTech">
+<meta property="og:image" content="https://irrigtech.com/images/hero-cornfield.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://irrigtech.com/images/hero-cornfield.jpg">
 <link rel="icon" type="image/png" href="images/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "IrrigTech",
+  "url": "https://irrigtech.com/",
+  "logo": "https://irrigtech.com/images/irrigtech-icon.png",
+  "email": "contact@irrigtech.com"
+}
+</script>
 </head>
 <body>
 
@@ -30,22 +43,23 @@
         <img src="images/irrigtech-logo-header.png" alt="IrrigTech — Smart Water. Smarter Growth." class="brand-logo brand-logo-full">
         <img src="images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact">
       </a>
-      
+
     </div>
     <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
     <nav class="primary" id="primary-nav">
       <a href="index.html" class="active">Home</a>
-      <a href="devices.html">Devices</a>
+      <a href="platform.html">Platform</a>
+      <a href="solutions.html">Solutions</a>
+      <a href="devices.html">Hardware</a>
+      <a href="software.html">Software</a>
       <a href="how-it-works.html">How it works</a>
-      <a href="pricing.html">Pricing</a>
       <a href="about.html">About</a>
-      <a href="blog.html">Blog</a>
       <a href="contact.html">Contact</a>
     </nav>
     <div class="nav-actions">
       <div class="lang-switch" aria-label="Language selector"><a href="/" hreflang="en" class="active">EN</a><span class="lang-sep">/</span><a href="/de/" hreflang="de">DE</a><span class="lang-sep">/</span><a href="/fr/" hreflang="fr">FR</a></div>
-      <a href="contact.html" class="btn btn-ghost">Talk to us</a>
-      <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+      <a href="contact.html" class="btn btn-ghost">Discuss Your Project</a>
+      <a href="contact.html" class="btn btn-primary">Request a Consultation</a>
     </div>
   </div>
 </header>
@@ -53,74 +67,117 @@
 <main>
   <section class="hero">
     <div class="hero-inner">
-      <span class="eyebrow">Field-tested soil intelligence</span>
-      <h1 style="margin-top:0.9rem;">Real-time soil monitoring for commercial irrigation.</h1>
-      <p class="dek">IrrigTech hardware measures soil moisture, nutrient levels, and pump/valve status continuously, and reports it to a dashboard your team can act on.</p>
+      <span class="eyebrow">Smart Field Intelligence</span>
+      <h1 style="margin-top:0.9rem;">See every field. Understand every change.</h1>
+      <p class="dek">IrrigTech, an engineering project by Pak-EL LAB, combines aerial crop scanning, field sensors, irrigation intelligence, and farm management software into one connected agricultural platform. Some of this is shipping hardware today; some is still in prototype — see <a href="how-it-works.html" style="color:inherit; text-decoration:underline;">what's built vs. planned</a>.</p>
       <div class="actions">
-        <a href="contact.html" class="btn btn-primary">Start Your Project</a>
-        <a href="devices.html" class="btn btn-ghost">View product line</a>
+        <a href="platform.html" class="btn btn-primary">Explore the Platform</a>
+        <a href="contact.html" class="btn btn-ghost">Request a Consultation</a>
       </div>
     </div>
   </section>
 
-  <section class="product-panel">
-    <div class="panel">
-      <div class="panel-head">
-        <span>FIELD 02 · NORTH BLOCK</span>
-        <span>Updated 2 min ago</span>
-      </div>
-      <div class="panel-body">
-        <div class="panel-metrics">
-          <div class="metric-row"><span class="label">Moisture</span><span class="bar"><span style="width:64%"></span></span><span class="val">64%</span></div>
-          <div class="metric-row"><span class="label">Nitrogen</span><span class="bar"><span style="width:38%"></span></span><span class="val">38 ppm</span></div>
-          <div class="metric-row low"><span class="label">Phosphorus</span><span class="bar"><span style="width:19%"></span></span><span class="val">19 ppm</span></div>
-          <div class="metric-row"><span class="label">Potassium</span><span class="bar"><span style="width:71%"></span></span><span class="val">71 ppm</span></div>
-          <div class="metric-row"><span class="label">Soil pH</span><span class="bar"><span style="width:58%"></span></span><span class="val">6.4</span></div>
-        </div>
-        <div class="panel-chart">
-          <div class="col" style="height:58%"></div>
-          <div class="col" style="height:52%"></div>
-          <div class="col" style="height:47%"></div>
-          <div class="col" style="height:39%"></div>
-          <div class="col" style="height:31%"></div>
-          <div class="col" style="height:44%"></div>
-          <div class="col" style="height:53%"></div>
-        </div>
-      </div>
-      <div class="panel-foot">Alert — Phosphorus below threshold, dosing recommended</div>
-    </div>
-  </section>
-
-  <div class="metrics-band">
+  <section style="padding-top:3rem;">
     <div class="wrap">
-      <div class="metric-block"><div class="num">61%</div><div class="cap">of yield loss traced back to nutrient stress no one caught in time</div></div>
-      <div class="metric-block"><div class="num">2–3wk</div><div class="cap">typical delay between a lab soil test and getting the result back</div></div>
-      <div class="metric-block"><div class="num">24/7</div><div class="cap">continuous field readings instead of a once-a-season snapshot</div></div>
+      <div class="s-head">
+        <span class="eyebrow">The ecosystem</span>
+        <h2>Everything feeds one field record</h2>
+      </div>
+      <div class="pipeline">
+        <div class="pipeline-step"><span class="pipeline-icon">✈</span><h4>Drone</h4><p>Aerial field scanning</p></div>
+        <div class="pipeline-connector" aria-hidden="true">+</div>
+        <div class="pipeline-step"><span class="pipeline-icon">◉</span><h4>Field Nodes</h4><p>Distributed sensors</p></div>
+        <div class="pipeline-connector" aria-hidden="true">+</div>
+        <div class="pipeline-step"><span class="pipeline-icon">≈</span><h4>Water</h4><p>Flow &amp; irrigation</p></div>
+        <div class="pipeline-connector" aria-hidden="true">+</div>
+        <div class="pipeline-step"><span class="pipeline-icon">▦</span><h4>Soil</h4><p>Moisture, EC, temp</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">AI</span><h4>AI-Assisted Analysis</h4><p>Decision support</p></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">▤</span><h4>Software</h4><p>Dashboard &amp; field record</p></div>
+      </div>
+      <p style="text-align:center; margin-top:1.5rem;"><a href="platform.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">See the full platform architecture →</a></p>
     </div>
-  </div>
-  <p class="metrics-source">Figures from IrrigTech's 2025–26 pilot program, 6 farms across mixed vegetable and grain operations.</p>
+  </section>
 
   <section>
     <div class="wrap">
       <div class="s-head">
-        <span class="eyebrow">How it works</span>
-        <h2>From soil to decision</h2>
+        <span class="eyebrow">What IrrigTech helps monitor</span>
+        <h2>Signals worth a closer look</h2>
+        <p>AI-assisted detection and anomaly flagging — decision support for your team, not an automatic diagnosis.</p>
       </div>
       <div class="feature-rows">
-        <div class="feature-row"><span class="fn">01</span><div><h3>Sense</h3><p>Buried nodes read moisture, NPK, pH and temperature every few minutes, all season, without anyone walking the field.</p></div></div>
-        <div class="feature-row"><span class="fn">02</span><div><h3>Send</h3><p>Readings hop over LoRa to a gateway, then up to your dashboard — no WiFi needed at the sensor.</p></div></div>
-        <div class="feature-row"><span class="fn">03</span><div><h3>Decide</h3><p>Thresholds you set per crop flag what's drifting, before it shows up as a visible problem in the plant.</p></div></div>
-        <div class="feature-row"><span class="fn">04</span><div><h3>Act</h3><p>Get an alert on your phone, or let the dosing controller open the right valve automatically.</p></div></div>
+        <div class="feature-row"><span class="fn">01</span><div><h3>Crop Health <span class="status-badge status-development">In development</span></h3><p>Drone imagery flags suspicious crop patterns and abnormal stress for you to verify on the ground.</p></div></div>
+        <div class="feature-row"><span class="fn">02</span><div><h3>Nutrient Stress <span class="status-badge status-development">In development</span></h3><p>Potential nutrient-deficiency patterns identified from imagery and sensor data together — lab or field verification recommended.</p></div></div>
+        <div class="feature-row"><span class="fn">03</span><div><h3>Crop Growth <span class="status-badge status-development">In development</span></h3><p>Emergence, canopy development, and change over time, tracked scan to scan.</p></div></div>
+        <div class="feature-row"><span class="fn">04</span><div><h3>Water Stress <span class="status-badge status-available">Available</span></h3><p>Under- and over-irrigated areas identified from soil moisture data by zone.</p></div></div>
+        <div class="feature-row"><span class="fn">05</span><div><h3>Soil Condition <span class="status-badge status-available">Available</span></h3><p>Moisture, temperature, and EC from field sensors, with spatial variability across the field.</p></div></div>
       </div>
     </div>
   </section>
 
-  <section>
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="split-section">
+        <div class="field-visual" role="img" aria-label="Illustration of a field-scanning drone over a gridded field, with connected field nodes below">
+          <div class="scan-line"></div>
+          <div class="fv-drone">
+            <svg viewBox="0 0 100 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="15" r="7" stroke="currentColor" stroke-width="2"/>
+              <circle cx="80" cy="15" r="7" stroke="currentColor" stroke-width="2"/>
+              <circle cx="20" cy="45" r="7" stroke="currentColor" stroke-width="2"/>
+              <circle cx="80" cy="45" r="7" stroke="currentColor" stroke-width="2"/>
+              <line x1="20" y1="15" x2="45" y2="30" stroke="currentColor" stroke-width="2"/>
+              <line x1="80" y1="15" x2="55" y2="30" stroke="currentColor" stroke-width="2"/>
+              <line x1="20" y1="45" x2="45" y2="30" stroke="currentColor" stroke-width="2"/>
+              <line x1="80" y1="45" x2="55" y2="30" stroke="currentColor" stroke-width="2"/>
+              <rect x="42" y="25" width="16" height="10" rx="2" fill="currentColor"/>
+            </svg>
+          </div>
+          <span class="fv-node" style="left:22%; top:66%;"></span>
+          <span class="fv-node" style="left:48%; top:80%;"></span>
+          <span class="fv-node" style="left:73%; top:62%;"></span>
+          <div class="fv-caption">
+            <span>FIELD SCANNER DRONE</span>
+            <span class="status-badge status-development">In development</span>
+          </div>
+        </div>
+        <div class="split-copy">
+          <span class="eyebrow">Hardware</span>
+          <h2 style="margin-top:0.5rem;">Field Scanner Drone</h2>
+          <p class="muted" style="margin-top:0.6rem;">High-resolution crop intelligence — autonomous, repeatable field scans, compared scan over scan.</p>
+          <ul>
+            <li>RGB field imaging</li>
+            <li>Multispectral mapping</li>
+            <li>Repeatable field scans</li>
+            <li>Georeferenced crop imagery</li>
+            <li>Automatic mission planning</li>
+            <li>Historical comparison</li>
+          </ul>
+          <div class="imaging-samples">
+            <div class="sample rgb"><div class="swatch"></div>RGB</div>
+            <div class="sample health"><div class="swatch"></div>Crop Health</div>
+            <div class="sample water"><div class="swatch"></div>Water Stress</div>
+            <div class="sample change"><div class="swatch"></div>Field Change</div>
+          </div>
+          <p style="margin-top:1.5rem;"><a href="how-it-works.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">See the full drone workflow →</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
     <div class="wrap">
       <div class="s-head">
-        <span class="eyebrow">The hardware</span>
-        <h2>Five devices, one system</h2>
-        <p>Each one does a specific job in the field — sense, act, or connect.</p>
+        <span class="eyebrow">Hardware <span class="status-badge status-available">Available</span></span>
+        <h2>Field nodes &amp; smart irrigation</h2>
+        <p>Five field-hardened devices, sealed and solar-friendly, covering soil, weather, and water.</p>
+        <div class="tag-row" style="justify-content:center;">
+          <span class="tag tag-soil">Soil</span>
+          <span class="tag tag-weather">Weather</span>
+          <span class="tag tag-water">Water</span>
+        </div>
       </div>
       <div class="device-grid">
         <div class="device-card"><div class="thumb"><img src="images/iot-sensor-node.png" alt="IrrigTech IoT Sensor Node with soil and air probes"></div><span class="glyph">01</span><h3>IoT Sensor Node</h3><p>Multi-probe hub reading soil moisture, EC, pH, and air temperature/humidity.</p><a href="iot-sensor-node.html" class="link">Spec sheet →</a></div>
@@ -129,20 +186,177 @@
         <div class="device-card"><div class="thumb"><img src="images/pump-controller.png" alt="IrrigTech Pump Controller mounted beside an irrigation pump"></div><span class="glyph">04</span><h3>Pump Controller</h3><p>Starts, stops, and protects your pump with built-in dry-run and overload alerts.</p><a href="pump-controller.html" class="link">Spec sheet →</a></div>
         <div class="device-card"><div class="thumb"><img src="images/field-gateway.png" alt="IrrigTech LoRa Field Gateway mounted on a pole with antenna"></div><span class="glyph">05</span><h3>Field Gateway</h3><p>Collects every node on the farm and pushes it to your dashboard over 4G or WiFi.</p><a href="field-gateway.html" class="link">Spec sheet →</a></div>
       </div>
+      <p style="margin-top:1.5rem;"><a href="devices.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">See all hardware, including the drone →</a></p>
     </div>
   </section>
 
-  <section class="testimonial">
+  <section style="padding-top:0;">
+    <div class="wrap" style="max-width:52rem;">
+      <span class="eyebrow">Software <span class="status-badge status-available">Available</span></span>
+      <h2 style="margin-top:0.4rem;">IrrigTech Farm Management Software</h2>
+      <p class="muted" style="margin-top:0.75rem;">One dashboard for field status, alerts, and history.</p>
+      <div class="device-frame" style="margin-top:1.75rem;">
+        <div class="device-frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="url">app.irrigtech.com/farm</span></div>
+      <div class="panel">
+        <div class="panel-head">
+          <span>SAMPLE · FIELD 02 · NORTH BLOCK</span>
+          <span>Demo data</span>
+        </div>
+        <div class="panel-body">
+          <div class="panel-metrics">
+            <div class="metric-row"><span class="label">Moisture</span><span class="bar"><span style="width:64%"></span></span><span class="val">64%</span></div>
+            <div class="metric-row"><span class="label">Nitrogen</span><span class="bar"><span style="width:38%"></span></span><span class="val">38 ppm</span></div>
+            <div class="metric-row low"><span class="label">Phosphorus</span><span class="bar"><span style="width:19%"></span></span><span class="val">19 ppm</span></div>
+            <div class="metric-row"><span class="label">Potassium</span><span class="bar"><span style="width:71%"></span></span><span class="val">71 ppm</span></div>
+            <div class="metric-row"><span class="label">Soil pH</span><span class="bar"><span style="width:58%"></span></span><span class="val">6.4</span></div>
+          </div>
+          <div class="panel-chart">
+            <div class="col" style="height:58%"></div>
+            <div class="col" style="height:52%"></div>
+            <div class="col" style="height:47%"></div>
+            <div class="col" style="height:39%"></div>
+            <div class="col" style="height:31%"></div>
+            <div class="col" style="height:44%"></div>
+            <div class="col" style="height:53%"></div>
+          </div>
+        </div>
+        <div class="panel-foot">Alert — Phosphorus below threshold</div>
+      </div>
+      </div>
+      <p style="margin-top:1.5rem;"><a href="software.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">See what's available vs. in development →</a></p>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
     <div class="wrap">
-      <blockquote>"We caught a phosphorus drop in the north block three weeks before we would have seen it in the plant. That block outyielded the rest of the farm this season."</blockquote>
-      <cite>— Pilot grower, 40-hectare mixed vegetable farm</cite>
+      <div class="s-head">
+        <span class="eyebrow">Automation</span>
+        <h2>From scheduled scan to field map</h2>
+      </div>
+      <div class="pipeline">
+        <div class="pipeline-step"><span class="pipeline-icon">01</span><h4>Schedule</h4></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">02</span><h4>Autonomous scan</h4></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">03</span><h4>Data sync</h4></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">04</span><h4>AI-assisted analysis</h4></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">05</span><h4>Field map &amp; alert</h4></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">06</span><h4>Field record</h4></div>
+      </div>
+      <p style="margin-top:1.5rem;"><a href="how-it-works.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">See the complete workflow →</a></p>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap" style="max-width:44rem;">
+      <div class="s-head">
+        <span class="eyebrow">Digital field record</span>
+        <h2>One history, all season</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Field established</h4><p>Boundary, crop, and planting date.</p></div></div>
+        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Scans 01, 02, 03…</h4><p>Compared automatically against the baseline.</p></div></div>
+        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Water, soil &amp; treatments</h4><p>Logged as they happen.</p></div></div>
+        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Harvest / yield</h4><p>Closes the season and informs the next one.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap" style="max-width:44rem;">
+      <div class="s-head">
+        <span class="eyebrow">Working with IrrigTech</span>
+        <h2>How deployment works</h2>
+      </div>
+      <div class="pipeline">
+        <div class="pipeline-step"><span class="pipeline-icon">01</span><h4>Assessment</h4></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">02</span><h4>System design</h4></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">03</span><h4>Limited deployment</h4></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">04</span><h4>Results review</h4></div>
+        <div class="pipeline-connector" aria-hidden="true">→</div>
+        <div class="pipeline-step"><span class="pipeline-icon">05</span><h4>Farm-wide rollout</h4></div>
+      </div>
+      <p style="margin-top:1.5rem;"><a href="platform.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">See the full pilot program →</a></p>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="s-head">
+        <span class="eyebrow">Benefits</span>
+        <h2>Why growers work with IrrigTech</h2>
+      </div>
+      <div class="values">
+        <div class="value"><h3>Earlier problem detection</h3><p>Find suspicious changes across a field before they're visible from the ground.</p></div>
+        <div class="value"><h3>Optimized water use</h3><p>Sensor and irrigation data to inform when and how much to water.</p></div>
+        <div class="value"><h3>Better field visibility</h3><p>See spatial differences across the whole field, not just where you happened to walk.</p></div>
+        <div class="value"><h3>Data-driven decisions</h3><p>Historical and current field data side by side.</p></div>
+        <div class="value"><h3>Targeted attention</h3><p>Direct scouting and treatment to the zones that actually need it.</p></div>
+        <div class="value"><h3>Field performance tracking</h3><p>See how zones perform season to season.</p></div>
+        <div class="value"><h3>One digital record</h3><p>Scans, sensor data, and treatments in a single field history.</p></div>
+        <div class="value"><h3>Scalable platform</h3><p>Sized for a single field or a multi-farm operation.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="s-head">
+        <span class="eyebrow">Honest positioning</span>
+        <h2>What's available today, and what's ahead</h2>
+      </div>
+      <div class="device-grid">
+        <div class="device-card"><span class="status-badge status-available">Available</span><h3>Monitor</h3><p>Field sensors, water monitoring, and farm input records.</p></div>
+        <div class="device-card"><span class="status-badge status-prototype">Prototype</span><h3>Scan</h3><p>Drone-based field mapping and crop imagery.</p></div>
+        <div class="device-card"><span class="status-badge status-development">In development</span><h3>Analyze</h3><p>AI-assisted crop and stress analytics.</p></div>
+        <div class="device-card"><span class="status-badge status-development">In development</span><h3>Predict</h3><p>Trend and yield intelligence, where validated.</p></div>
+        <div class="device-card"><span class="status-badge status-planned">Planned</span><h3>Automate</h3><p>Expanded irrigation and treatment automation.</p></div>
+      </div>
+      <p style="margin-top:1.5rem;"><a href="platform.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">Read the full platform positioning →</a></p>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap" style="max-width:44rem;">
+      <div class="s-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Is the Field Scanner Drone available to buy today?</summary>
+          <p>No — it's currently a prototype. Field sensors, valve/pump controllers, and the field gateway are IrrigTech's current shipping hardware.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What does "AI-assisted analysis" actually mean?</summary>
+          <p>It means imagery and sensor data are processed to flag anomalies and patterns worth a closer look — decision support, not an automatic diagnosis. Ground verification is recommended before acting on any flagged area.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can the drone diagnose plant disease or exact nutrient levels?</summary>
+          <p>No. RGB, multispectral, and thermal imagery can indicate stress patterns worth investigating, but they can't reliably diagnose a specific disease or measure exact nutrient concentrations on their own.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Does IrrigTech work without reliable internet in the field?</summary>
+          <p>Field nodes and gateways are designed to store readings locally and forward them once a connection is available, rather than losing data during a signal gap.</p>
+        </details>
+        <details class="faq-item">
+          <summary>What happens if I get an automation threshold wrong?</summary>
+          <p>Automated irrigation acts only on the thresholds you configure. You can review and adjust them at any time, and manual control is always available.</p>
+        </details>
+      </div>
     </div>
   </section>
 
   <section class="cta-band">
     <div class="wrap">
-      <h2>Ready to see your soil in real time?</h2>
-      <div class="actions"><a href="contact.html" class="btn btn-primary">Start Your Project</a><a href="pricing.html" class="btn btn-ghost">View pricing</a></div>
+      <h2>Ready to see this on your fields?</h2>
+      <div class="actions"><a href="contact.html" class="btn btn-primary">Request a Consultation</a><a href="platform.html" class="btn btn-ghost">Explore the Platform</a></div>
     </div>
   </section>
 </main>
@@ -151,7 +365,7 @@
   <div class="footer-grid">
     <div>
       <div class="brand"><img src="images/irrigtech-icon.png" width="24" height="24" alt="" style="display:inline-block; vertical-align:-6px;"> IrrigTech</div>
-      <p class="muted" style="margin-top:0.9rem; font-size:0.9rem; max-width:26ch;">Real-time soil intelligence for growers who'd rather prevent a bad season than react to one.</p>
+      <p class="muted" style="margin-top:0.9rem; font-size:0.9rem; max-width:26ch;">Smart Field Intelligence — drone scanning, field sensors, and irrigation data in one platform.</p>
       <a href="mailto:contact@irrigtech.com" class="footer-email">Email: contact@irrigtech.com</a>
       <a href="https://wa.me/923451616967?text=Hello%20IrrigTech%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20your%20team." target="_blank" rel="noopener noreferrer" class="footer-whatsapp"><svg class="whatsapp-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.45 1.29 4.9L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.67-.78-3.08-1.27-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17 0-1.5.79-2.24 1.07-2.55.28-.3.6-.38.8-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.3-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/></svg>WhatsApp: +92 345 1616967</a>
       <a href="index.html" class="footer-domain">irrigtech.com</a>
@@ -169,14 +383,14 @@
       <li><a href="contact.html">Contact</a></li>
     </ul></div>
     <div><h4>Get started</h4><ul>
-      <li><a href="contact.html">Start Your Project</a></li>
+      <li><a href="contact.html">Request a Consultation</a></li>
       <li><a href="pricing.html">View pricing</a></li>
     </ul></div>
   </div>
   <div class="footer-bottom">
-    <span>© 2026 IrrigTech, Inc.</span>
+    <span>© 2026 IrrigTech — a project by Pak-EL LAB</span>
     <div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div>
-    <span class="pulse"><span class="dot"></span>All systems operational</span>
+
   </div>
 </footer>
 
