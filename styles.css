@@ -164,8 +164,7 @@ nav.primary a.active::after{ transform:scaleX(1); }
 @media (max-width: 1320px){
   nav.primary{ display:none; position:absolute; top:100%; left:0; right:0; background:var(--navy-2); border-bottom:1px solid var(--line); flex-direction:column; align-items:flex-start; padding:1rem 1.75rem; gap:0.9rem; box-shadow:var(--shadow-md); }
   nav.primary.open{ display:flex; }
-  .hamburger{ display:inline-flex; margin-left:auto; order:2; }
-  .nav-actions{ order:3; }
+  .hamburger{ display:inline-flex; }
 }
 
 /* ---------- Hero (home, split layout: message + field visual) ---------- */
