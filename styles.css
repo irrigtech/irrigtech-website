@@ -759,3 +759,47 @@ footer .muted{ color:rgba(255,255,255,0.72); }
   .whatsapp-float{ right:1rem; bottom:4.75rem; width:2.85rem; height:2.85rem; }
   .whatsapp-float svg{ width:1.4rem; height:1.4rem; }
 }
+
+/* ============================================================
+   TOPIC ROWS — spacious full-width image+text rows for repeated
+   topics (Platform capabilities, Software features, Solutions).
+   Scoped entirely to .topic-rows/.topic-row and children; nothing
+   here touches .device-grid, .feature-rows, .pipeline, or the footer.
+   ============================================================ */
+.topic-rows{ display:flex; flex-direction:column; gap:1.5rem; margin-top:1.75rem; }
+.topic-row{
+  display:grid; grid-template-columns:22rem 1fr; gap:2rem; align-items:center;
+  padding:1.75rem; border:1px solid var(--line); border-radius:var(--radius-lg);
+  background:rgba(20,28,22,0.55); box-shadow:var(--glass-hi), var(--shadow-sm);
+  transition:box-shadow var(--transition), border-color var(--transition), transform var(--transition);
+}
+.topic-row:hover{ border-color:var(--line-strong); box-shadow:var(--glass-hi), var(--shadow-md); transform:translateY(-2px); }
+.topic-media{
+  position:relative; width:100%; aspect-ratio:4/3; border-radius:var(--radius); overflow:hidden;
+  background:#f3f5f7; flex:0 0 auto;
+}
+.topic-media img{ width:100%; height:100%; object-fit:cover; display:block; }
+.topic-media.fit-contain{ background:#151d18; }
+.topic-media.fit-contain img{ object-fit:contain; }
+.topic-media.icon-only{
+  display:flex; align-items:center; justify-content:center;
+  background:linear-gradient(135deg, var(--surface-2), var(--surface-3));
+}
+.topic-media.icon-only .topic-icon{
+  width:3.6rem; height:3.6rem; border-radius:var(--radius-sm);
+  background:var(--accent-gradient); background-size:160% 160%; background-position:20% 20%;
+  display:flex; align-items:center; justify-content:center; color:#06121e;
+  font-family:var(--font-mono); font-weight:700; font-size:1.3rem; box-shadow:var(--shadow-sm);
+}
+.topic-media .badge{
+  position:absolute; top:0.6rem; right:0.6rem;
+  font-family:var(--font-mono); font-size:0.62rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase;
+  padding:0.22rem 0.55rem; border-radius:99px; background:rgba(9,14,11,0.82); color:var(--ink-muted); border:1px solid var(--line-strong);
+}
+.topic-content h3{ font-size:1.2rem; color:var(--ink); text-shadow:0 1px 3px rgba(0,0,0,0.5); }
+.topic-content p{ margin-top:0.55rem; color:var(--ink-muted); font-size:0.95rem; max-width:56ch; text-shadow:0 1px 3px rgba(0,0,0,0.45); }
+.topic-content .status-badge{ margin-bottom:0.5rem; }
+@media (max-width:760px){
+  .topic-row{ grid-template-columns:1fr; gap:1.25rem; padding:1.25rem; }
+  .topic-media{ aspect-ratio:16/10; }
+}
