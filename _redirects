@@ -1,0 +1,57 @@
+# Force the canonical .html URL for every page. Netlify's default clean-URL
+# behavior otherwise serves the extensionless path (e.g. /contact) as a silent
+# 200 duplicate of the canonical /contact.html, with no redirect either way —
+# this makes the extensionless path 301 into the canonical, indexed .html URL
+# instead. The homepage (/, /de/, /fr/) is intentionally left alone: it's
+# already canonicalized to the directory form, not index.html.
+
+/about                          /about.html                          301
+/blog                           /blog.html                           301
+/contact                        /contact.html                        301
+/devices                        /devices.html                        301
+/field-gateway                  /field-gateway.html                  301
+/how-it-works                   /how-it-works.html                   301
+/iot-sensor-node                /iot-sensor-node.html                301
+/platform                       /platform.html                       301
+/pricing                        /pricing.html                        301
+/privacy                        /privacy.html                        301
+/pump-controller                /pump-controller.html                301
+/smart-valve-controller         /smart-valve-controller.html         301
+/software                       /software.html                       301
+/soil-moisture-sensor           /soil-moisture-sensor.html           301
+/solutions                      /solutions.html                      301
+/terms                          /terms.html                          301
+
+/de/about                       /de/about.html                       301
+/de/blog                        /de/blog.html                        301
+/de/contact                     /de/contact.html                     301
+/de/devices                     /de/devices.html                     301
+/de/field-gateway                /de/field-gateway.html               301
+/de/how-it-works                /de/how-it-works.html                301
+/de/iot-sensor-node             /de/iot-sensor-node.html             301
+/de/platform                    /de/platform.html                    301
+/de/pricing                     /de/pricing.html                     301
+/de/privacy                     /de/privacy.html                     301
+/de/pump-controller             /de/pump-controller.html             301
+/de/smart-valve-controller       /de/smart-valve-controller.html      301
+/de/software                    /de/software.html                    301
+/de/soil-moisture-sensor        /de/soil-moisture-sensor.html        301
+/de/solutions                   /de/solutions.html                   301
+/de/terms                       /de/terms.html                       301
+
+/fr/about                       /fr/about.html                       301
+/fr/blog                        /fr/blog.html                        301
+/fr/contact                     /fr/contact.html                     301
+/fr/devices                     /fr/devices.html                     301
+/fr/field-gateway                /fr/field-gateway.html               301
+/fr/how-it-works                /fr/how-it-works.html                301
+/fr/iot-sensor-node             /fr/iot-sensor-node.html             301
+/fr/platform                    /fr/platform.html                    301
+/fr/pricing                     /fr/pricing.html                     301
+/fr/privacy                     /fr/privacy.html                     301
+/fr/pump-controller             /fr/pump-controller.html             301
+/fr/smart-valve-controller       /fr/smart-valve-controller.html      301
+/fr/software                    /fr/software.html                    301
+/fr/soil-moisture-sensor        /fr/soil-moisture-sensor.html        301
+/fr/solutions                   /fr/solutions.html                   301
+/fr/terms                       /fr/terms.html                       301
