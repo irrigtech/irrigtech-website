@@ -168,12 +168,15 @@
         <h2>Des signaux qui méritent un examen plus approfondi</h2>
         <p>Détection assistée par IA et signalement d'anomalies — une aide à la décision pour votre équipe, pas un diagnostic automatique.</p>
       </div>
-      <div class="feature-rows">
-        <div class="feature-row"><span class="fn">01</span><div><h3>Santé des cultures <span class="status-badge status-development">En développement</span></h3><p>L'imagerie par drone signale les schémas de culture suspects et le stress anormal, à vérifier sur le terrain.</p></div></div>
-        <div class="feature-row"><span class="fn">02</span><div><h3>Stress nutritionnel <span class="status-badge status-development">En développement</span></h3><p>Des schémas potentiels de carence nutritionnelle identifiés en combinant imagerie et données de capteurs — vérification en laboratoire ou sur le terrain recommandée.</p></div></div>
-        <div class="feature-row"><span class="fn">03</span><div><h3>Croissance des cultures <span class="status-badge status-development">En développement</span></h3><p>Levée, développement de la canopée et évolution dans le temps, suivis d'un scan à l'autre.</p></div></div>
-        <div class="feature-row"><span class="fn">04</span><div><h3>Stress hydrique <span class="status-badge status-available">Disponible</span></h3><p>Zones sous- et sur-irriguées identifiées à partir des données d'humidité du sol par zone.</p></div></div>
-        <div class="feature-row"><span class="fn">05</span><div><h3>État du sol <span class="status-badge status-available">Disponible</span></h3><p>Humidité, température et CE mesurées par les capteurs de terrain, avec la variabilité spatiale sur l'ensemble du champ.</p></div></div>
+      <div class="signals-split">
+        <div class="signals-media"><span class="badge">Illustration conceptuelle</span><img src="/images/ecosystem-fieldnodes.jpg" srcset="/images/ecosystem-fieldnodes-480.jpg 480w, /images/ecosystem-fieldnodes.jpg 1000w" sizes="(max-width: 860px) 90vw, 420px" width="1000" height="750" alt="Illustration conceptuelle des capteurs de terrain et de l'imagerie par drone à l'origine des signaux surveillés" loading="lazy" decoding="async"></div>
+        <div class="feature-rows">
+          <div class="feature-row"><span class="fn">01</span><div><h3>Santé des cultures <span class="status-badge status-development">En développement</span></h3><p>L'imagerie par drone signale les schémas de culture suspects et le stress anormal, à vérifier sur le terrain.</p></div></div>
+          <div class="feature-row"><span class="fn">02</span><div><h3>Stress nutritionnel <span class="status-badge status-development">En développement</span></h3><p>Des schémas potentiels de carence nutritionnelle identifiés en combinant imagerie et données de capteurs — vérification en laboratoire ou sur le terrain recommandée.</p></div></div>
+          <div class="feature-row"><span class="fn">03</span><div><h3>Croissance des cultures <span class="status-badge status-development">En développement</span></h3><p>Levée, développement de la canopée et évolution dans le temps, suivis d'un scan à l'autre.</p></div></div>
+          <div class="feature-row"><span class="fn">04</span><div><h3>Stress hydrique <span class="status-badge status-available">Disponible</span></h3><p>Zones sous- et sur-irriguées identifiées à partir des données d'humidité du sol par zone.</p></div></div>
+          <div class="feature-row"><span class="fn">05</span><div><h3>État du sol <span class="status-badge status-available">Disponible</span></h3><p>Humidité, température et CE mesurées par les capteurs de terrain, avec la variabilité spatiale sur l'ensemble du champ.</p></div></div>
+        </div>
       </div>
     </div>
   </section>
@@ -255,17 +258,12 @@
         <span class="eyebrow">Automatisation</span>
         <h2>Du scan planifié à la carte de champ</h2>
       </div>
-      <div class="pipeline">
+      <div class="flow-grid">
         <div class="pipeline-step"><span class="pipeline-icon">01</span><h4>Planification</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">02</span><h4>Scan autonome</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">03</span><h4>Synchronisation des données</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">04</span><h4>Analyse assistée par IA</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">05</span><h4>Carte de champ et alerte</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">06</span><h4>Dossier de champ</h4></div>
       </div>
       <p style="margin-top:1.5rem;"><a href="/fr/how-it-works.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">Voir le déroulé complet →</a></p>
@@ -273,16 +271,19 @@
   </section>
 
   <section style="padding-top:0;">
-    <div class="wrap" style="max-width:44rem;">
+    <div class="wrap">
       <div class="s-head">
         <span class="eyebrow">Dossier de champ numérique</span>
         <h2>Un seul historique, toute la saison</h2>
       </div>
-      <div class="timeline">
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Champ créé</h4><p>Limites, culture et date de semis.</p></div></div>
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Scans 01, 02, 03…</h4><p>Comparés automatiquement à la référence initiale.</p></div></div>
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Eau, sol et traitements</h4><p>Enregistrés au fur et à mesure.</p></div></div>
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Récolte / rendement</h4><p>Clôture la saison et éclaire la suivante.</p></div></div>
+      <div class="timeline-split">
+        <div class="timeline-media"><img src="/images/ecosystem-soil.jpg" srcset="/images/ecosystem-soil-480.jpg 480w, /images/ecosystem-soil.jpg 1000w" sizes="(max-width: 860px) 90vw, 480px" width="1000" height="750" alt="Jeune plant avec racines visibles dans le sol, symbolisant le dossier de champ saisonnier" loading="lazy" decoding="async"></div>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Champ créé</h4><p>Limites, culture et date de semis.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Scans 01, 02, 03…</h4><p>Comparés automatiquement à la référence initiale.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Eau, sol et traitements</h4><p>Enregistrés au fur et à mesure.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Récolte / rendement</h4><p>Clôture la saison et éclaire la suivante.</p></div></div>
+        </div>
       </div>
     </div>
   </section>

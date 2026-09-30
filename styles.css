@@ -282,6 +282,23 @@ nav.primary a.active::after{ transform:scaleX(1); }
 .feature-row:nth-child(6n+5) .fn{ background:rgba(78,168,230,0.1); color:var(--accent-strong); border-color:rgba(78,168,230,0.24); }
 .feature-row:nth-child(6n+6) .fn{ background:rgba(143,209,79,0.08); color:var(--leaf); border-color:rgba(143,209,79,0.2); }
 
+/* ---------- Feature-rows paired with a single supporting image (e.g.
+   homepage "Signals worth a closer look"), so the list doesn't sit
+   alone in a wide container. Scoped to .signals-split only. ---------- */
+.signals-split{ display:grid; grid-template-columns:1fr 1.3fr; gap:3rem; align-items:start; margin-top:1.75rem; }
+.signals-split .feature-rows{ margin-top:0; }
+.signals-media{ position:relative; border-radius:var(--radius-lg); overflow:hidden; aspect-ratio:4/3; border:var(--glass-edge); box-shadow:var(--glass-hi), var(--shadow-lg); position:sticky; top:6rem; }
+.signals-media img{ width:100%; height:100%; object-fit:cover; display:block; }
+.signals-media .badge{
+  position:absolute; top:0.6rem; right:0.6rem;
+  font-family:var(--font-mono); font-size:0.62rem; font-weight:600; letter-spacing:0.05em; text-transform:uppercase;
+  padding:0.22rem 0.55rem; border-radius:99px; background:rgba(9,14,11,0.82); color:var(--ink-muted); border:1px solid var(--line-strong);
+}
+@media (max-width:860px){
+  .signals-split{ grid-template-columns:1fr; gap:1.5rem; }
+  .signals-media{ position:relative; top:auto; }
+}
+
 /* ---------- Device teaser ---------- */
 .device-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; }
 @media (max-width: 900px){ .device-grid{ grid-template-columns:1fr; } }
@@ -520,6 +537,15 @@ footer .muted{ color:rgba(255,255,255,0.72); }
   .pipeline-connector svg{ transform:rotate(90deg); }
 }
 
+/* ---------- Flow grid: numbered-step sequences with no connector arrows,
+   laid out as an even grid so the last step never wraps alone into a
+   near-empty full-width row. Reuses .pipeline-step for the box/icon
+   styling; scoped to .flow-grid only, .pipeline itself is untouched. ---------- */
+.flow-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:0.75rem; margin-top:1.75rem; }
+.flow-grid .pipeline-step{ width:auto; }
+@media (max-width:860px){ .flow-grid{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:480px){ .flow-grid{ grid-template-columns:1fr; } }
+
 /* ---------- Ecosystem card grid (homepage "Everything feeds one field record") ---------- */
 .ecosystem-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1rem; margin-top:1.75rem; }
 .ecosystem-card{
@@ -564,6 +590,18 @@ footer .muted{ color:rgba(255,255,255,0.72); }
 .timeline-item:not(:last-child)::before{ content:""; position:absolute; left:0.38rem; top:1.1rem; bottom:-0.45rem; width:2px; background:var(--line-strong); }
 .timeline-item h4{ font-size:0.96rem; color:var(--ink); text-shadow:0 1px 3px rgba(0,0,0,0.5); }
 .timeline-item p{ margin-top:0.35rem; font-size:0.86rem; color:var(--ink-muted); text-shadow:0 1px 3px rgba(0,0,0,0.45); }
+
+/* ---------- Timeline paired with a supporting image, so a short list
+   doesn't sit alone in a wide, mostly-empty container. Scoped to
+   .timeline-split only — .timeline itself (used standalone elsewhere)
+   is untouched. ---------- */
+.timeline-split{ display:grid; grid-template-columns:1.15fr 1fr; gap:3rem; align-items:center; margin-top:1.75rem; }
+.timeline-split .timeline{ margin-top:0; }
+.timeline-media{ position:relative; border-radius:var(--radius-lg); overflow:hidden; aspect-ratio:4/3; border:var(--glass-edge); box-shadow:var(--glass-hi), var(--shadow-lg); }
+.timeline-media img{ width:100%; height:100%; object-fit:cover; display:block; }
+@media (max-width:860px){
+  .timeline-split{ grid-template-columns:1fr; gap:1.5rem; }
+}
 
 /* ---------- Small category tag row (e.g. SOIL / WEATHER / WATER) ---------- */
 .tag-row{ display:flex; flex-wrap:wrap; gap:0.6rem; margin-top:1.25rem; }

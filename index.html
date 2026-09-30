@@ -167,12 +167,15 @@
         <h2>Signals worth a closer look</h2>
         <p>AI-assisted detection and anomaly flagging — decision support for your team, not an automatic diagnosis.</p>
       </div>
-      <div class="feature-rows">
-        <div class="feature-row"><span class="fn">01</span><div><h3>Crop Health <span class="status-badge status-development">In development</span></h3><p>Drone imagery flags suspicious crop patterns and abnormal stress for you to verify on the ground.</p></div></div>
-        <div class="feature-row"><span class="fn">02</span><div><h3>Nutrient Stress <span class="status-badge status-development">In development</span></h3><p>Potential nutrient-deficiency patterns identified from imagery and sensor data together — lab or field verification recommended.</p></div></div>
-        <div class="feature-row"><span class="fn">03</span><div><h3>Crop Growth <span class="status-badge status-development">In development</span></h3><p>Emergence, canopy development, and change over time, tracked scan to scan.</p></div></div>
-        <div class="feature-row"><span class="fn">04</span><div><h3>Water Stress <span class="status-badge status-available">Available</span></h3><p>Under- and over-irrigated areas identified from soil moisture data by zone.</p></div></div>
-        <div class="feature-row"><span class="fn">05</span><div><h3>Soil Condition <span class="status-badge status-available">Available</span></h3><p>Moisture, temperature, and EC from field sensors, with spatial variability across the field.</p></div></div>
+      <div class="signals-split">
+        <div class="signals-media"><span class="badge">Concept illustration</span><img src="/images/ecosystem-fieldnodes.jpg" srcset="/images/ecosystem-fieldnodes-480.jpg 480w, /images/ecosystem-fieldnodes.jpg 1000w" sizes="(max-width: 860px) 90vw, 420px" width="1000" height="750" alt="Concept illustration of field sensors and drone imagery feeding the signals IrrigTech monitors" loading="lazy" decoding="async"></div>
+        <div class="feature-rows">
+          <div class="feature-row"><span class="fn">01</span><div><h3>Crop Health <span class="status-badge status-development">In development</span></h3><p>Drone imagery flags suspicious crop patterns and abnormal stress for you to verify on the ground.</p></div></div>
+          <div class="feature-row"><span class="fn">02</span><div><h3>Nutrient Stress <span class="status-badge status-development">In development</span></h3><p>Potential nutrient-deficiency patterns identified from imagery and sensor data together — lab or field verification recommended.</p></div></div>
+          <div class="feature-row"><span class="fn">03</span><div><h3>Crop Growth <span class="status-badge status-development">In development</span></h3><p>Emergence, canopy development, and change over time, tracked scan to scan.</p></div></div>
+          <div class="feature-row"><span class="fn">04</span><div><h3>Water Stress <span class="status-badge status-available">Available</span></h3><p>Under- and over-irrigated areas identified from soil moisture data by zone.</p></div></div>
+          <div class="feature-row"><span class="fn">05</span><div><h3>Soil Condition <span class="status-badge status-available">Available</span></h3><p>Moisture, temperature, and EC from field sensors, with spatial variability across the field.</p></div></div>
+        </div>
       </div>
     </div>
   </section>
@@ -280,17 +283,12 @@
         <span class="eyebrow">Automation</span>
         <h2>From scheduled scan to field map</h2>
       </div>
-      <div class="pipeline">
+      <div class="flow-grid">
         <div class="pipeline-step"><span class="pipeline-icon">01</span><h4>Schedule</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">02</span><h4>Autonomous scan</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">03</span><h4>Data sync</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">04</span><h4>AI-assisted analysis</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">05</span><h4>Field map &amp; alert</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">06</span><h4>Field record</h4></div>
       </div>
       <p style="margin-top:1.5rem;"><a href="/how-it-works.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">See the complete workflow →</a></p>
@@ -298,16 +296,19 @@
   </section>
 
   <section style="padding-top:0;">
-    <div class="wrap" style="max-width:44rem;">
+    <div class="wrap">
       <div class="s-head">
         <span class="eyebrow">Digital field record</span>
         <h2>One history, all season</h2>
       </div>
-      <div class="timeline">
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Field established</h4><p>Boundary, crop, and planting date.</p></div></div>
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Scans 01, 02, 03…</h4><p>Compared automatically against the baseline.</p></div></div>
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Water, soil &amp; treatments</h4><p>Logged as they happen.</p></div></div>
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Harvest / yield</h4><p>Closes the season and informs the next one.</p></div></div>
+      <div class="timeline-split">
+        <div class="timeline-media"><img src="/images/ecosystem-soil.jpg" srcset="/images/ecosystem-soil-480.jpg 480w, /images/ecosystem-soil.jpg 1000w" sizes="(max-width: 860px) 90vw, 480px" width="1000" height="750" alt="Crop seedling with visible roots growing in soil, representing a field's season-long record" loading="lazy" decoding="async"></div>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Field established</h4><p>Boundary, crop, and planting date.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Scans 01, 02, 03…</h4><p>Compared automatically against the baseline.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Water, soil &amp; treatments</h4><p>Logged as they happen.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Harvest / yield</h4><p>Closes the season and informs the next one.</p></div></div>
+        </div>
       </div>
     </div>
   </section>

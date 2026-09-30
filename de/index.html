@@ -168,12 +168,15 @@
         <h2>Signale, die einen genaueren Blick wert sind</h2>
         <p>KI-gestützte Erkennung und Anomalie-Markierung — Entscheidungsunterstützung für Ihr Team, keine automatische Diagnose.</p>
       </div>
-      <div class="feature-rows">
-        <div class="feature-row"><span class="fn">01</span><div><h3>Pflanzengesundheit <span class="status-badge status-development">In Entwicklung</span></h3><p>Drohnenaufnahmen markieren auffällige Pflanzenmuster und ungewöhnlichen Stress, die Sie vor Ort überprüfen können.</p></div></div>
-        <div class="feature-row"><span class="fn">02</span><div><h3>Nährstoffstress <span class="status-badge status-development">In Entwicklung</span></h3><p>Mögliche Muster von Nährstoffmangel, erkannt aus Bildmaterial und Sensordaten zusammen — Labor- oder Feldverifikation wird empfohlen.</p></div></div>
-        <div class="feature-row"><span class="fn">03</span><div><h3>Pflanzenwachstum <span class="status-badge status-development">In Entwicklung</span></h3><p>Auflaufen, Bestandsentwicklung und Veränderungen im Zeitverlauf, von Scan zu Scan verfolgt.</p></div></div>
-        <div class="feature-row"><span class="fn">04</span><div><h3>Wasserstress <span class="status-badge status-available">Verfügbar</span></h3><p>Unter- und überbewässerte Bereiche, erkannt anhand von Bodenfeuchtedaten je Zone.</p></div></div>
-        <div class="feature-row"><span class="fn">05</span><div><h3>Bodenzustand <span class="status-badge status-available">Verfügbar</span></h3><p>Feuchtigkeit, Temperatur und EC von Feldsensoren, mit räumlicher Variabilität über das gesamte Feld.</p></div></div>
+      <div class="signals-split">
+        <div class="signals-media"><span class="badge">Konzeptdarstellung</span><img src="/images/ecosystem-fieldnodes.jpg" srcset="/images/ecosystem-fieldnodes-480.jpg 480w, /images/ecosystem-fieldnodes.jpg 1000w" sizes="(max-width: 860px) 90vw, 420px" width="1000" height="750" alt="Konzeptdarstellung von Feldsensoren und Drohnenaufnahmen als Grundlage der überwachten Signale" loading="lazy" decoding="async"></div>
+        <div class="feature-rows">
+          <div class="feature-row"><span class="fn">01</span><div><h3>Pflanzengesundheit <span class="status-badge status-development">In Entwicklung</span></h3><p>Drohnenaufnahmen markieren auffällige Pflanzenmuster und ungewöhnlichen Stress, die Sie vor Ort überprüfen können.</p></div></div>
+          <div class="feature-row"><span class="fn">02</span><div><h3>Nährstoffstress <span class="status-badge status-development">In Entwicklung</span></h3><p>Mögliche Muster von Nährstoffmangel, erkannt aus Bildmaterial und Sensordaten zusammen — Labor- oder Feldverifikation wird empfohlen.</p></div></div>
+          <div class="feature-row"><span class="fn">03</span><div><h3>Pflanzenwachstum <span class="status-badge status-development">In Entwicklung</span></h3><p>Auflaufen, Bestandsentwicklung und Veränderungen im Zeitverlauf, von Scan zu Scan verfolgt.</p></div></div>
+          <div class="feature-row"><span class="fn">04</span><div><h3>Wasserstress <span class="status-badge status-available">Verfügbar</span></h3><p>Unter- und überbewässerte Bereiche, erkannt anhand von Bodenfeuchtedaten je Zone.</p></div></div>
+          <div class="feature-row"><span class="fn">05</span><div><h3>Bodenzustand <span class="status-badge status-available">Verfügbar</span></h3><p>Feuchtigkeit, Temperatur und EC von Feldsensoren, mit räumlicher Variabilität über das gesamte Feld.</p></div></div>
+        </div>
       </div>
     </div>
   </section>
@@ -255,17 +258,12 @@
         <span class="eyebrow">Automatisierung</span>
         <h2>Vom geplanten Scan zur Feldkarte</h2>
       </div>
-      <div class="pipeline">
+      <div class="flow-grid">
         <div class="pipeline-step"><span class="pipeline-icon">01</span><h4>Planung</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">02</span><h4>Autonomer Scan</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">03</span><h4>Datensynchronisation</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">04</span><h4>KI-gestützte Analyse</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">05</span><h4>Feldkarte &amp; Warnung</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">06</span><h4>Feldbericht</h4></div>
       </div>
       <p style="margin-top:1.5rem;"><a href="/de/how-it-works.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">Den vollständigen Workflow ansehen →</a></p>
@@ -273,16 +271,19 @@
   </section>
 
   <section style="padding-top:0;">
-    <div class="wrap" style="max-width:44rem;">
+    <div class="wrap">
       <div class="s-head">
         <span class="eyebrow">Digitaler Feldbericht</span>
         <h2>Eine Historie, die ganze Saison</h2>
       </div>
-      <div class="timeline">
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Feld angelegt</h4><p>Grenze, Kultur und Pflanzdatum.</p></div></div>
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Scans 01, 02, 03…</h4><p>Automatisch mit dem Ausgangswert verglichen.</p></div></div>
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Wasser, Boden &amp; Behandlungen</h4><p>Werden erfasst, sobald sie stattfinden.</p></div></div>
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Ernte / Ertrag</h4><p>Schließt die Saison ab und liefert Erkenntnisse für die nächste.</p></div></div>
+      <div class="timeline-split">
+        <div class="timeline-media"><img src="/images/ecosystem-soil.jpg" srcset="/images/ecosystem-soil-480.jpg 480w, /images/ecosystem-soil.jpg 1000w" sizes="(max-width: 860px) 90vw, 480px" width="1000" height="750" alt="Junge Pflanze mit sichtbaren Wurzeln im Boden, sinnbildlich für den saisonalen Feldbericht" loading="lazy" decoding="async"></div>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Feld angelegt</h4><p>Grenze, Kultur und Pflanzdatum.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Scans 01, 02, 03…</h4><p>Automatisch mit dem Ausgangswert verglichen.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Wasser, Boden &amp; Behandlungen</h4><p>Werden erfasst, sobald sie stattfinden.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Ernte / Ertrag</h4><p>Schließt die Saison ab und liefert Erkenntnisse für die nächste.</p></div></div>
+        </div>
       </div>
     </div>
   </section>
