@@ -82,18 +82,80 @@
         <span class="eyebrow">L'écosystème</span>
         <h2>Tout alimente un seul dossier de champ</h2>
       </div>
-      <div class="pipeline">
-        <div class="pipeline-step"><span class="pipeline-icon">✈</span><h4>Drone</h4><p>Scan aérien du champ</p></div>
-        <div class="pipeline-connector" aria-hidden="true">+</div>
-        <div class="pipeline-step"><span class="pipeline-icon">◉</span><h4>Nœuds de terrain</h4><p>Capteurs répartis</p></div>
-        <div class="pipeline-connector" aria-hidden="true">+</div>
-        <div class="pipeline-step"><span class="pipeline-icon">≈</span><h4>Eau</h4><p>Débit et irrigation</p></div>
-        <div class="pipeline-connector" aria-hidden="true">+</div>
-        <div class="pipeline-step"><span class="pipeline-icon">▦</span><h4>Sol</h4><p>Humidité, CE, température</p></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
-        <div class="pipeline-step"><span class="pipeline-icon">AI</span><h4>Analyse assistée par IA</h4><p>Aide à la décision</p></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
-        <div class="pipeline-step"><span class="pipeline-icon">▤</span><h4>Logiciel</h4><p>Tableau de bord et dossier de champ</p></div>
+      <div class="ecosystem-grid">
+        <div class="ecosystem-card">
+          <div class="ecosystem-thumb"><span class="badge">Illustration conceptuelle</span><img src="/images/ecosystem-drone.jpg" srcset="/images/ecosystem-drone-480.jpg 480w, /images/ecosystem-drone.jpg 1000w" sizes="(max-width: 860px) 45vw, 260px" width="1000" height="750" alt="Illustration conceptuelle d'un drone de scan multispectral au-dessus d'un champ cultivé" loading="lazy" decoding="async"></div>
+          <div class="ecosystem-body"><h4>Drone</h4><p>Scan aérien du champ</p></div>
+        </div>
+        <div class="ecosystem-card">
+          <div class="ecosystem-thumb"><span class="badge">Illustration conceptuelle</span><img src="/images/ecosystem-fieldnodes.jpg" srcset="/images/ecosystem-fieldnodes-480.jpg 480w, /images/ecosystem-fieldnodes.jpg 1000w" sizes="(max-width: 860px) 45vw, 260px" width="1000" height="750" alt="Illustration conceptuelle d'un nœud de capteur de terrain solaire installé parmi les rangs de culture" loading="lazy" decoding="async"></div>
+          <div class="ecosystem-body"><h4>Nœuds de terrain</h4><p>Capteurs répartis</p></div>
+        </div>
+        <div class="ecosystem-card">
+          <div class="ecosystem-thumb"><img src="/images/ecosystem-water.jpg" srcset="/images/ecosystem-water-480.jpg 480w, /images/ecosystem-water.jpg 1000w" sizes="(max-width: 860px) 45vw, 260px" width="1000" height="750" alt="Éclaboussure d'eau, symbolisant le débit et l'irrigation" loading="lazy" decoding="async"></div>
+          <div class="ecosystem-body"><h4>Eau</h4><p>Débit et irrigation</p></div>
+        </div>
+        <div class="ecosystem-card">
+          <div class="ecosystem-thumb"><img src="/images/ecosystem-soil.jpg" srcset="/images/ecosystem-soil-480.jpg 480w, /images/ecosystem-soil.jpg 1000w" sizes="(max-width: 860px) 45vw, 260px" width="1000" height="750" alt="Jeune plant avec racines visibles poussant dans le sol" loading="lazy" decoding="async"></div>
+          <div class="ecosystem-body"><h4>Sol</h4><p>Humidité, CE, température</p></div>
+        </div>
+        <div class="ecosystem-card">
+          <div class="ecosystem-thumb"><span class="badge">Illustratif</span><svg class="ecosystem-map" viewBox="0 0 397 297" role="img" aria-label="Carte des zones de champ illustrative, pas des données en direct">
+          <rect class="cell" x="0" y="0" width="47" height="47" rx="4" fill="#8fd14f"/>
+          <rect class="cell" x="50" y="0" width="47" height="47" rx="4" fill="#74a844"/>
+          <rect class="cell" x="100" y="0" width="47" height="47" rx="4" fill="#a6e070"/>
+          <rect class="cell" x="150" y="0" width="47" height="47" rx="4" fill="#5f8f3a"/>
+          <rect class="cell" x="200" y="0" width="47" height="47" rx="4" fill="#8fd14f"/>
+          <rect class="cell" x="250" y="0" width="47" height="47" rx="4" fill="#8fd14f"/>
+          <rect class="cell" x="300" y="0" width="47" height="47" rx="4" fill="#5f8f3a"/>
+          <rect class="cell" x="350" y="0" width="47" height="47" rx="4" fill="#8fd14f"/>
+          <rect class="cell" x="0" y="50" width="47" height="47" rx="4" fill="#5f8f3a"/>
+          <rect class="cell" x="50" y="50" width="47" height="47" rx="4" fill="#8fd14f"/>
+          <rect class="cell" x="100" y="50" width="47" height="47" rx="4" fill="#5f8f3a"/>
+          <rect class="cell" x="150" y="50" width="47" height="47" rx="4" fill="#5f8f3a"/>
+          <rect class="cell" x="200" y="50" width="47" height="47" rx="4" fill="#8fd14f"/>
+          <rect class="cell" x="250" y="50" width="47" height="47" rx="4" fill="#c1543a"/>
+          <rect class="cell" x="300" y="50" width="47" height="47" rx="4" fill="#5f8f3a"/>
+          <rect class="cell" x="350" y="50" width="47" height="47" rx="4" fill="#74a844"/>
+          <rect class="cell" x="0" y="100" width="47" height="47" rx="4" fill="#a6e070"/>
+          <rect class="cell" x="50" y="100" width="47" height="47" rx="4" fill="#4ea8e6"/>
+          <rect class="cell" x="100" y="100" width="47" height="47" rx="4" fill="#a6e070"/>
+          <rect class="cell" x="150" y="100" width="47" height="47" rx="4" fill="#8fd14f"/>
+          <rect class="cell" x="200" y="100" width="47" height="47" rx="4" fill="#4ea8e6"/>
+          <rect class="cell" x="250" y="100" width="47" height="47" rx="4" fill="#5f8f3a"/>
+          <rect class="cell" x="300" y="100" width="47" height="47" rx="4" fill="#3f6b8a"/>
+          <rect class="cell" x="350" y="100" width="47" height="47" rx="4" fill="#74a844"/>
+          <rect class="cell" x="0" y="150" width="47" height="47" rx="4" fill="#74a844"/>
+          <rect class="cell" x="50" y="150" width="47" height="47" rx="4" fill="#5f8f3a"/>
+          <rect class="cell" x="100" y="150" width="47" height="47" rx="4" fill="#74a844"/>
+          <rect class="cell" x="150" y="150" width="47" height="47" rx="4" fill="#c1543a"/>
+          <rect class="cell" x="200" y="150" width="47" height="47" rx="4" fill="#74a844"/>
+          <rect class="cell" x="250" y="150" width="47" height="47" rx="4" fill="#a6e070"/>
+          <rect class="cell" x="300" y="150" width="47" height="47" rx="4" fill="#a6e070"/>
+          <rect class="cell" x="350" y="150" width="47" height="47" rx="4" fill="#8fd14f"/>
+          <rect class="cell" x="0" y="200" width="47" height="47" rx="4" fill="#a6e070"/>
+          <rect class="cell" x="50" y="200" width="47" height="47" rx="4" fill="#5f8f3a"/>
+          <rect class="cell" x="100" y="200" width="47" height="47" rx="4" fill="#5f8f3a"/>
+          <rect class="cell" x="150" y="200" width="47" height="47" rx="4" fill="#74a844"/>
+          <rect class="cell" x="200" y="200" width="47" height="47" rx="4" fill="#e2a44e"/>
+          <rect class="cell" x="250" y="200" width="47" height="47" rx="4" fill="#8fd14f"/>
+          <rect class="cell" x="300" y="200" width="47" height="47" rx="4" fill="#74a844"/>
+          <rect class="cell" x="350" y="200" width="47" height="47" rx="4" fill="#a6e070"/>
+          <rect class="cell" x="0" y="250" width="47" height="47" rx="4" fill="#8fd14f"/>
+          <rect class="cell" x="50" y="250" width="47" height="47" rx="4" fill="#74a844"/>
+          <rect class="cell" x="100" y="250" width="47" height="47" rx="4" fill="#e2a44e"/>
+          <rect class="cell" x="150" y="250" width="47" height="47" rx="4" fill="#e2a44e"/>
+          <rect class="cell" x="200" y="250" width="47" height="47" rx="4" fill="#74a844"/>
+          <rect class="cell" x="250" y="250" width="47" height="47" rx="4" fill="#a6e070"/>
+          <rect class="cell" x="300" y="250" width="47" height="47" rx="4" fill="#8fd14f"/>
+          <rect class="cell" x="350" y="250" width="47" height="47" rx="4" fill="#3f6b8a"/>
+          </svg></div>
+          <div class="ecosystem-body"><h4>Analyse assistée par IA</h4><p>Aide à la décision</p></div>
+        </div>
+        <div class="ecosystem-card">
+          <div class="ecosystem-thumb fit-contain"><span class="badge">Démo</span><img src="/images/software-dashboard-demo.png" srcset="/images/software-dashboard-demo-480.png 480w, /images/software-dashboard-demo.png 900w" sizes="(max-width: 860px) 45vw, 260px" width="900" height="404" alt="Exemple de tableau de bord IrrigTech avec des données de champ de démonstration, pas des mesures en direct" loading="lazy" decoding="async"></div>
+          <div class="ecosystem-body"><h4>Logiciel</h4><p>Tableau de bord et dossier de champ</p></div>
+        </div>
       </div>
       <p style="text-align:center; margin-top:1.5rem;"><a href="/fr/platform.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">Voir l'architecture complète de la plateforme →</a></p>
     </div>
@@ -106,12 +168,15 @@
         <h2>Des signaux qui méritent un examen plus approfondi</h2>
         <p>Détection assistée par IA et signalement d'anomalies — une aide à la décision pour votre équipe, pas un diagnostic automatique.</p>
       </div>
-      <div class="feature-rows">
-        <div class="feature-row"><span class="fn">01</span><div><h3>Santé des cultures <span class="status-badge status-development">En développement</span></h3><p>L'imagerie par drone signale les schémas de culture suspects et le stress anormal, à vérifier sur le terrain.</p></div></div>
-        <div class="feature-row"><span class="fn">02</span><div><h3>Stress nutritionnel <span class="status-badge status-development">En développement</span></h3><p>Des schémas potentiels de carence nutritionnelle identifiés en combinant imagerie et données de capteurs — vérification en laboratoire ou sur le terrain recommandée.</p></div></div>
-        <div class="feature-row"><span class="fn">03</span><div><h3>Croissance des cultures <span class="status-badge status-development">En développement</span></h3><p>Levée, développement de la canopée et évolution dans le temps, suivis d'un scan à l'autre.</p></div></div>
-        <div class="feature-row"><span class="fn">04</span><div><h3>Stress hydrique <span class="status-badge status-available">Disponible</span></h3><p>Zones sous- et sur-irriguées identifiées à partir des données d'humidité du sol par zone.</p></div></div>
-        <div class="feature-row"><span class="fn">05</span><div><h3>État du sol <span class="status-badge status-available">Disponible</span></h3><p>Humidité, température et CE mesurées par les capteurs de terrain, avec la variabilité spatiale sur l'ensemble du champ.</p></div></div>
+      <div class="signals-split">
+        <div class="signals-media"><span class="badge">Illustration conceptuelle</span><img src="/images/ecosystem-fieldnodes.jpg" srcset="/images/ecosystem-fieldnodes-480.jpg 480w, /images/ecosystem-fieldnodes.jpg 1000w" sizes="(max-width: 860px) 90vw, 420px" width="1000" height="750" alt="Illustration conceptuelle des capteurs de terrain et de l'imagerie par drone à l'origine des signaux surveillés" loading="lazy" decoding="async"></div>
+        <div class="feature-rows">
+          <div class="feature-row"><span class="fn">01</span><div><h3>Santé des cultures <span class="status-badge status-development">En développement</span></h3><p>L'imagerie par drone signale les schémas de culture suspects et le stress anormal, à vérifier sur le terrain.</p></div></div>
+          <div class="feature-row"><span class="fn">02</span><div><h3>Stress nutritionnel <span class="status-badge status-development">En développement</span></h3><p>Des schémas potentiels de carence nutritionnelle identifiés en combinant imagerie et données de capteurs — vérification en laboratoire ou sur le terrain recommandée.</p></div></div>
+          <div class="feature-row"><span class="fn">03</span><div><h3>Croissance des cultures <span class="status-badge status-development">En développement</span></h3><p>Levée, développement de la canopée et évolution dans le temps, suivis d'un scan à l'autre.</p></div></div>
+          <div class="feature-row"><span class="fn">04</span><div><h3>Stress hydrique <span class="status-badge status-available">Disponible</span></h3><p>Zones sous- et sur-irriguées identifiées à partir des données d'humidité du sol par zone.</p></div></div>
+          <div class="feature-row"><span class="fn">05</span><div><h3>État du sol <span class="status-badge status-available">Disponible</span></h3><p>Humidité, température et CE mesurées par les capteurs de terrain, avec la variabilité spatiale sur l'ensemble du champ.</p></div></div>
+        </div>
       </div>
     </div>
   </section>
@@ -193,17 +258,12 @@
         <span class="eyebrow">Automatisation</span>
         <h2>Du scan planifié à la carte de champ</h2>
       </div>
-      <div class="pipeline">
+      <div class="flow-grid">
         <div class="pipeline-step"><span class="pipeline-icon">01</span><h4>Planification</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">02</span><h4>Scan autonome</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">03</span><h4>Synchronisation des données</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">04</span><h4>Analyse assistée par IA</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">05</span><h4>Carte de champ et alerte</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">06</span><h4>Dossier de champ</h4></div>
       </div>
       <p style="margin-top:1.5rem;"><a href="/fr/how-it-works.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">Voir le déroulé complet →</a></p>
@@ -211,35 +271,34 @@
   </section>
 
   <section style="padding-top:0;">
-    <div class="wrap" style="max-width:44rem;">
+    <div class="wrap">
       <div class="s-head">
         <span class="eyebrow">Dossier de champ numérique</span>
         <h2>Un seul historique, toute la saison</h2>
       </div>
-      <div class="timeline">
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Champ créé</h4><p>Limites, culture et date de semis.</p></div></div>
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Scans 01, 02, 03…</h4><p>Comparés automatiquement à la référence initiale.</p></div></div>
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Eau, sol et traitements</h4><p>Enregistrés au fur et à mesure.</p></div></div>
-        <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Récolte / rendement</h4><p>Clôture la saison et éclaire la suivante.</p></div></div>
+      <div class="timeline-split">
+        <div class="timeline-media"><img src="/images/ecosystem-soil.jpg" srcset="/images/ecosystem-soil-480.jpg 480w, /images/ecosystem-soil.jpg 1000w" sizes="(max-width: 860px) 90vw, 480px" width="1000" height="750" alt="Jeune plant avec racines visibles dans le sol, symbolisant le dossier de champ saisonnier" loading="lazy" decoding="async"></div>
+        <div class="timeline">
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Champ créé</h4><p>Limites, culture et date de semis.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Scans 01, 02, 03…</h4><p>Comparés automatiquement à la référence initiale.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Eau, sol et traitements</h4><p>Enregistrés au fur et à mesure.</p></div></div>
+          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Récolte / rendement</h4><p>Clôture la saison et éclaire la suivante.</p></div></div>
+        </div>
       </div>
     </div>
   </section>
 
   <section style="padding-top:0;">
-    <div class="wrap" style="max-width:44rem;">
+    <div class="wrap">
       <div class="s-head">
         <span class="eyebrow">Travailler avec IrrigTech</span>
         <h2>Comment se déroule le déploiement</h2>
       </div>
-      <div class="pipeline">
+      <div class="flow-grid">
         <div class="pipeline-step"><span class="pipeline-icon">01</span><h4>Évaluation</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">02</span><h4>Conception du système</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">03</span><h4>Déploiement limité</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">04</span><h4>Bilan des résultats</h4></div>
-        <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">05</span><h4>Déploiement à l'échelle de l'exploitation</h4></div>
       </div>
       <p style="margin-top:1.5rem;"><a href="/fr/platform.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">Voir le programme pilote complet →</a></p>
@@ -339,7 +398,6 @@
     </ul></div>
     <div><h4>Entreprise</h4><ul>
       <li><a href="/fr/about.html">À propos</a></li>
-      <li><a href="/fr/blog.html">Blog</a></li>
       <li><a href="/fr/contact.html">Contact</a></li>
     </ul></div>
     <div><h4>Commencer</h4><ul>
