@@ -55,7 +55,7 @@
 <div class="page-hero"><div class="wrap">
   <span class="eyebrow">Betriebsablauf</span>
   <h1>Vom Feld zu einer Entscheidung, die Sie umsetzen können</h1>
-  <p>Wie aus Drohnenscans, Feldknoten und Bewässerungssensoren eine Karte, eine Warnmeldung und ein Bericht werden — durchgängig.</p>
+  <p>Wie aus Drohnenscans, Feldknoten und Bewässerungssensoren eine Karte und einen Bericht werden, Warnmeldungen sind geplant — durchgängig.</p>
 </div></div>
 
 <main>
@@ -69,7 +69,7 @@
       <div class="pipeline">
         <div class="pipeline-step"><span class="pipeline-icon">01</span><h4>Feld</h4><p>Drohnenscans, Feldknoten und Bewässerungssensoren erfassen alle dasselbe physische Feld.</p></div>
         <div class="pipeline-connector" aria-hidden="true">→</div>
-        <div class="pipeline-step"><span class="pipeline-icon">02</span><h4>Datenerfassung</h4><p>Bildmaterial, Bodenmesswerte sowie Durchfluss-/Druckdaten werden erfasst und geotaggt.</p></div>
+        <div class="pipeline-step"><span class="pipeline-icon">02</span><h4>Datenerfassung</h4><p>Bildmaterial und Bodenmesswerte werden erfasst und geotaggt; Durchfluss- und Druckdaten sind geplante Eingänge.</p></div>
         <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">03</span><h4>Übertragung</h4><p>LoRa, WiFi oder Mobilfunk übertragen die Daten zurück — mit Store-and-Forward-Synchronisation bei eingeschränktem Signal.</p></div>
         <div class="pipeline-connector" aria-hidden="true">→</div>
@@ -79,9 +79,9 @@
         <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">06</span><h4>Feldkarte / Dashboard</h4><p>Ergebnisse werden über die Feldgrenze gelegt, damit Sie sehen, wo — nicht nur was.</p></div>
         <div class="pipeline-connector" aria-hidden="true">→</div>
-        <div class="pipeline-step"><span class="pipeline-icon">07</span><h4>Warnmeldungen</h4><p>Von Ihnen je Kultur und Zone festgelegte Schwellenwerte entscheiden, was eine Benachrichtigung wert ist.</p></div>
+        <div class="pipeline-step"><span class="pipeline-icon">07</span><h4>Warnmeldungen</h4><p>Geplant: Von Ihnen je Kultur und Zone festgelegte Schwellenwerte sollen entscheiden, was eine Benachrichtigung wert ist.</p></div>
         <div class="pipeline-connector" aria-hidden="true">→</div>
-        <div class="pipeline-step"><span class="pipeline-icon">08</span><h4>Feldbericht</h4><p>Jeder Scan, jeder Messwert und jede Warnmeldung wird der dauerhaften Historie dieses Felds zugeordnet.</p></div>
+        <div class="pipeline-step"><span class="pipeline-icon">08</span><h4>Feldbericht</h4><p>Jeder Scan und jeder Messwert wird der dauerhaften Historie dieses Felds zugeordnet.</p></div>
         <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">09</span><h4>Ihre Maßnahme</h4><p>Sie oder Ihr Agronom entscheiden über die nächsten Schritte — Prüfen, Bewässern oder Behandeln.</p></div>
       </div>
@@ -93,14 +93,14 @@
       <div class="s-head">
         <span class="eyebrow">Feldscanner-Drohne <span class="status-badge status-prototype">Prototyp</span></span>
         <h2>Automatischer Scan-Workflow</h2>
-        <p>Sobald eine Feldgrenze definiert ist, können wiederholte Scans nach Zeitplan ablaufen, ohne dass ein Pilot vor Ort sein muss.</p>
+        <p>Sobald eine Feldgrenze definiert ist, sollen wiederholte Scans nach Zeitplan ohne Pilot vor Ort ablaufen, sobald der Ablauf validiert ist.</p>
       </div>
       <div class="pipeline">
         <div class="pipeline-step"><span class="pipeline-icon">01</span><h4>Planung</h4><p>Sie legen fest, wie oft ein Feld gescannt werden soll.</p></div>
         <div class="pipeline-connector" aria-hidden="true">→</div>
-        <div class="pipeline-step"><span class="pipeline-icon">02</span><h4>Missionserstellung</h4><p>Eine Flugroute wird automatisch aus der gespeicherten Feldgrenze erzeugt.</p></div>
+        <div class="pipeline-step"><span class="pipeline-icon">02</span><h4>Missionserstellung</h4><p>Eine Flugroute würde aus der gespeicherten Feldgrenze erzeugt.</p></div>
         <div class="pipeline-connector" aria-hidden="true">→</div>
-        <div class="pipeline-step"><span class="pipeline-icon">03</span><h4>Autonomer Scan</h4><p>Die Drohne fliegt die Mission und kehrt nach Abschluss automatisch zurück.</p></div>
+        <div class="pipeline-step"><span class="pipeline-icon">03</span><h4>Autonomer Scan</h4><p>Die Drohne soll die Mission fliegen und nach Abschluss zurückkehren.</p></div>
         <div class="pipeline-connector" aria-hidden="true">→</div>
         <div class="pipeline-step"><span class="pipeline-icon">04</span><h4>Datenerfassung</h4><p>RGB- sowie, je nach Ausstattung, multispektrale oder thermische Aufnahmen werden erfasst und geotaggt.</p></div>
         <div class="pipeline-connector" aria-hidden="true">→</div>
@@ -120,7 +120,7 @@
 
   <section style="padding-top:0;">
     <div class="wrap" style="max-width:52rem;">
-      <span class="eyebrow">Sensorüberwachung <span class="status-badge status-available">Verfügbar</span></span>
+      <span class="eyebrow">Sensorüberwachung <span class="status-badge status-prototype">Prototyp</span></span>
       <h2 style="margin-top:0.4rem;">Stickstoff, über die Woche verfolgt</h2>
       <div class="chart">
         <div class="chart-head"><span>FELD 02 · STICKSTOFF (ppm)</span><span>ZIELWERT 30–45</span></div>
@@ -134,7 +134,7 @@
           <div class="bar"><span>38</span><b style="height:53%"></b><span class="day">So</span></div>
         </div>
       </div>
-      <p class="muted" style="margin-top:2.2rem; font-size:0.9rem;">Der Rückgang unter den Zielwert am Freitag löste eine Warnmeldung aus — eine Nachdüngung brachte den Stickstoffwert bis Samstag wieder in den Zielbereich.</p>
+      <p class="muted" style="margin-top:2.2rem; font-size:0.9rem;">Nur illustrativ: Ein Rückgang unter den Zielwert am Freitag würde eine Warnmeldung auslösen, eine Nachdüngung würde den Stickstoffwert bis Samstag wieder in den Zielbereich bringen.</p>
     </div>
   </section>
 </main>

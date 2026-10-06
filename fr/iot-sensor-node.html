@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Nœud de capteurs IoT — IrrigTech</title>
-<meta name="description" content="Fiche technique du nœud de capteurs IoT — une plateforme multi-sondes sur ESP32 qui mesure l'humidité du sol, l'EC, le pH, ainsi que la température et l'humidité de l'air, via LoRa.">
+<meta name="description" content="Fiche technique du nœud de capteurs IoT — plateforme multi-sondes prévue sur ESP32 pour l'humidité du sol, l'EC, le pH et l'air, via LoRa.">
 <meta property="og:title" content="Nœud de capteurs IoT — IrrigTech">
-<meta property="og:description" content="Des données de sol et d'environnement en temps réel, collectées par jusqu'à quatre sondes interchangeables et transmises par radio à la passerelle.">
+<meta property="og:description" content="Données de sol et d'environnement en temps réel prévues, collectées par des sondes interchangeables et transmises par radio à la passerelle.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://irrigtech.com/fr/iot-sensor-node.html">
 <link rel="alternate" hreflang="en" href="https://irrigtech.com/iot-sensor-node.html">
@@ -62,20 +62,20 @@
   <section>
     <div class="wrap">
       <div class="device-detail" style="border-bottom:none; padding-top:0;">
-        <div class="device-visual photo"><img src="/images/iot-sensor-node.png" alt="Nœud de capteurs IoT IrrigTech avec sondes d'humidité du sol, de température/humidité de l'air, d'EC et de pH du sol"></div>
+        <div class="device-visual photo"><img src="/images/ecosystem-fieldnodes.jpg" alt="Illustration conceptuelle d'un nœud de capteurs solaire entre des rangs de culture, pas le produit fini" loading="lazy" decoding="async"><span class="concept-tag">Illustration conceptuelle</span></div>
         <div>
-          <p class="muted" style="font-size:0.98rem; max-width:44ch;">Le nœud de capteurs IoT est le centre de détection du champ — un boîtier à base d'ESP32 doté de quatre sondes interchangeables et étanches, connectées en dessous. Les sondes de sol sont enterrées dans la zone racinaire, tandis que le boîtier principal, la radio et l'antenne restent hors sol afin que le signal LoRa dispose d'un chemin dégagé vers la passerelle. Il mesure l'humidité du sol, l'EC du sol, le pH du sol, la température et l'humidité de l'air (ainsi que la luminosité et la pluviométrie lorsqu'elles sont équipées) toutes les quelques minutes, et transmet les relevés par radio à la passerelle la plus proche via LoRa, afin que le reste du système sache toujours exactement ce qui se passe dans ce champ.</p>
+          <p class="muted" style="font-size:0.98rem; max-width:44ch;">Le nœud de capteurs IoT est conçu pour être le centre de détection du champ — un boîtier prévu autour d'un microcontrôleur ESP32, doté de sondes interchangeables et étanches, connectées en dessous. Les sondes de sol sont enterrées dans la zone racinaire, tandis que le boîtier principal, la radio et l'antenne restent hors sol afin que le signal LoRa dispose d'un chemin dégagé vers la passerelle. Il est conçu pour mesurer l'humidité du sol, l'EC du sol, le pH du sol, la température et l'humidité de l'air (ainsi que la luminosité et la pluviométrie lorsqu'elles sont équipées) toutes les quelques minutes, et transmettre les relevés par radio à la passerelle la plus proche via LoRa, afin que le reste du système puisse suivre ce qui se passe dans ce champ.</p>
           <span class="eyebrow">Caractéristiques techniques</span>
           <div class="table-wrap"><table class="spec-table" style="margin-top:0.9rem;">
-            <tr><th>Microcontrôleur</th><td>ESP32</td></tr>
-            <tr><th>Communication</th><td>LoRa (SX1276)</td></tr>
-            <tr><th>Fréquence</th><td>433,05–434,79 MHz / 863–870 MHz / 902–928 MHz</td></tr>
-            <tr><th>Tension de fonctionnement</th><td>3,3V – 12V DC</td></tr>
+            <tr><th>Microcontrôleur</th><td>À confirmer</td></tr>
+            <tr><th>Communication</th><td>À confirmer</td></tr>
+            <tr><th>Fréquence</th><td>À confirmer</td></tr>
+            <tr><th>Tension de fonctionnement</th><td>À confirmer</td></tr>
             <tr><th>Source d'alimentation</th><td>Batterie / Solaire</td></tr>
-            <tr><th>Autonomie de la batterie</th><td>Objectif multi-saisons — selon la configuration</td></tr>
-            <tr><th>Capteurs pris en charge</th><td>Humidité du sol, temp. du sol, EC du sol, pH du sol, temp. de l'air, humidité de l'air, luminosité, pluviométrie</td></tr>
-            <tr><th>Boîtier</th><td>Indice IP65, résistant aux intempéries</td></tr>
-            <tr><th>Température de fonctionnement</th><td>-20 °C à +60 °C</td></tr>
+            <tr><th>Autonomie de la batterie</th><td>Objectif de conception, pas encore vérifié sur le terrain — selon la configuration</td></tr>
+            <tr><th>Capteurs pris en charge</th><td>Prévu : Humidité du sol, temp. du sol, EC du sol, pH du sol, temp. de l'air, humidité de l'air, luminosité, pluviométrie</td></tr>
+            <tr><th>Boîtier</th><td>Boîtier résistant aux intempéries ; indice à confirmer</td></tr>
+            <tr><th>Température de fonctionnement</th><td>À confirmer</td></tr>
           </table></div>
           <div class="price-tag"><a href="/fr/contact.html" style="color:var(--accent);">Demander un devis prototype →</a></div>
           <div class="actions" style="margin-top:1.5rem;">
@@ -91,8 +91,8 @@
     <div class="wrap">
       <div class="s-head"><span class="eyebrow">Autres appareils</span><h2>Fonctionne avec</h2></div>
       <div class="device-grid">
-        <div class="device-card"><span class="glyph">03</span><h3>Contrôleur de vanne intelligent</h3><p>Agit selon ce que le nœud capteur mesure — ouvre automatiquement la bonne vanne d'irrigation.</p><a href="/fr/smart-valve-controller.html" class="link">Voir la fiche technique →</a></div>
-        <div class="device-card"><span class="glyph">05</span><h3>Passerelle de terrain</h3><p>Transmet les relevés de chaque nœud capteur jusqu'à votre tableau de bord.</p><a href="/fr/field-gateway.html" class="link">Voir la fiche technique →</a></div>
+        <div class="device-card"><span class="glyph">03</span><h3>Contrôleur de vanne intelligent</h3><p>Conçu pour agir selon ce que le nœud capteur mesure — ouvrir automatiquement la bonne vanne d'irrigation.</p><a href="/fr/smart-valve-controller.html" class="link">Voir la fiche technique →</a></div>
+        <div class="device-card"><span class="glyph">05</span><h3>Passerelle de terrain</h3><p>Conçue pour transmettre les relevés de chaque nœud capteur jusqu'à votre tableau de bord.</p><a href="/fr/field-gateway.html" class="link">Voir la fiche technique →</a></div>
       </div>
     </div>
   </section>
