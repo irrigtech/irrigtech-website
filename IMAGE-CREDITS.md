@@ -34,3 +34,18 @@ All four photographic files were cropped locally to a uniform 4:3 frame and resi
 | `12_32_02` | Crop Health | Similar issue: a "Detected Issues" panel with a warning icon points at a specific field location as a confirmed problem, implying a validated finding the site doesn't claim to make. Same as above — left the existing icon+text row unchanged. |
 
 Nothing generated or supplied was used to imply live sensor readings, yield predictions, or automated diagnoses that IrrigTech has not validated.
+
+
+## Device renders removed from pages
+
+Five AI-generated device renders were used on device pages and were not documented here. All five are now removed from every page (EN, DE, FR) and replaced with a neutral text placeholder. The files stay on disk in `images/` but are no longer referenced.
+
+| File | Previously used on | Why removed | Now shown |
+|---|---|---|---|
+| `images/pump-controller.png` | Hardware card and Pump Controller page (index, devices, pump-controller) | AI-generated render with a lit live-status panel and readout, which implies a running unit. Not a photo of deployed hardware. | Text placeholder: "Clean photo pending" / "Foto folgt" / "Photo à venir" |
+| `images/field-gateway.png` | Field Gateway card and page (index, devices, field-gateway) | AI-generated render with a lit LED status panel (Power, Status, LoRa, Wi-Fi / LTE, Ethernet), a "Pak-EL LAB" brand plate and a web address baked into the pixels. The lit indicators imply live connectivity status. | Text placeholder (same wording) |
+| `images/iot-sensor-node.png` | IoT Sensor Node card and page (index, devices, iot-sensor-node) | AI-generated render presenting a finished product: "Long Battery Life", "IP65" and "LoRa" badges, a marketing headline ("Smart Sensing. Smarter Farming.") and a www.pakellab.com address baked into the image. Not a photo of deployed hardware. | Text placeholder (same wording as above) |
+| `images/soil-moisture-sensor.png` | Soil Moisture Sensor card and page (index, devices, soil-moisture-sensor) | AI-generated render presenting a finished product: "Long Battery Life" badge, "Accurate Soil Insights" headline and a www.pakellab.com address baked into the image. | Text placeholder (same wording as above) |
+| `images/smart-valve-controller.png` | Smart Valve Controller card and page (index, devices, smart-valve-controller) | AI-generated render presenting a finished product: "Low Power" badge, marketing copy ("enables precise automation … for optimal water usage and healthier crops") and a www.pakellab.com address baked into the image. | Text placeholder (same wording as above) |
+
+All five device renders above were reviewed and are no longer used. The concept illustrations on the homepage and Field Scanner Drone section remain, each labelled "Concept illustration".
