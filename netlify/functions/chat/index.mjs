@@ -19,9 +19,9 @@ const MAX_TURNS = 12;            // messages sent to the model (most recent kept
 const MAX_USER_CHARS = 800;
 const MAX_ASSISTANT_CHARS = 2_500;
 const LANGS = new Set(["en", "de", "fr"]);
-
-// Models that accept the server-side refusal fallback ("default" mode) on the Claude API.
-const FALLBACK_MODELS = new Set(["claude-opus-5-5", "claude-sonnet-5-5", "claude-fable-5-1"]);
+// Default model: Claude Haiku 5.5 (lowest cost). Override with CHAT_MODEL in Netlify settings.
+// No automatic fallback to other (more expensive) models is configured.
+export const DEFAULT_MODEL = "claude-haiku-5-5";
 
 export const config = { path: "/api/chat" };
 
@@ -129,7 +129,7 @@ export default async function handler(req, context) {
     return json(503, { error: "unavailable" });
   }
 
-  const model = env.CHAT_MODEL || "claude-opus-5-5";
+  const model = env.CHAT_MODEL || DEFAULT_MODEL;
   const encoder = new TextEncoder();
 
   const body = new ReadableStream({
@@ -144,9 +144,7 @@ export default async function handler(req, context) {
         }
         const client = new Anthropic({ apiKey: env.ANTHROPIC_API_KEY, maxRetries: 1, timeout: 25_000 });
         const params = buildParams(model, parsed.lang, parsed.messages, env);
-        const stream = FALLBACK_MODELS.has(model)
-          ? client.beta.messages.stream({ ...params, betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" }, { signal: req.signal })
-          : client.messages.stream(params, { signal: req.signal });
+        const stream = client.messages.stream(params, { signal: req.signal });
 
         for await (const event of stream) {
           if (event.type === "content_block_delta" && event.delta.type === "text_delta") send({ t: "d", v: event.delta.text });

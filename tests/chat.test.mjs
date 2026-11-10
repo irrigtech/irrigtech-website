@@ -119,6 +119,16 @@ test("checkAndCount enforces limits end to end and purges old days", async () =>
   assert.ok([...store.data.keys()].every((k) => k.startsWith("2026-11-10/")));
 });
 
+// ---- cost controls ----
+test("defaults: Haiku model, no model fallback, 100 messages/day site-wide", async () => {
+  const { DEFAULT_MODEL } = await import("../netlify/functions/chat/index.mjs");
+  const { limitsFromEnv } = await import("../netlify/functions/chat/limits.mjs");
+  assert.equal(DEFAULT_MODEL, "claude-haiku-5-5");
+  assert.equal(limitsFromEnv({}).globalPerDay, 100);
+  const src = readFileSync(path.join(root, "netlify/functions/chat/index.mjs"), "utf8");
+  assert.ok(!/fallbacks|server-side-fallback/.test(src), "no automatic fallback to other models");
+});
+
 // ---- content boundaries ----
 test("knowledge and prompt contain IrrigTech content and nothing from other businesses", () => {
   assert.ok(KNOWLEDGE.includes("IrrigTech"));

@@ -18,7 +18,7 @@ export function limitsFromEnv(env = process.env) {
   return {
     perMinute: num(env.CHAT_LIMIT_PER_MINUTE, 6),
     perDay: num(env.CHAT_LIMIT_PER_IP_PER_DAY, 40),
-    globalPerDay: num(env.CHAT_LIMIT_GLOBAL_PER_DAY, 400),
+    globalPerDay: num(env.CHAT_LIMIT_GLOBAL_PER_DAY, 100),
   };
 }
 
