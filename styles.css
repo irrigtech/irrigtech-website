@@ -868,3 +868,17 @@ footer .muted{ color:rgba(255,255,255,0.72); }
   .topic-row{ grid-template-columns:1fr; gap:1.25rem; padding:1.25rem; }
   .topic-media{ aspect-ratio:16/10; }
 }
+
+/* ---- Mobile overflow fix (phones, <=700px only; desktop/tablet unchanged) ----
+ * 1. Footer: the brand/contact block spans the full width and the link columns may
+ *    shrink, so the email/WhatsApp links no longer push the footer off-screen.
+ * 2. Long headings (e.g. German compound words) hyphenate or wrap instead of overflowing.
+ * 3. Contact-form and platform-flow grid items may shrink to the screen width.
+ */
+@media (max-width:700px){
+  .footer-grid{ grid-template-columns:repeat(2, minmax(0,1fr)); gap:2rem 1.5rem; }
+  .footer-grid > div:first-child{ grid-column:1 / -1; }
+  .footer-email, .footer-whatsapp{ flex-wrap:wrap; overflow-wrap:anywhere; }
+  h1, h2, h3, h4{ -webkit-hyphens:auto; hyphens:auto; overflow-wrap:break-word; }
+  .contact-grid > *, .flow-grid > *, .flow-item > *{ min-width:0; }
+}
