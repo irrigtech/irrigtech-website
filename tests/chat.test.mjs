@@ -1,6 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync, statSync } from "node:fs";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -10,6 +11,14 @@ import { KNOWLEDGE } from "../netlify/functions/chat/knowledge.mjs";
 import { INSTRUCTIONS, LANGUAGE_NOTE } from "../netlify/functions/chat/prompt.mjs";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+
+// Names of unrelated businesses that must never appear in IrrigTech code or content,
+// stored only as SHA-256 hashes so the names themselves are not part of this repository.
+const FORBIDDEN_NAME_HASHES = new Set(["c51f111ef9f8da62f0c18bf2c32670defaff4214951ede3a1abac328ef309989"]);
+function forbiddenNamesIn(text) {
+  const words = new Set(text.toLowerCase().match(/[a-z0-9]+/g) || []);
+  return [...words].filter((w) => FORBIDDEN_NAME_HASHES.has(createHash("sha256").update(w).digest("hex")));
+}
 const LIMITS = { perMinute: 3, perDay: 5, globalPerDay: 7 };
 
 // ---- request validation ----
@@ -133,8 +142,8 @@ test("defaults: Haiku model, no model fallback, 100 messages/day site-wide", asy
 test("knowledge and prompt contain IrrigTech content and nothing from other businesses", () => {
   assert.ok(KNOWLEDGE.includes("IrrigTech"));
   assert.ok(KNOWLEDGE.length > 20_000);
-  const all = (KNOWLEDGE + INSTRUCTIONS + Object.values(LANGUAGE_NOTE).join(" ")).toLowerCase();
-  assert.ok(!all.includes("pawsync"), "no PawSync content");
+  const all = KNOWLEDGE + INSTRUCTIONS + Object.values(LANGUAGE_NOTE).join(" ");
+  assert.deepEqual(forbiddenNamesIn(all), [], "no other-business content");
 });
 
 test("no secrets or other-business references in shipped front-end or function code", () => {
@@ -142,7 +151,7 @@ test("no secrets or other-business references in shipped front-end or function c
   for (const f of files) {
     const src = readFileSync(path.join(root, f), "utf8");
     assert.ok(!/sk-ant-[a-z0-9]/i.test(src), `${f} must not contain an API key`);
-    assert.ok(!/pawsync/i.test(src), `${f} must not reference PawSync`);
+    assert.deepEqual(forbiddenNamesIn(src), [], `${f} must not reference other businesses`);
   }
   assert.ok(!/ANTHROPIC|x-api-key/i.test(readFileSync(path.join(root, "chat-widget.js"), "utf8")), "front end never handles credentials");
 });
