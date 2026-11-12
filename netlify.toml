@@ -57,3 +57,19 @@
   for = "/chat-widget.*"
   [headers.values]
     Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Baseline security headers for every page (no CSP yet: it needs testing against
+# Google Fonts, the chat widget and Netlify Forms before it can be enforced).
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+
+# The sitemap is for crawlers, not a page to show in search results.
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    X-Robots-Tag = "noindex"
