@@ -1,3 +1,53 @@
 # Static HTML/CSS site — no build step required.
+# The only server-side code is the chat assistant function in netlify/functions/chat
+# (served at /api/chat). Its Anthropic API key is set in Netlify's environment
+# variables (ANTHROPIC_API_KEY), never in this repository.
 [build]
   publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# The site publishes the repository root, so keep source/tooling folders from being
+# served as public files. (Rules in _redirects run first; none of them match these paths.)
+[[redirects]]
+  from = "/netlify/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/node_modules/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/scripts/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/tests/*"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/package.json"
+  to = "/404"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/package-lock.json"
+  to = "/404"
+  status = 404
+  force = true
+
+[[headers]]
+  for = "/chat-widget.*"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"

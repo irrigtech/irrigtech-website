@@ -23,6 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/chat-widget.css">
 </head>
 <body>
 
@@ -62,7 +63,7 @@
   <section>
     <div class="wrap legal">
 
-      <div class="note" style="margin-bottom:1.5rem;">IrrigTech, par Pak-EL LAB, est actuellement un projet d'ingénierie au stade de prototype/déploiement précoce. Ce site web ne dispose aujourd'hui d'aucun compte utilisateur, d'aucune connexion publique au tableau de bord ni d'aucune télémétrie d'appareil en direct — les seules données personnelles collectées par ce site sont celles que vous transmettez via le formulaire de contact ci-dessous, ainsi que les journaux d'hébergement standard.</div>
+      <div class="note" style="margin-bottom:1.5rem;">IrrigTech, par Pak-EL LAB, est actuellement un projet d'ingénierie au stade de prototype/déploiement précoce. Ce site web ne dispose aujourd'hui d'aucun compte utilisateur, d'aucune connexion publique au tableau de bord ni d'aucune télémétrie d'appareil en direct — les seules données personnelles collectées par ce site sont celles que vous transmettez via le formulaire de contact ou l'assistant de chat du site, ainsi que les journaux d'hébergement standard et les compteurs d'utilisation du chat de courte durée décrits ci-dessous.</div>
 
       <h2>Objet de la présente politique</h2>
       <p>Cette politique explique ce qu'IrrigTech collecte lorsque vous utilisez ce site web, et la manière dont ces informations sont utilisées, conservées et partagées. Elle sera étendue pour couvrir les données du tableau de bord et du matériel de terrain une fois que ces éléments deviendront des parties actives et facturables du service.</p>
@@ -70,22 +71,25 @@
       <h2>Informations que nous collectons aujourd'hui</h2>
       <ul>
         <li><strong>Soumissions du formulaire de contact</strong> — le nom, l'e-mail, l'entreprise, le téléphone et les détails du projet que vous saisissez sur la page <a href="/fr/contact.html" style="color:var(--accent);">Contact</a>. Elles sont transmises via Netlify Forms et livrées par e-mail à notre équipe.</li>
+        <li><strong>Assistant de chat IA du site</strong> — lorsque vous utilisez la fenêtre de chat de ce site, les messages que vous saisissez, les messages récents de cette conversation et la langue de chat choisie sont transmis depuis notre serveur à <strong>Anthropic</strong>, le fournisseur du modèle d'IA (Claude) qui rédige les réponses. L'assistant répond à partir du contenu publié sur ce site. Notre fonction de chat n'enregistre pas le contenu de votre conversation ; il est conservé uniquement dans le stockage de session de votre navigateur jusqu'à ce que vous fermiez l'onglet ou commenciez une nouvelle conversation. Merci de ne pas saisir d'informations personnelles sensibles dans le chat. Les réponses sont générées automatiquement, peuvent être incomplètes ou erronées, et ne constituent ni un devis ni une offre ferme — veuillez confirmer les informations importantes avec notre équipe.</li>
+        <li><strong>Demandes envoyées depuis le chat</strong> — si vous choisissez « Envoyer une demande » dans le chat et cochez la case de consentement, le nom, l'e-mail, l'entreprise et le téléphone (facultatifs), le type de projet et les besoins du projet que vous saisissez, ainsi que votre consentement, la langue du chat et la page consultée, sont transmis via Netlify Forms et livrés par e-mail à notre équipe, comme pour le formulaire de contact. Votre conversation n'est pas jointe à la demande.</li>
+        <li><strong>Limites d'utilisation du chat</strong> — pour prévenir les abus et maîtriser les coûts, nous comptons les messages de chat par visiteur et par jour. Le compteur est enregistré avec une empreinte (hachage à sens unique) de votre adresse IP, et non l'adresse IP elle-même, dans le stockage de notre hébergeur (Netlify Blobs) ; les compteurs des jours précédents sont supprimés automatiquement, généralement en quelques jours.</li>
         <li><strong>Messages directs</strong> — tout ce que vous nous envoyez par e-mail ou WhatsApp.</li>
         <li><strong>Journaux d'hébergement de base</strong> — les journaux serveur standard (comme l'adresse IP et l'heure de la requête) conservés par notre hébergeur, Netlify, à des fins de sécurité et de fiabilité.</li>
       </ul>
       <p>Nous n'exploitons actuellement aucun compte utilisateur, aucun tableau de bord public, ni aucun système ingérant des données de capteurs de terrain en direct depuis le matériel des clients. Lorsque ces parties de la plateforme seront actives, cette politique sera mise à jour en premier lieu, et décrira précisément ce qui est collecté (pour les déploiements pilotes, nous définissons cela par projet, par écrit, avant qu'un appareil ne transmette des données).</p>
 
       <h2>Utilisation des données</h2>
-      <p>Les informations du formulaire de contact et des messages directs ne sont utilisées que pour répondre à votre demande et, si vous devenez client, pour mener à bien ce projet. Nous ne vendons pas ces informations à des tiers.</p>
+      <p>Les informations du formulaire de contact, des demandes envoyées depuis le chat et des messages directs ne sont utilisées que pour répondre à votre demande et, si vous devenez client, pour mener à bien ce projet. Nous ne vendons pas ces informations à des tiers. Les messages du chat servent uniquement à générer les réponses de l'assistant. Votre navigateur enregistre également la langue de chat choisie (stockage local) et la conversation ouverte (stockage de session) sur votre appareil ; ce site ne les utilise pas à des fins de suivi.</p>
 
       <h2>Conservation des données</h2>
-      <p>Nous conservons les soumissions du formulaire de contact et la correspondance associée aussi longtemps que raisonnablement nécessaire pour vous répondre ou mener à bien un projet, puis nous les supprimons ou les archivons.</p>
+      <p>Nous conservons les soumissions du formulaire de contact, les demandes envoyées depuis le chat et la correspondance associée aussi longtemps que raisonnablement nécessaire pour vous répondre ou mener à bien un projet, puis nous les supprimons ou les archivons. Nous ne conservons pas de copie des conversations du chat. Anthropic peut conserver les messages qu'il traite pendant une durée limitée, conformément à ses propres conditions et à sa <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener" style="color:var(--accent);">politique de confidentialité</a>. Les compteurs d'utilisation du chat sont supprimés après le jour concerné, généralement en quelques jours.</p>
 
       <h2>Partage des données</h2>
-      <p>Nous ne partageons des données avec des sous-traitants que lorsque cela est nécessaire au fonctionnement de ce site et pour vous répondre — actuellement notre hébergeur (Netlify) et, si vous nous contactez par ce biais, WhatsApp/Meta — dans le cadre de leurs propres conditions d'utilisation.</p>
+      <p>Nous ne partageons des données avec des sous-traitants que lorsque cela est nécessaire au fonctionnement de ce site et pour vous répondre — actuellement notre hébergeur (Netlify), le fournisseur d'IA de l'assistant de chat (Anthropic) et, si vous nous contactez par ce biais, WhatsApp/Meta — dans le cadre de leurs propres conditions d'utilisation. Ces fournisseurs peuvent traiter des données en dehors de votre pays, y compris aux États-Unis.</p>
 
       <h2>Sécurité</h2>
-      <p>Les soumissions du formulaire de contact sont envoyées via une connexion chiffrée (HTTPS). Nous ne demandons ni mot de passe, ni informations de paiement, ni autres identifiants sensibles via ce site.</p>
+      <p>Les soumissions du formulaire de contact, les messages du chat et les demandes envoyées depuis le chat transitent par des connexions chiffrées (HTTPS). Les identifiants utilisés pour accéder au fournisseur d'IA sont conservés sur notre serveur et ne sont jamais envoyés à votre navigateur. Nous ne demandons ni mot de passe, ni informations de paiement, ni autres identifiants sensibles via ce site.</p>
 
       <h2>Vos droits</h2>
       <p>Vous pouvez demander une copie des informations que nous détenons à votre sujet, nous demander de les corriger, ou nous demander de les supprimer, en nous contactant ci-dessous.</p>
@@ -130,10 +134,7 @@
   </div>
 </footer>
 
-<a href="https://wa.me/923451616967?text=Bonjour%20IrrigTech%2C%20je%20souhaite%20discuter%20d%27un%20projet%20avec%20votre%20%C3%A9quipe." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Discuter avec IrrigTech sur WhatsApp">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.45 1.29 4.9L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.67-.78-3.08-1.27-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17 0-1.5.79-2.24 1.07-2.55.28-.3.6-.38.8-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.3-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/></svg>
-  <span class="whatsapp-float-label">Discuter sur WhatsApp</span>
-</a>
+
 
 <script>
   document.getElementById('hamburger').addEventListener('click', function(){
@@ -143,5 +144,6 @@
     this.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script src="/chat-widget.js" defer></script>
 </body>
 </html>

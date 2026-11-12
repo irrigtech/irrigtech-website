@@ -23,6 +23,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/chat-widget.css">
 </head>
 <body>
 
@@ -62,7 +63,7 @@
   <section>
     <div class="wrap legal">
 
-      <div class="note" style="margin-bottom:1.5rem;">IrrigTech, von Pak-EL LAB, ist derzeit ein Ingenieurprojekt im Prototyp-/frühen Einsatzstadium. Diese Website verfügt heute über keine Nutzerkonten, kein öffentliches Dashboard-Login und keine Live-Gerätetelemetrie — die einzigen personenbezogenen Daten, die diese Website erhebt, sind die Angaben, die Sie über das untenstehende Kontaktformular übermitteln, sowie übliche Hosting-Protokolle.</div>
+      <div class="note" style="margin-bottom:1.5rem;">IrrigTech, von Pak-EL LAB, ist derzeit ein Ingenieurprojekt im Prototyp-/frühen Einsatzstadium. Diese Website verfügt heute über keine Nutzerkonten, kein öffentliches Dashboard-Login und keine Live-Gerätetelemetrie — die einzigen personenbezogenen Daten, die diese Website erhebt, sind die Angaben, die Sie über das Kontaktformular oder den Chat-Assistenten der Website übermitteln, sowie übliche Hosting-Protokolle und die unten beschriebenen kurzlebigen Chat-Nutzungszähler.</div>
 
       <h2>Geltungsbereich</h2>
       <p>Diese Erklärung beschreibt, was IrrigTech bei der Nutzung dieser Website erhebt und wie diese Informationen genutzt, gespeichert und weitergegeben werden. Sie wird erweitert, sobald Dashboard- und Feldhardware-Daten zu aktiven, kostenpflichtigen Teilen des Dienstes werden.</p>
@@ -70,22 +71,25 @@
       <h2>Welche Daten wir heute erheben</h2>
       <ul>
         <li><strong>Kontaktformular-Übermittlungen</strong> — Name, E-Mail-Adresse, Unternehmen, Telefonnummer und Projektdetails, die Sie auf der Seite <a href="/de/contact.html" style="color:var(--accent);">Kontakt</a> eingeben. Diese werden über Netlify Forms übermittelt und per E-Mail an unser Team zugestellt.</li>
+        <li><strong>KI-Chat-Assistent der Website</strong> — wenn Sie das Chatfenster auf dieser Website nutzen, werden die von Ihnen eingegebenen Nachrichten, die letzten Nachrichten dieses Gesprächs und die gewählte Chat-Sprache von unserem Server an <strong>Anthropic</strong> übermittelt, den Anbieter des KI-Modells (Claude), das die Antworten verfasst. Der Assistent antwortet auf Grundlage der auf dieser Website veröffentlichten Inhalte. Unsere Chat-Funktion speichert den Inhalt Ihres Gesprächs nicht; er wird nur im Sitzungsspeicher (Session Storage) Ihres Browsers gehalten, bis Sie den Tab schließen oder einen neuen Chat beginnen. Bitte geben Sie im Chat keine sensiblen personenbezogenen Daten ein. Die Antworten werden automatisch erstellt, können unvollständig oder fehlerhaft sein und sind weder ein Angebot noch verbindlich — bitte bestätigen Sie wichtige Details mit unserem Team.</li>
+        <li><strong>Anfragen über den Chat</strong> — wenn Sie im Chat „Anfrage senden“ wählen und das Einwilligungsfeld ankreuzen, werden Name, E-Mail-Adresse, optional Unternehmen und Telefonnummer, Projektart und Projektanforderungen, die Sie eingeben, sowie Ihre Einwilligung, die Chat-Sprache und die Seite, auf der Sie sich befanden, über Netlify Forms übermittelt und per E-Mail an unser Team zugestellt — genauso wie beim Kontaktformular. Ihr Chatverlauf wird der Anfrage nicht beigefügt.</li>
+        <li><strong>Nutzungsgrenzen des Chats</strong> — um Missbrauch zu verhindern und Kosten zu begrenzen, zählen wir Chat-Nachrichten pro Besucher und Tag. Der Zähler wird zusammen mit einem Einweg-Hash Ihrer IP-Adresse (nicht der IP-Adresse selbst) im Speicher unseres Hosting-Anbieters (Netlify Blobs) abgelegt; Zähler vergangener Tage werden automatisch gelöscht, in der Regel innerhalb weniger Tage.</li>
         <li><strong>Direkte Nachrichten</strong> — alles, was Sie uns per E-Mail oder WhatsApp senden.</li>
         <li><strong>Grundlegende Hosting-Protokolle</strong> — Standard-Server-Protokolle (wie IP-Adresse und Anfragezeit), die von unserem Hosting-Anbieter Netlify aus Sicherheits- und Zuverlässigkeitsgründen gespeichert werden.</li>
       </ul>
       <p>Wir betreiben derzeit keine Nutzerkonten, kein öffentliches Dashboard und kein System, das Live-Felddaten von Kundenhardware erfasst. Sobald diese Teile der Plattform live gehen, wird diese Erklärung zuerst aktualisiert und beschreibt genau, was erhoben wird (für Pilotprojekte legen wir dies projektbezogen schriftlich fest, bevor ein Gerät Daten meldet).</p>
 
       <h2>Wie wir die Daten verwenden</h2>
-      <p>Angaben aus dem Kontaktformular und Direktnachrichten werden ausschließlich genutzt, um auf Ihre Anfrage zu antworten und, falls Sie Kunde werden, um dieses Projekt durchzuführen. Wir verkaufen diese Informationen nicht an Dritte.</p>
+      <p>Angaben aus dem Kontaktformular, aus Chat-Anfragen und aus Direktnachrichten werden ausschließlich genutzt, um auf Ihre Anfrage zu antworten und, falls Sie Kunde werden, um dieses Projekt durchzuführen. Wir verkaufen diese Informationen nicht an Dritte. Chat-Nachrichten werden ausschließlich zur Erstellung der Antworten des Assistenten verwendet. Ihr Browser speichert außerdem Ihre gewählte Chat-Sprache (Local Storage) und das geöffnete Gespräch (Session Storage) auf Ihrem Gerät; diese Website nutzt sie nicht zur Nachverfolgung.</p>
 
       <h2>Speicherdauer</h2>
-      <p>Wir bewahren Kontaktformular-Übermittlungen und zugehörige Korrespondenz so lange auf, wie es angemessen ist, um Ihnen zu antworten oder ein Projekt durchzuführen, und löschen oder archivieren sie anschließend.</p>
+      <p>Wir bewahren Kontaktformular-Übermittlungen, Chat-Anfragen und zugehörige Korrespondenz so lange auf, wie es angemessen ist, um Ihnen zu antworten oder ein Projekt durchzuführen, und löschen oder archivieren sie anschließend. Chatverläufe speichern wir nicht. Anthropic kann die verarbeiteten Chat-Nachrichten für einen begrenzten Zeitraum gemäß seinen eigenen Bedingungen und seiner <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener" style="color:var(--accent);">Datenschutzerklärung</a> aufbewahren. Chat-Nutzungszähler werden nach Ablauf des jeweiligen Tages gelöscht, in der Regel innerhalb weniger Tage.</p>
 
       <h2>Weitergabe</h2>
-      <p>Wir geben Daten nur dann an Auftragsverarbeiter weiter, wenn dies für den Betrieb dieser Website und die Beantwortung Ihrer Anfrage erforderlich ist — derzeit unser Hosting-Anbieter (Netlify) und, falls Sie uns dort kontaktieren, WhatsApp/Meta —, jeweils im Rahmen von deren eigenen Nutzungsbedingungen.</p>
+      <p>Wir geben Daten nur dann an Auftragsverarbeiter weiter, wenn dies für den Betrieb dieser Website und die Beantwortung Ihrer Anfrage erforderlich ist — derzeit unser Hosting-Anbieter (Netlify), der KI-Anbieter des Chat-Assistenten (Anthropic) und, falls Sie uns dort kontaktieren, WhatsApp/Meta —, jeweils im Rahmen von deren eigenen Nutzungsbedingungen. Diese Anbieter können Daten außerhalb Ihres Landes verarbeiten, auch in den Vereinigten Staaten.</p>
 
       <h2>Sicherheit</h2>
-      <p>Kontaktformular-Übermittlungen werden über eine verschlüsselte (HTTPS) Verbindung gesendet. Wir fragen über diese Website nicht nach Passwörtern, Zahlungsdaten oder anderen sensiblen Zugangsdaten.</p>
+      <p>Kontaktformular-Übermittlungen, Chat-Nachrichten und Chat-Anfragen werden über verschlüsselte (HTTPS) Verbindungen gesendet. Die Zugangsdaten für den KI-Anbieter liegen auf unserem Server und werden nie an Ihren Browser übertragen. Wir fragen über diese Website nicht nach Passwörtern, Zahlungsdaten oder anderen sensiblen Zugangsdaten.</p>
 
       <h2>Ihre Rechte</h2>
       <p>Sie können eine Kopie der über Sie gespeicherten Informationen anfordern, uns um deren Berichtigung bitten oder deren Löschung verlangen, indem Sie uns unten kontaktieren.</p>
@@ -130,10 +134,7 @@
   </div>
 </footer>
 
-<a href="https://wa.me/923451616967?text=Hallo%20IrrigTech%2C%20ich%20m%C3%B6chte%20ein%20Projekt%20mit%20Ihrem%20Team%20besprechen." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Mit IrrigTech auf WhatsApp chatten">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.45 1.29 4.9L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.67-.78-3.08-1.27-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17 0-1.5.79-2.24 1.07-2.55.28-.3.6-.38.8-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.3-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/></svg>
-  <span class="whatsapp-float-label">Auf WhatsApp chatten</span>
-</a>
+
 
 <script>
   document.getElementById('hamburger').addEventListener('click', function(){
@@ -143,5 +144,6 @@
     this.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script src="/chat-widget.js" defer></script>
 </body>
 </html>
