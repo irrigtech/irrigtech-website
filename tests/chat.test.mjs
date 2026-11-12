@@ -161,7 +161,7 @@ test("every published page loads the widget and no longer has the floating Whats
   for (const dir of ["", "de", "fr"]) for (const f of readdirSync(path.join(root, dir))) {
     if (f.endsWith(".html") && !f.includes("preview") && statSync(path.join(root, dir, f)).isFile()) pages.push(path.join(dir, f));
   }
-  assert.equal(pages.length, 51);
+  assert.equal(pages.length, 52); // 51 site pages + 404.html
   for (const p of pages) {
     const html = readFileSync(path.join(root, p), "utf8");
     assert.ok(html.includes('<script src="/chat-widget.js" defer></script>'), `${p} loads widget`);
