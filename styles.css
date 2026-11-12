@@ -914,3 +914,7 @@ footer .muted{ color:rgba(255,255,255,0.72); }
 .device-card.device-card-cta{ justify-content:center; text-align:left; background:radial-gradient(110% 80% at 0% 0%, rgba(78,168,230,0.18) 0%, rgba(78,168,230,0) 60%), rgba(20,28,22,0.55); border-color:rgba(78,168,230,0.35); }
 .device-card-cta .cta-kicker{ font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent-strong); }
 .device-card-cta .btn{ align-self:flex-start; margin-top:0.35rem; }
+
+/* Home: 5-step deployment row on wide screens; photo thumbs fill the card */
+@media (min-width:1000px){ .flow-grid:has(> :nth-child(5):last-child){ grid-template-columns:repeat(5,1fr); } }
+.device-card .thumb img.thumb-cover{ object-fit:cover; }
