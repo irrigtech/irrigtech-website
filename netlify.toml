@@ -5,6 +5,12 @@
 [build]
   publish = "."
 
+# Keep internal links exactly as written (/page.html). Netlify's Pretty URLs
+# post-processing rewrote them to /page, which _redirects then 301s back to
+# /page.html, so every internal link cost a redirect hop.
+[build.processing.html]
+  pretty_urls = false
+
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
