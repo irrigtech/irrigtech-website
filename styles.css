@@ -408,10 +408,10 @@ footer .muted{ color:rgba(255,255,255,0.72); }
 .device-visual.photo img{ width:100%; height:auto; display:block; border-radius:6px; }
 .device-card .thumb{ width:100%; aspect-ratio:4/3; border-radius:6px; overflow:hidden; background:#f3f5f7; border:1px solid var(--line); }
 .device-card .thumb img{ width:100%; height:100%; object-fit:contain; display:block; }
-.photo-pending{ display:flex; align-items:center; justify-content:center; text-align:center; width:100%; min-height:14rem; padding:1.25rem; border-radius:6px; background:var(--surface); color:var(--ink-muted); font-family:var(--font-mono); font-size:0.78rem; letter-spacing:0.05em; text-transform:uppercase; }
+
 .device-card .thumb:has(.photo-pending){ display:flex; }
-.device-card .thumb .photo-pending{ min-height:0; flex:1; border-radius:0; background:#f3f5f7; color:#5c665e; }
-.device-visual.photo .photo-pending{ background:#f3f5f7; color:#5c665e; min-height:12rem; }
+
+
 .device-card .thumb, .device-visual.photo{ position:relative; }
 .concept-tag{ position:absolute; left:0.75rem; top:0.75rem; z-index:1; padding:0.25rem 0.6rem; border-radius:999px; background:rgba(13,19,16,0.82); color:#ffffff; font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.05em; text-transform:uppercase; }
 .rs-fill-surface{ fill:var(--surface); }
@@ -888,3 +888,29 @@ footer .muted{ color:rgba(255,255,255,0.72); }
   h1, h2, h3, h4{ -webkit-hyphens:auto; hyphens:auto; overflow-wrap:break-word; }
   .contact-grid > *, .flow-grid > *, .flow-item > *{ min-width:0; }
 }
+
+/* Product photo placeholder (designed, honest: no fake product render) */
+.photo-pending{ position:relative; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:0.85rem; text-align:center; width:100%; min-height:14rem; padding:1.25rem; border-radius:6px;
+  background:radial-gradient(120% 90% at 50% 0%, rgba(78,168,230,0.16) 0%, rgba(78,168,230,0) 60%), linear-gradient(180deg, #18221c 0%, #111814 100%);
+  color:var(--ink-muted); font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; }
+.photo-pending::before{ content:""; width:3.25rem; height:3.25rem; background-color:var(--accent); opacity:0.9;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='10' y='16' width='28' height='24' rx='4'/%3E%3Cpath d='M30 16V6'/%3E%3Cpath d='M26 8.5a6 6 0 0 1 8 0'/%3E%3Ccircle cx='18' cy='24' r='2'/%3E%3Cpath d='M16 33h16'/%3E%3C/svg%3E") center/contain no-repeat; mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='10' y='16' width='28' height='24' rx='4'/%3E%3Cpath d='M30 16V6'/%3E%3Cpath d='M26 8.5a6 6 0 0 1 8 0'/%3E%3Ccircle cx='18' cy='24' r='2'/%3E%3Cpath d='M16 33h16'/%3E%3C/svg%3E") center/contain no-repeat; }
+.photo-pending::after{ content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+  background-image:linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px); background-size:22px 22px; }
+.device-card .thumb:has(.photo-pending){ background:#111814; }
+.device-card .thumb .photo-pending{ min-height:0; flex:1; border-radius:0; }
+.device-visual.photo:has(.photo-pending){ background:var(--surface); }
+.device-visual.photo .photo-pending{ min-height:12rem; }
+
+/* Hero status line */
+.hero .hero-status{ margin:1.1rem auto 0; display:inline-flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:0.35rem 0.5rem; max-width:46rem;
+  padding:0.45rem 0.9rem; border-radius:var(--radius-pill); background:rgba(13,19,16,0.55); border:1px solid rgba(255,255,255,0.14);
+  font-size:0.8rem; color:rgba(255,255,255,0.82); backdrop-filter:blur(6px); }
+.hero .hero-status a{ color:#fff; text-decoration:underline; text-underline-offset:2px; }
+.hero .hero-status-dot{ width:0.5rem; height:0.5rem; border-radius:50%; background:var(--warn); box-shadow:0 0 0 3px var(--warn-soft); flex:none; }
+@media (max-width:700px){ .hero .hero-status{ border-radius:var(--radius); font-size:0.76rem; } }
+
+/* Consultation card that completes the 3x2 hardware grid */
+.device-card.device-card-cta{ justify-content:center; text-align:left; background:radial-gradient(110% 80% at 0% 0%, rgba(78,168,230,0.18) 0%, rgba(78,168,230,0) 60%), rgba(20,28,22,0.55); border-color:rgba(78,168,230,0.35); }
+.device-card-cta .cta-kicker{ font-family:var(--font-mono); font-size:0.72rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--accent-strong); }
+.device-card-cta .btn{ align-self:flex-start; margin-top:0.35rem; }
