@@ -43,6 +43,7 @@
   ]
 }
 </script>
+<link rel="stylesheet" href="/chat-widget.css">
 </head>
 <body>
 
@@ -82,7 +83,7 @@
   <section>
     <div class="wrap legal">
 
-      <div class="note" style="margin-bottom:1.5rem;">IrrigTech, by Pak-EL LAB, is currently a prototype/early-deployment engineering project. This website does not have user accounts, a public dashboard login, or live device telemetry today — the only personal data this site collects is what you submit through the contact form below, plus standard hosting logs.</div>
+      <div class="note" style="margin-bottom:1.5rem;">IrrigTech, by Pak-EL LAB, is currently a prototype/early-deployment engineering project. This website does not have user accounts, a public dashboard login, or live device telemetry today — the only personal data this site collects is what you submit through the contact form or the website chat assistant, plus standard hosting logs and the short-lived chat usage counters described below.</div>
 
       <h2>What this covers</h2>
       <p>This policy explains what IrrigTech collects when you use this website, and how that information is used, stored, and shared. It will be expanded to cover dashboard and field-hardware data once those are live, billable parts of the service.</p>
@@ -90,22 +91,25 @@
       <h2>Information we collect today</h2>
       <ul>
         <li><strong>Contact form submissions</strong> — the name, email, company, phone, and project details you enter on the <a href="/contact.html" style="color:var(--accent);">Contact</a> page. These are submitted via Netlify Forms and delivered to our team by email.</li>
+        <li><strong>Website chat assistant (AI)</strong> — when you use the chat window on this site, the messages you type, the recent messages of that conversation, and your chosen chat language are sent from our server to <strong>Anthropic</strong>, the provider of the AI model (Claude) that writes the answers. The assistant answers from the content published on this website. Our chat function does not save the content of your conversation; it is kept only in your browser's session storage until you close the tab or start a new chat. Please don't enter sensitive personal information in the chat. Answers are generated automatically, may be incomplete or wrong, and are not a quote or binding offer — please confirm important details with our team.</li>
+        <li><strong>Chat inquiries</strong> — if you choose "Send an inquiry" in the chat and tick the consent box, the name, email, optional company and phone, project type, and project requirements you enter, plus your consent, the chat language, and the page you were on, are submitted via Netlify Forms and delivered to our team by email, the same way as the contact form. Your chat conversation is not attached to the inquiry.</li>
+        <li><strong>Chat usage limits</strong> — to prevent abuse and control costs, we count chat messages per visitor per day. The count is stored with a one-way hash of your IP address (not the IP address itself) in our hosting provider's storage (Netlify Blobs), and counters from previous days are deleted automatically, usually within a few days.</li>
         <li><strong>Direct messages</strong> — anything you send us by email or WhatsApp.</li>
         <li><strong>Basic hosting logs</strong> — standard server logs (such as IP address and request time) kept by our hosting provider, Netlify, for security and reliability.</li>
       </ul>
       <p>We do not currently operate user accounts, a public dashboard, or a system that ingests live field-sensor data from customer hardware. When those parts of the platform go live, this policy will be updated first, and it will describe exactly what is collected (for pilot deployments we design that per project, in writing, before any device reports data).</p>
 
       <h2>How we use it</h2>
-      <p>Contact form and direct-message details are used only to respond to your inquiry and, if you become a customer, to run that project. We don't sell this information to third parties.</p>
+      <p>Contact form, chat inquiry, and direct-message details are used only to respond to your inquiry and, if you become a customer, to run that project. We don't sell this information to third parties. Chat messages are used only to generate the assistant's answers. Your browser also stores your chat language choice (local storage) and the open conversation (session storage) on your device; this site does not use them for tracking.</p>
 
       <h2>Data retention</h2>
-      <p>We keep contact-form submissions and related correspondence for as long as reasonably needed to respond to you or deliver a project, and then delete or archive them.</p>
+      <p>We keep contact-form submissions, chat inquiries, and related correspondence for as long as reasonably needed to respond to you or deliver a project, and then delete or archive them. We do not keep a copy of chat conversations. Anthropic may retain chat messages it processes for a limited period under its own terms and <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener" style="color:var(--accent);">privacy policy</a>. Chat usage counters are deleted after the day they relate to, usually within a few days.</p>
 
       <h2>Sharing</h2>
-      <p>We share data with sub-processors only where needed to operate this site and respond to you — currently our hosting provider (Netlify) and, if you message us there, WhatsApp/Meta — under their own terms of service.</p>
+      <p>We share data with sub-processors only where needed to operate this site and respond to you — currently our hosting provider (Netlify), the AI provider for the website chat assistant (Anthropic), and, if you message us there, WhatsApp/Meta — under their own terms of service. These providers may process data outside your country, including in the United States.</p>
 
       <h2>Security</h2>
-      <p>Contact form submissions are sent over an encrypted (HTTPS) connection. We don't ask for passwords, payment details, or other sensitive credentials through this site.</p>
+      <p>Contact form submissions, chat messages, and chat inquiries are sent over encrypted (HTTPS) connections. The credentials used to reach the AI provider are kept on our server and are never sent to your browser. We don't ask for passwords, payment details, or other sensitive credentials through this site.</p>
 
       <h2>Your rights</h2>
       <p>You can request a copy of the information we hold about you, ask us to correct it, or ask us to delete it, by contacting us below.</p>
@@ -150,10 +154,7 @@
   </div>
 </footer>
 
-<a href="https://wa.me/923451616967?text=Hello%20IrrigTech%2C%20I%20would%20like%20to%20discuss%20a%20project%20with%20your%20team." target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="Chat with IrrigTech on WhatsApp">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.45 1.29 4.9L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.67-.78-3.08-1.27-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17 0-1.5.79-2.24 1.07-2.55.28-.3.6-.38.8-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.3-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/></svg>
-  <span class="whatsapp-float-label">Chat on WhatsApp</span>
-</a>
+
 
 <script>
   document.getElementById('hamburger').addEventListener('click', function(){
@@ -163,5 +164,6 @@
     this.setAttribute('aria-expanded', open ? 'true' : 'false');
   });
 </script>
+<script src="/chat-widget.js" defer></script>
 </body>
 </html>
