@@ -69,15 +69,16 @@
     <div class="hero-inner">
       <span class="eyebrow">Intelligence de terrain</span>
       <h1 style="margin-top:0.9rem;">Des données de terrain à de meilleures décisions.</h1>
-      <p class="dek">IrrigTech, un projet d'ingénierie de Pak-EL LAB, développe une plateforme qui réunit le scan aérien des cultures, les capteurs de terrain, l'intelligence d'irrigation et le logiciel de gestion agricole au sein d'une plateforme agricole connectée. Quelques éléments existent en prototype, proposés via une consultation de projet ; le reste est prévu — voir <a href="/fr/how-it-works.html" style="text-decoration:underline;">ce qui est déjà construit et ce qui est prévu</a>.</p>
+      <p class="dek">IrrigTech, un projet d'ingénierie de Pak-EL LAB, développe une plateforme connectée pour les exploitations agricoles : scan aérien des cultures, capteurs de terrain, pilotage intelligent de l'irrigation et logiciel de gestion agricole.</p>
       <div class="actions">
         <a href="/fr/platform.html" class="btn btn-primary">Découvrir la plateforme</a>
         <a href="/fr/contact.html" class="btn btn-ghost">Demander une consultation</a>
       </div>
+      <p class="hero-status"><span class="hero-status-dot" aria-hidden="true"></span>Matériel prototype disponible via une consultation de projet · Autres éléments en développement · <a href="/fr/how-it-works.html">Voir l'avancement</a></p>
     </div>
   </section>
 
-  <section style="padding-top:3rem;">
+  <section>
     <div class="wrap">
       <div class="s-head">
         <span class="eyebrow">L'écosystème</span>
@@ -162,42 +163,6 @@
     </div>
   </section>
 
-  <section>
-    <div class="wrap">
-      <div class="s-head">
-        <span class="eyebrow">Ce qu'IrrigTech est conçu pour surveiller</span>
-        <h2>Des signaux qui méritent un examen plus approfondi</h2>
-        <p>Détection assistée par IA et signalement d'anomalies — une aide à la décision pour votre équipe, pas un diagnostic automatique.</p>
-      </div>
-      <div class="signals-split">
-        <div class="signals-media"><span class="badge">Illustration conceptuelle</span><img src="/images/ecosystem-fieldnodes.jpg" srcset="/images/ecosystem-fieldnodes-480.jpg 480w, /images/ecosystem-fieldnodes.jpg 1000w" sizes="(max-width: 860px) 90vw, 420px" width="1000" height="750" alt="Illustration conceptuelle des capteurs de terrain et de l'imagerie par drone à l'origine des signaux surveillés" loading="lazy" decoding="async"></div>
-        <div class="feature-rows">
-          <div class="feature-row"><span class="fn">01</span><div><h3>Santé des cultures <span class="status-badge status-development">En développement</span></h3><p>L'imagerie par drone est conçue pour signaler les schémas de culture suspects et le stress anormal, à vérifier sur le terrain.</p></div></div>
-          <div class="feature-row"><span class="fn">02</span><div><h3>Stress nutritionnel <span class="status-badge status-development">En développement</span></h3><p>Prévu : des schémas potentiels de carence nutritionnelle identifiés en combinant imagerie et données de capteurs — vérification en laboratoire ou sur le terrain recommandée.</p></div></div>
-          <div class="feature-row"><span class="fn">03</span><div><h3>Croissance des cultures <span class="status-badge status-development">En développement</span></h3><p>Prévu : levée, développement de la canopée et évolution dans le temps, suivis d'un scan à l'autre.</p></div></div>
-          <div class="feature-row"><span class="fn">04</span><div><h3>Stress hydrique <span class="status-badge status-prototype">Prototype</span></h3><p>Prévu : zones sous- et sur-irriguées identifiées à partir des données d'humidité du sol par zone.</p></div></div>
-          <div class="feature-row"><span class="fn">05</span><div><h3>État du sol <span class="status-badge status-prototype">Prototype</span></h3><p>Prévu : humidité, température et CE mesurées par les capteurs de terrain, avec la variabilité spatiale sur l'ensemble du champ.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="s-head">
-        <span class="eyebrow">Matériel <span class="status-badge status-prototype">Prototype</span></span>
-        <h2>Drone de scan de terrain</h2>
-        <p>Des scans de champ reproductibles — imagerie géolocalisée, comparée scan après scan ; le fonctionnement autonome est un objectif de conception.</p>
-      </div>
-      <div class="feature-rows">
-        <div class="feature-row"><span class="fn">✈</span><div><h3>Missions planifiées et autonomes</h3><p>Les trajectoires de vol sont prévues à partir des limites de champ enregistrées, pour que les scans répétés couvrent la même zone — objectif de conception.</p></div></div>
-        <div class="feature-row"><span class="fn">◈</span><div><h3>RGB, multispectral, thermique en option</h3><p>Prévus : plusieurs modes d'imagerie selon vos besoins — état de la canopée, schémas de stress ou évolution à l'échelle du champ.</p></div></div>
-        <div class="feature-row"><span class="fn">⊕</span><div><h3>Positionnement GNSS / RTK</h3><p>Prévu : une imagerie géolocalisée qui s'aligne précisément avec les scans précédents du même champ.</p></div></div>
-      </div>
-      <p style="margin-top:1.5rem;"><a href="/fr/how-it-works.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">Voir le déroulé complet du scan par drone →</a></p>
-    </div>
-  </section>
-
   <section style="padding-top:0;">
     <div class="wrap">
       <div class="s-head">
@@ -207,10 +172,11 @@
       </div>
       <div class="device-grid">
         <div class="device-card"><div class="thumb"><img src="/images/ecosystem-fieldnodes.jpg" alt="Illustration conceptuelle d'un nœud de capteurs solaire entre des rangs de culture, pas le produit fini" loading="lazy" decoding="async"><span class="concept-tag">Illustration conceptuelle</span></div><span class="glyph">01</span><h3>Nœud de capteurs IoT</h3><p>Concentrateur multi-sondes prévu pour mesurer l'humidité du sol, la CE, le pH, ainsi que la température et l'humidité de l'air.</p><a href="/fr/iot-sensor-node.html" class="link">Fiche technique →</a></div>
-        <div class="device-card"><div class="thumb"><img src="/images/ecosystem-fieldnodes.jpg" alt="Illustration conceptuelle d'un nœud de capteurs solaire entre des rangs de culture, pas le produit fini" loading="lazy" decoding="async"><span class="concept-tag">Illustration conceptuelle</span></div><span class="glyph">02</span><h3>Capteur d'humidité du sol</h3><p>Une sonde dédiée, pour multiplier les points de mesure sur un même champ.</p><a href="/fr/soil-moisture-sensor.html" class="link">Fiche technique →</a></div>
+        <div class="device-card"><div class="thumb"><img src="/images/ecosystem-soil.jpg" alt="Jeune plant et racines dans le sol, la zone racinaire que le capteur d'humidité du sol doit mesurer" loading="lazy" decoding="async" class="thumb-cover"></div><span class="glyph">02</span><h3>Capteur d'humidité du sol</h3><p>Une sonde dédiée, pour multiplier les points de mesure sur un même champ.</p><a href="/fr/soil-moisture-sensor.html" class="link">Fiche technique →</a></div>
         <div class="device-card"><div class="thumb"><span class="photo-pending">Photo à venir</span></div><span class="glyph">03</span><h3>Contrôleur de vanne intelligent</h3><p>Conçu pour ouvrir et fermer les vannes d'irrigation dès qu'un seuil est franchi.</p><a href="/fr/smart-valve-controller.html" class="link">Fiche technique →</a></div>
         <div class="device-card"><div class="thumb"><span class="photo-pending">Photo à venir</span></div><span class="glyph">04</span><h3>Contrôleur de pompe</h3><p>Démarre et arrête votre pompe à distance ; les protections contre la marche à sec et la surcharge sont prévues, pas encore vérifiées sur le terrain.</p><a href="/fr/pump-controller.html" class="link">Fiche technique →</a></div>
         <div class="device-card"><div class="thumb"><span class="photo-pending">Photo à venir</span></div><span class="glyph">05</span><h3>Passerelle de terrain</h3><p>Conçue pour centraliser tous les nœuds de l'exploitation et les transmettre à votre tableau de bord via 4G ou WiFi.</p><a href="/fr/field-gateway.html" class="link">Fiche technique →</a></div>
+        <div class="device-card device-card-cta"><span class="cta-kicker">Vous ne savez pas par où commencer ?</span><h3>Trouver l'équipement adapté à votre champ</h3><p>Parlez-nous de votre culture, de votre source d'eau et de la taille du champ. Nous recommandons les appareils adaptés et établissons un devis écrit.</p><a href="/fr/contact.html" class="btn btn-primary">Demander une consultation</a></div>
       </div>
       <p style="margin-top:1.5rem;"><a href="/fr/devices.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">Voir tout le matériel, drone inclus →</a></p>
     </div>
@@ -256,35 +222,54 @@
   <section style="padding-top:0;">
     <div class="wrap">
       <div class="s-head">
-        <span class="eyebrow">Automatisation</span>
-        <h2>Du scan planifié à la carte de champ</h2>
+        <span class="eyebrow">Matériel <span class="status-badge status-prototype">Prototype</span></span>
+        <h2>Drone de scan de terrain</h2>
+        <p>Des scans de champ reproductibles — imagerie géolocalisée, comparée scan après scan ; le fonctionnement autonome est un objectif de conception.</p>
       </div>
-      <div class="flow-grid">
-        <div class="pipeline-step"><span class="pipeline-icon">01</span><h4>Planification</h4></div>
-        <div class="pipeline-step"><span class="pipeline-icon">02</span><h4>Scan autonome (objectif de conception)</h4></div>
-        <div class="pipeline-step"><span class="pipeline-icon">03</span><h4>Synchronisation des données</h4></div>
-        <div class="pipeline-step"><span class="pipeline-icon">04</span><h4>Analyse assistée par IA</h4></div>
-        <div class="pipeline-step"><span class="pipeline-icon">05</span><h4>Carte de champ</h4></div>
-        <div class="pipeline-step"><span class="pipeline-icon">06</span><h4>Dossier de champ</h4></div>
+      <div class="feature-rows">
+        <div class="feature-row"><span class="fn">✈</span><div><h3>Missions planifiées et autonomes</h3><p>Les trajectoires de vol sont prévues à partir des limites de champ enregistrées, pour que les scans répétés couvrent la même zone — objectif de conception.</p></div></div>
+        <div class="feature-row"><span class="fn">◈</span><div><h3>RGB, multispectral, thermique en option</h3><p>Prévus : plusieurs modes d'imagerie selon vos besoins — état de la canopée, schémas de stress ou évolution à l'échelle du champ.</p></div></div>
+        <div class="feature-row"><span class="fn">⊕</span><div><h3>Positionnement GNSS / RTK</h3><p>Prévu : une imagerie géolocalisée qui s'aligne précisément avec les scans précédents du même champ.</p></div></div>
       </div>
-      <p style="margin-top:1.5rem;"><a href="/fr/how-it-works.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">Voir le déroulé complet →</a></p>
+      <p style="margin-top:1.5rem;"><a href="/fr/how-it-works.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">Voir le déroulé complet du scan par drone →</a></p>
     </div>
   </section>
 
   <section style="padding-top:0;">
     <div class="wrap">
       <div class="s-head">
-        <span class="eyebrow">Dossier de champ numérique</span>
-        <h2>Un seul historique, toute la saison</h2>
+        <span class="eyebrow">Ce qu'IrrigTech est conçu pour surveiller</span>
+        <h2>Des signaux qui méritent un examen plus approfondi</h2>
+        <p>Détection assistée par IA et signalement d'anomalies — une aide à la décision pour votre équipe, pas un diagnostic automatique.</p>
       </div>
-      <div class="timeline-split">
-        <div class="timeline-media"><img src="/images/ecosystem-soil.jpg" srcset="/images/ecosystem-soil-480.jpg 480w, /images/ecosystem-soil.jpg 1000w" sizes="(max-width: 860px) 90vw, 480px" width="1000" height="750" alt="Jeune plant avec racines visibles dans le sol, symbolisant le dossier de champ saisonnier" loading="lazy" decoding="async"></div>
-        <div class="timeline">
-          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Champ créé</h4><p>Prévu : limites, culture et date de semis.</p></div></div>
-          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Scans 01, 02, 03…</h4><p>Prévu : comparés automatiquement à la référence initiale.</p></div></div>
-          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Eau, sol et traitements</h4><p>Prévu : enregistrés au fur et à mesure.</p></div></div>
-          <div class="timeline-item"><span class="timeline-dot"></span><div><h4>Récolte / rendement</h4><p>Prévu : clôture la saison et éclaire la suivante.</p></div></div>
+      <div class="signals-split">
+        <div class="signals-media"><span class="badge">Illustration conceptuelle</span><img src="/images/ecosystem-drone.jpg" srcset="/images/ecosystem-drone-480.jpg 480w, /images/ecosystem-drone.jpg 1000w" sizes="(max-width: 860px) 90vw, 420px" width="1000" height="750" alt="Illustration conceptuelle d'un drone de scan au-dessus d'un champ, dont les images doivent être analysées par IrrigTech" loading="lazy" decoding="async"></div>
+        <div class="feature-rows">
+          <div class="feature-row"><span class="fn">01</span><div><h3>Santé des cultures <span class="status-badge status-development">En développement</span></h3><p>L'imagerie par drone est conçue pour signaler les schémas de culture suspects et le stress anormal, à vérifier sur le terrain.</p></div></div>
+          <div class="feature-row"><span class="fn">02</span><div><h3>Stress nutritionnel <span class="status-badge status-development">En développement</span></h3><p>Prévu : des schémas potentiels de carence nutritionnelle identifiés en combinant imagerie et données de capteurs — vérification en laboratoire ou sur le terrain recommandée.</p></div></div>
+          <div class="feature-row"><span class="fn">03</span><div><h3>Croissance des cultures <span class="status-badge status-development">En développement</span></h3><p>Prévu : levée, développement de la canopée et évolution dans le temps, suivis d'un scan à l'autre.</p></div></div>
+          <div class="feature-row"><span class="fn">04</span><div><h3>Stress hydrique <span class="status-badge status-prototype">Prototype</span></h3><p>Prévu : zones sous- et sur-irriguées identifiées à partir des données d'humidité du sol par zone.</p></div></div>
+          <div class="feature-row"><span class="fn">05</span><div><h3>État du sol <span class="status-badge status-prototype">Prototype</span></h3><p>Prévu : humidité, température et CE mesurées par les capteurs de terrain, avec la variabilité spatiale sur l'ensemble du champ.</p></div></div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="s-head">
+        <span class="eyebrow">Avantages</span>
+        <h2>Ce qu'IrrigTech est conçu pour apporter</h2>
+      </div>
+      <div class="values">
+        <div class="value"><h3>Détection plus précoce des problèmes</h3><p>Conçu pour repérer les changements suspects dans un champ avant qu'ils ne soient visibles depuis le sol.</p></div>
+        <div class="value"><h3>Suivi de l'usage de l'eau</h3><p>Conçu pour utiliser les données de capteurs et d'irrigation afin de savoir quand et combien arroser.</p></div>
+        <div class="value"><h3>Meilleure visibilité du champ</h3><p>Conçu pour visualiser les écarts spatiaux sur l'ensemble du champ, pas seulement là où vous êtes passé.</p></div>
+        <div class="value"><h3>Décisions fondées sur les données</h3><p>Prévu : données de champ historiques et actuelles, côte à côte.</p></div>
+        <div class="value"><h3>Attention ciblée</h3><p>Conçu pour orienter le repérage et les traitements vers les zones qui en ont réellement besoin.</p></div>
+        <div class="value"><h3>Suivi de la performance des champs</h3><p>Prévu : observez l'évolution des zones d'une saison à l'autre.</p></div>
+        <div class="value"><h3>Un seul dossier numérique</h3><p>Prévu : scans, données de capteurs et traitements réunis dans un seul historique de champ.</p></div>
+        <div class="value"><h3>Plateforme évolutive</h3><p>Conçue pour un seul champ comme pour une exploitation multi-sites.</p></div>
       </div>
     </div>
   </section>
@@ -303,25 +288,6 @@
         <div class="pipeline-step"><span class="pipeline-icon">05</span><h4>Déploiement à l'échelle de l'exploitation</h4></div>
       </div>
       <p style="margin-top:1.5rem;"><a href="/fr/platform.html" class="link" style="color:var(--accent-strong); font-family:var(--font-mono); font-size:0.85rem;">Voir le déroulement d'un premier projet →</a></p>
-    </div>
-  </section>
-
-  <section style="padding-top:0;">
-    <div class="wrap">
-      <div class="s-head">
-        <span class="eyebrow">Avantages</span>
-        <h2>Pourquoi les producteurs choisissent IrrigTech</h2>
-      </div>
-      <div class="values">
-        <div class="value"><h3>Détection plus précoce des problèmes</h3><p>Conçu pour repérer les changements suspects dans un champ avant qu'ils ne soient visibles depuis le sol.</p></div>
-        <div class="value"><h3>Suivi de l'usage de l'eau</h3><p>Conçu pour utiliser les données de capteurs et d'irrigation afin de savoir quand et combien arroser.</p></div>
-        <div class="value"><h3>Meilleure visibilité du champ</h3><p>Conçu pour visualiser les écarts spatiaux sur l'ensemble du champ, pas seulement là où vous êtes passé.</p></div>
-        <div class="value"><h3>Décisions fondées sur les données</h3><p>Prévu : données de champ historiques et actuelles, côte à côte.</p></div>
-        <div class="value"><h3>Attention ciblée</h3><p>Conçu pour orienter le repérage et les traitements vers les zones qui en ont réellement besoin.</p></div>
-        <div class="value"><h3>Suivi de la performance des champs</h3><p>Prévu : observez l'évolution des zones d'une saison à l'autre.</p></div>
-        <div class="value"><h3>Un seul dossier numérique</h3><p>Prévu : scans, données de capteurs et traitements réunis dans un seul historique de champ.</p></div>
-        <div class="value"><h3>Plateforme évolutive</h3><p>Conçue pour un seul champ comme pour une exploitation multi-sites.</p></div>
-      </div>
     </div>
   </section>
 
