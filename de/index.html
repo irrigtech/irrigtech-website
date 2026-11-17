@@ -26,12 +26,47 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "IrrigTech",
-  "url": "https://irrigtech.com/",
-  "logo": "https://irrigtech.com/images/irrigtech-icon.png",
-  "email": "contact@irrigtech.com",
-  "sameAs": []
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://irrigtech.com/#organization",
+      "name": "IrrigTech",
+      "url": "https://irrigtech.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://irrigtech.com/images/irrigtech-icon.png",
+        "width": 128,
+        "height": 127
+      },
+      "description": "IrrigTech ist ein Ingenieurprojekt von Pak-EL LAB und entwickelt eine vernetzte Plattform für smarte Bewässerung und Feldmonitoring: LoRa-Bodensensoren, Ventil- und Pumpensteuerung, Feld-Gateway und Farm-Software.",
+      "email": "contact@irrigtech.com",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Pak-EL LAB"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "contact@irrigtech.com",
+        "telephone": "+92-345-1616967",
+        "availableLanguage": [
+          "English",
+          "German",
+          "French"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://irrigtech.com/#website",
+      "url": "https://irrigtech.com/",
+      "name": "IrrigTech",
+      "inLanguage": "de",
+      "publisher": {
+        "@id": "https://irrigtech.com/#organization"
+      }
+    }
+  ]
 }
 </script>
 <link rel="stylesheet" href="/chat-widget.css">
@@ -42,8 +77,8 @@
   <div class="nav-inner">
     <div class="brand-group">
       <a href="/de/" class="brand">
-        <img src="/images/irrigtech-logo-header.png" alt="IrrigTech — Smarte Bewässerung. Smarteres Wachstum." class="brand-logo brand-logo-full">
-        <img src="/images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact">
+        <img src="/images/irrigtech-logo-header.png" alt="IrrigTech — Smarte Bewässerung. Smarteres Wachstum." class="brand-logo brand-logo-full" width="600" height="201">
+        <img src="/images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact" width="440" height="122">
       </a>
 
     </div>
@@ -67,8 +102,8 @@
 <main>
   <section class="hero">
     <div class="hero-inner">
-      <span class="eyebrow">Smart Field Intelligence</span>
-      <h1 style="margin-top:0.9rem;">Von Felddaten zu besseren Entscheidungen.</h1>
+      <span class="eyebrow">Von Felddaten zu besseren Entscheidungen</span>
+      <h1 style="margin-top:0.9rem;">Smarte Bewässerung und Feldmonitoring – vom Boden bis zum Dashboard</h1>
       <p class="dek">IrrigTech, ein Ingenieurprojekt von Pak-EL LAB, entwickelt eine vernetzte Plattform für landwirtschaftliche Betriebe: Luftbild-Scans der Kulturen, Feldsensoren, smarte Bewässerungssteuerung und Farm-Management-Software.</p>
       <div class="actions">
         <a href="/de/platform.html" class="btn btn-primary">Plattform entdecken</a>
@@ -171,8 +206,8 @@
         <p>Fünf Prototypen, für Versiegelung und Solarbetrieb ausgelegt.</p>
       </div>
       <div class="device-grid">
-        <div class="device-card"><div class="thumb"><img src="/images/ecosystem-fieldnodes.jpg" alt="Konzeptillustration eines solarbetriebenen Feldsensorknotens zwischen Pflanzenreihen, nicht das fertige Produkt" loading="lazy" decoding="async"><span class="concept-tag">Konzeptdarstellung</span></div><span class="glyph">01</span><h3>IoT-Sensorknoten</h3><p>Multisensor-Hub zur Erfassung von Bodenfeuchte, EC, pH-Wert sowie Lufttemperatur und -feuchtigkeit.</p><a href="/de/iot-sensor-node.html" class="link">Datenblatt →</a></div>
-        <div class="device-card"><div class="thumb"><img src="/images/ecosystem-soil.jpg" alt="Keimling mit Wurzeln im Boden, der Wurzelraum, den der Bodenfeuchtesensor messen soll" loading="lazy" decoding="async" class="thumb-cover"></div><span class="glyph">02</span><h3>Bodenfeuchtesensor</h3><p>Eine dedizierte Sonde, um viele Messpunkte über ein Feld zu verteilen.</p><a href="/de/soil-moisture-sensor.html" class="link">Datenblatt →</a></div>
+        <div class="device-card"><div class="thumb"><img width="1000" height="750" src="/images/ecosystem-fieldnodes.jpg" alt="Konzeptillustration eines solarbetriebenen Feldsensorknotens zwischen Pflanzenreihen, nicht das fertige Produkt" loading="lazy" decoding="async"><span class="concept-tag">Konzeptdarstellung</span></div><span class="glyph">01</span><h3>IoT-Sensorknoten</h3><p>Multisensor-Hub zur Erfassung von Bodenfeuchte, EC, pH-Wert sowie Lufttemperatur und -feuchtigkeit.</p><a href="/de/iot-sensor-node.html" class="link">Datenblatt →</a></div>
+        <div class="device-card"><div class="thumb"><img width="1000" height="750" src="/images/ecosystem-soil.jpg" alt="Keimling mit Wurzeln im Boden, der Wurzelraum, den der Bodenfeuchtesensor messen soll" loading="lazy" decoding="async" class="thumb-cover"></div><span class="glyph">02</span><h3>Bodenfeuchtesensor</h3><p>Eine dedizierte Sonde, um viele Messpunkte über ein Feld zu verteilen.</p><a href="/de/soil-moisture-sensor.html" class="link">Datenblatt →</a></div>
         <div class="device-card"><div class="thumb"><span class="photo-pending">Foto folgt</span></div><span class="glyph">03</span><h3>Smarter Ventilcontroller</h3><p>Soll Bewässerungsventile öffnen und schließen, sobald ein Schwellenwert überschritten wird.</p><a href="/de/smart-valve-controller.html" class="link">Datenblatt →</a></div>
         <div class="device-card"><div class="thumb"><span class="photo-pending">Foto folgt</span></div><span class="glyph">04</span><h3>Pumpencontroller</h3><p>Startet und stoppt Ihre Pumpe per Fernsteuerung; Trockenlauf- und Überlastschutz sind Konstruktionsmerkmale, noch nicht im Feld verifiziert.</p><a href="/de/pump-controller.html" class="link">Datenblatt →</a></div>
         <div class="device-card"><div class="thumb"><span class="photo-pending">Foto folgt</span></div><span class="glyph">05</span><h3>Feld-Gateway</h3><p>Soll alle Knoten auf dem Betrieb erfassen und per 4G oder WLAN an Ihr Dashboard übertragen.</p><a href="/de/field-gateway.html" class="link">Datenblatt →</a></div>
@@ -365,6 +400,7 @@
     </ul></div>
     <div><h4>Unternehmen</h4><ul>
       <li><a href="/de/about.html">Über uns</a></li>
+      <li><a href="/de/blog.html">Blog</a></li>
       <li><a href="/de/contact.html">Kontakt</a></li>
     </ul></div>
     <div><h4>Erste Schritte</h4><ul>

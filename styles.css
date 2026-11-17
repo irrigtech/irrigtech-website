@@ -42,7 +42,7 @@
 html{ scroll-behavior:smooth; }
 .sr-only{ position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 @media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; } }
-img{ display:block; max-width:100%; }
+img{ display:block; max-width:100%; height:auto; }
 ::selection{ background:rgba(78,168,230,0.32); color:#fff; }
 section[id]{ scroll-margin-top:5rem; }
 
@@ -935,3 +935,10 @@ footer .muted{ color:rgba(255,255,255,0.72); }
 .explainer h3:first-child{ margin-top:0.25rem; }
 .explainer p{ margin-top:0.55rem; color:var(--ink-muted); line-height:1.7; }
 .explainer a.link{ color:var(--accent-strong); text-decoration:underline; text-underline-offset:2px; }
+
+/* ---------- Blog article pages ---------- */
+.article-body > img:first-child{ margin-bottom:1.8rem; }
+.article-body h2{ font-size:1.3rem; margin-top:2.2rem; text-shadow:0 1px 3px rgba(0,0,0,0.55); }
+.article-body p, .article-body li{ font-size:1.02rem; line-height:1.7; }
+.article-body a.btn{ text-decoration:none; }
+.article-body a.btn-primary{ color:#06121e; }

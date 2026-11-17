@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Irrigation Pump Controller &amp; Remote Pump Monitoring — IrrigTech</title>
-<meta name="description" content="Pump Controller specs: remote start and stop, real-time monitoring and protection features for irrigation pumps. Prototype-stage.">
-<meta property="og:title" content="Irrigation Pump Controller — IrrigTech">
+<title>Irrigation Pump Controller, Remote Monitoring — IrrigTech</title>
+<meta name="description" content="Irrigation pump controller: remote start/stop, real-time pump monitoring and protection features, linked over LoRa. Prototype; pilots on request.">
+<meta property="og:title" content="Irrigation Pump Controller, Remote Monitoring — IrrigTech">
 <meta property="og:description" content="Designed to automate pump operations, monitor performance in real time, and protect the pump.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://irrigtech.com/pump-controller.html">
@@ -57,8 +57,8 @@
   <div class="nav-inner">
     <div class="brand-group">
       <a href="/" class="brand">
-        <img src="/images/irrigtech-logo-header.png" alt="IrrigTech — Smart Water. Smarter Growth." class="brand-logo brand-logo-full">
-        <img src="/images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact">
+        <img src="/images/irrigtech-logo-header.png" alt="IrrigTech — Smart Water. Smarter Growth." class="brand-logo brand-logo-full" width="600" height="201">
+        <img src="/images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact" width="440" height="122">
       </a>
 
     </div>
@@ -116,6 +116,26 @@
     </div>
   </section>
 
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="s-head"><span class="eyebrow">Quick guide</span><h2>Irrigation pump control and remote monitoring</h2></div>
+      <div class="explainer" style="max-width:46rem;">
+        <h3>What does an irrigation pump controller do?</h3>
+        <p>It starts and stops the pump remotely or on demand, and watches the pump while it runs. Instead of a trip to the well or the tank, the pump can be switched from the dashboard and alerts arrive when something goes wrong.</p>
+        <h3>Remote pump monitoring</h3>
+        <p>The IrrigTech controller is designed to track pressure, current and runtime. Comparing those values with normal operation shows problems early: a blocked filter, a leak, a worn pump or a falling water level.</p>
+        <h3>Protection features</h3>
+        <p>Dry-run, overload and over/under-voltage protection are planned design features, not yet field-verified. They aim to stop the motor before an empty tank, a bad connection or an unstable supply damages it.</p>
+        <h3>Pump, valves and sensors working together</h3>
+        <p>The pump supplies pressure; the <a href="/smart-valve-controller.html" class="link">Smart Valve Controller</a> decides where the water goes; soil sensors decide when it is needed. Commands and alerts travel through the <a href="/field-gateway.html" class="link">LoRa Field Gateway</a>.</p>
+        <h3>Flow and leak detection</h3>
+        <p>Flow, pressure and level inputs are planned. Flow when nothing should be running is the clearest sign of a leak. See <a href="/blog/flow-monitoring-for-smart-irrigation.html" class="link">Flow monitoring for smart irrigation</a> and <a href="/blog/irrigation-leak-detection.html" class="link">Irrigation leak detection</a>.</p>
+        <h3>Where is it today?</h3>
+        <p>The controller is at prototype stage; supply voltage, maximum load and inputs are still to be confirmed. Prototypes are quoted through a <a href="/contact.html" class="link">project consultation</a>.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="steps">
     <div class="wrap">
       <div class="s-head"><span class="eyebrow">Other devices</span><h2>Pairs with</h2></div>
@@ -145,6 +165,7 @@
     </ul></div>
     <div><h4>Company</h4><ul>
       <li><a href="/about.html">About</a></li>
+      <li><a href="/blog.html">Blog</a></li>
       <li><a href="/contact.html">Contact</a></li>
     </ul></div>
     <div><h4>Get started</h4><ul>

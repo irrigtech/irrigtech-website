@@ -7,7 +7,7 @@
 // Output: netlify/functions/chat/knowledge.mjs (committed, so every change to what
 // the bot "knows" shows up in a reviewable git diff).
 
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync } from "node:fs";
 import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -35,6 +35,11 @@ const PAGES = [
   ["/privacy.html", "privacy.html"],
   ["/terms.html", "terms.html"],
 ];
+
+// Each blog article has its own page under /blog/ (the listing page only holds summaries).
+for (const f of readdirSync(path.join(root, "blog")).filter((f) => f.endsWith(".html")).sort()) {
+  PAGES.push([`/blog/${f}`, `blog/${f}`]);
+}
 
 const ENTITIES = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", mdash: "—", ndash: "–", hellip: "…", rsquo: "’", lsquo: "‘", rdquo: "”", ldquo: "“", copy: "©", middot: "·", rarr: "→", times: "×", deg: "°" };
 

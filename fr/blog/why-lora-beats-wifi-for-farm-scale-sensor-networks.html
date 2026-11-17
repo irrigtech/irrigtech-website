@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pourquoi LoRa surpasse le WiFi pour les réseaux de capteurs à l&#x27;échelle d&#x27;une exploitation — IrrigTech</title>
+<meta name="description" content="Le WiFi perd sa portée dès la limite de la cour. Voici pourquoi une radio longue portée et basse consommation est le bon choix pour tout ce qui est…">
+<meta property="og:title" content="Pourquoi LoRa surpasse le WiFi pour les réseaux de capteurs à l&#x27;échelle d&#x27;une exploitation">
+<meta property="og:description" content="Le WiFi perd sa portée dès la limite de la cour. Voici pourquoi une radio longue portée et basse consommation est le bon choix pour tout ce qui est…">
+<meta property="og:type" content="article">
+<link rel="canonical" href="https://irrigtech.com/fr/blog/why-lora-beats-wifi-for-farm-scale-sensor-networks.html">
+<link rel="alternate" hreflang="en" href="https://irrigtech.com/blog/why-lora-beats-wifi-for-farm-scale-sensor-networks.html">
+<link rel="alternate" hreflang="de" href="https://irrigtech.com/de/blog/why-lora-beats-wifi-for-farm-scale-sensor-networks.html">
+<link rel="alternate" hreflang="fr" href="https://irrigtech.com/fr/blog/why-lora-beats-wifi-for-farm-scale-sensor-networks.html">
+<link rel="alternate" hreflang="x-default" href="https://irrigtech.com/blog/why-lora-beats-wifi-for-farm-scale-sensor-networks.html">
+<meta property="og:url" content="https://irrigtech.com/fr/blog/why-lora-beats-wifi-for-farm-scale-sensor-networks.html">
+<meta property="og:site_name" content="IrrigTech">
+<meta property="og:image" content="https://irrigtech.com/images/blog-weather-station.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://irrigtech.com/images/blog-weather-station.jpg">
+<link rel="icon" type="image/png" href="/images/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/chat-widget.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://irrigtech.com/fr/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blog",
+      "item": "https://irrigtech.com/fr/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Pourquoi LoRa surpasse le WiFi pour les réseaux de capteurs à l'échelle d'une exploitation",
+      "item": "https://irrigtech.com/fr/blog/why-lora-beats-wifi-for-farm-scale-sensor-networks.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Pourquoi LoRa surpasse le WiFi pour les réseaux de capteurs à l'échelle d'une exploitation",
+  "description": "Le WiFi perd sa portée dès la limite de la cour. Voici pourquoi une radio longue portée et basse consommation est le bon choix pour tout ce qui est…",
+  "image": "https://irrigtech.com/images/blog-weather-station.jpg",
+  "inLanguage": "fr",
+  "datePublished": "2026-08-04",
+  "mainEntityOfPage": "https://irrigtech.com/fr/blog/why-lora-beats-wifi-for-farm-scale-sensor-networks.html",
+  "author": {
+    "@type": "Organization",
+    "name": "IrrigTech",
+    "url": "https://irrigtech.com/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "IrrigTech",
+    "url": "https://irrigtech.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://irrigtech.com/images/irrigtech-icon.png"
+    }
+  }
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <div class="brand-group">
+      <a href="/fr/" class="brand">
+        <img src="/images/irrigtech-logo-header.png" alt="IrrigTech — Eau intelligente. Croissance intelligente." class="brand-logo brand-logo-full" width="600" height="201">
+        <img src="/images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact" width="440" height="122">
+      </a>
+
+    </div>
+    <nav class="primary" id="primary-nav">
+      <a href="/fr/">Accueil</a>
+      <a href="/fr/platform.html">Plateforme</a>
+      <a href="/fr/solutions.html">Solutions</a>
+      <a href="/fr/devices.html">Matériel</a>
+      <a href="/fr/software.html">Logiciel</a>
+      <a href="/fr/how-it-works.html">Fonctionnement</a>
+      <a href="/fr/about.html">À propos</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+      <div class="lang-switch" aria-label="Language selector"><a href="/blog/why-lora-beats-wifi-for-farm-scale-sensor-networks.html" hreflang="en">EN</a><span class="lang-sep">/</span><a href="/de/blog/why-lora-beats-wifi-for-farm-scale-sensor-networks.html" hreflang="de">DE</a><span class="lang-sep">/</span><a href="/fr/blog/why-lora-beats-wifi-for-farm-scale-sensor-networks.html" hreflang="fr" class="active">FR</a></div>
+      <a href="/fr/contact.html" class="btn btn-primary">Demander une consultation</a>
+    </div>
+  </div>
+</header>
+
+<div class="page-hero"><div class="wrap">
+  <a href="/fr/blog.html" class="eyebrow">← Tous les articles</a>
+  <h1 style="margin-top:0.6rem;">Pourquoi LoRa surpasse le WiFi pour les réseaux de capteurs à l'échelle d'une exploitation</h1>
+  <p>Le WiFi perd sa portée dès la limite de la cour. Voici pourquoi une radio longue portée et basse consommation est le bon choix pour tout ce qui est enterré dans un champ.</p>
+  <p class="updated" style="margin-top:0.9rem;">Matériel · 04 août 2026 · 5 min de lecture</p>
+</div></div>
+
+<main>
+  <section>
+    <div class="wrap legal article-body">
+      <img width="800" height="543" src="/images/blog-weather-station.jpg" alt="Un technicien de terrain réglant le mât d'une station météo" fetchpriority="high" decoding="async" style="width:100%; border-radius:var(--radius-lg, 10px);">
+      <p>Le WiFi a été conçu pour une maison ou un bureau : des dizaines d'appareils, une alimentation secteur, et un routeur jamais à plus d'une ou deux pièces de distance. Une exploitation agricole met à mal chacune de ces hypothèses. Les capteurs se trouvent à des centaines de mètres de tout bâtiment, il n'y a pas d'alimentation au niveau du capteur, et les obstacles sur le trajet — le sol, la canopée des cultures, un hangar métallique, une dénivellation du terrain — sont précisément ce que la radio 2,4 GHz a du mal à traverser.</p>
+      <p>LoRa fait le choix inverse. Elle envoie de très petits paquets, très lentement, sur une fréquence basse, et obtient en échange une portée qui se compte en kilomètres et une consommation assez faible pour faire fonctionner un nœud pendant des années sur une seule pile.</p>
+      <h2>Portée et obstacles</h2>
+      <p>Un nœud LoRa placé au coin le plus éloigné d'une parcelle de 40 hectares peut atteindre une passerelle proche du hangar, en visibilité directe ou non. C'est le faible débit qui rend cela possible : le récepteur parvient à extraire un signal du bruit là où le WiFi l'aurait perdu entièrement. Pour des données de terrain — une valeur d'humidité, une tension de batterie, un état de vanne toutes les quelques minutes — ce faible débit ne coûte rien, car il n'y a rien de volumineux à transmettre.</p>
+      <h2>Consommation et topologie du réseau</h2>
+      <p>Un nœud WiFi qui maintient sa radio associée au réseau consomme trop pour fonctionner sur une petite pile, et le faire fonctionner par cycles entraîne des délais de reconnexion et des lectures perdues. Un nœud LoRa se réveille, transmet quelques octets en une fraction de seconde, puis se rendort — la différence entre changer les piles toutes les quelques semaines et les changer une fois par saison, voire jamais avec un petit panneau solaire. Et là où le WiFi veut que chaque appareil soit sur un même réseau local, LoRa fonctionne en étoile : de nombreux nœuds bon marché, une seule passerelle, qui achemine ensuite tout vers l'amont via la liaison dont dispose l'exploitation.</p>
+      <p>Le WiFi reste adapté à l'intérieur d'un hangar de conditionnement ou d'un bureau, pour une caméra ou un appareil qui a besoin d'une vraie bande passante et d'une alimentation. L'erreur est de vouloir l'étendre au champ à coups de répéteurs, en espérant que ça tienne. Chaque répéteur est un point d'alimentation secteur de plus, un point de défaillance de plus, et une chose de plus à aller vérifier quand il se bloque. Pour tout ce qui est enterré dans un champ, alimenté par pile, et éloigné d'un bâtiment, une radio longue portée et basse consommation n'est pas un compromis — c'est la conception qui correspond réellement au problème.</p>
+
+      <div class="note" style="margin-top:2rem;">Article pédagogique. Les exemples, chiffres et scénarios sont généraux ou illustratifs — ce ne sont pas des résultats de déploiements IrrigTech. Le matériel IrrigTech est au stade de prototype et de premiers déploiements.</div>
+
+      <h2>Matériel IrrigTech associé</h2>
+      <p>Là où ce sujet rejoint les appareils d'IrrigTech :</p>
+      <ul>
+        <li><a href="/fr/field-gateway.html">Passerelle de terrain</a></li>
+      </ul>
+
+      <h2>Blog</h2>
+      <ul>
+        <li><a href="/fr/blog/reading-npk-numbers-like-a-field-scout.html">Lire les valeurs NPK comme un agronome de terrain</a></li><li><a href="/fr/blog/the-true-cost-of-a-missed-irrigation-cycle.html">Le vrai coût d'un cycle d'irrigation manqué</a></li>
+      </ul>
+
+      <p style="margin-top:2rem;">Vous prévoyez des capteurs ou une irrigation automatisée pour vos parcelles ?</p>
+      <p style="margin-top:0.8rem;"><a href="/fr/contact.html" class="btn btn-primary">Demander une consultation</a></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="brand"><img src="/images/irrigtech-icon.png" width="24" height="24" alt="" style="display:inline-block; vertical-align:-6px;"> IrrigTech</div>
+      <p class="muted" style="margin-top:0.9rem; font-size:0.9rem; max-width:26ch;">L'intelligence du sol en temps réel, pour les producteurs qui préfèrent prévenir une mauvaise saison plutôt que d'y réagir.</p>
+      <a href="mailto:contact@irrigtech.com" class="footer-email">E-mail : contact@irrigtech.com</a>
+      <a href="https://wa.me/923451616967?text=Bonjour%20IrrigTech%2C%20je%20souhaite%20discuter%20d%27un%20projet%20avec%20votre%20%C3%A9quipe." target="_blank" rel="noopener noreferrer" class="footer-whatsapp"><svg class="whatsapp-icon" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.79.47 3.45 1.29 4.9L2 22l5.31-1.39a9.9 9.9 0 0 0 4.73 1.2h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.14c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.67-.78-3.08-1.27-5.06-4.4-5.21-4.6-.15-.2-1.25-1.66-1.25-3.17 0-1.5.79-2.24 1.07-2.55.28-.3.6-.38.8-.38.2 0 .4 0 .57.01.18.01.43-.07.67.51.25.6.85 2.08.92 2.23.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.3-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.48.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.67-.15.28.1 1.76.83 2.06.98.3.15.5.22.57.35.08.13.08.75-.17 1.45z"/></svg>WhatsApp : +92 345 1616967</a>
+      <a href="/fr/" class="footer-domain">irrigtech.com</a>
+    </div>
+    <div><h4>Produits</h4><ul>
+      <li><a href="/fr/iot-sensor-node.html">Nœud de capteurs IoT</a></li>
+      <li><a href="/fr/soil-moisture-sensor.html">Capteur d'humidité du sol</a></li>
+      <li><a href="/fr/smart-valve-controller.html">Contrôleur de vanne intelligent</a></li>
+      <li><a href="/fr/pump-controller.html">Contrôleur de pompe</a></li>
+      <li><a href="/fr/field-gateway.html">Passerelle de terrain</a></li>
+    </ul></div>
+    <div><h4>Entreprise</h4><ul>
+      <li><a href="/fr/about.html">À propos</a></li>
+      <li><a href="/fr/blog.html">Blog</a></li>
+      <li><a href="/fr/contact.html">Contact</a></li>
+    </ul></div>
+    <div><h4>Commencer</h4><ul>
+      <li><a href="/fr/contact.html">Demander une consultation</a></li>
+      <li><a href="/fr/pricing.html">Voir les tarifs</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 IrrigTech – un projet de Pak-EL LAB</span>
+    <div class="footer-legal"><a href="/fr/privacy.html">Confidentialité</a><a href="/fr/terms.html">Conditions</a></div>
+
+  </div>
+</footer>
+
+
+
+<script>
+  document.getElementById('hamburger').addEventListener('click', function(){
+    var nav = document.getElementById('primary-nav');
+    var open = nav.classList.toggle('open');
+    this.classList.toggle('is-open', open);
+    this.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+</script>
+<script src="/chat-widget.js" defer></script>
+</body>
+</html>

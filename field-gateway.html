@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LoRa Field Gateway for Farm Sensors — IrrigTech</title>
-<meta name="description" content="LoRa Field Gateway specs: designed to connect remote sensor nodes to the cloud for real-time monitoring and irrigation control. Prototype-stage.">
+<meta name="description" content="LoRa field gateway for farm sensors: connects remote sensor nodes and controllers to the cloud for real-time monitoring and irrigation control. Prototype.">
 <meta property="og:title" content="LoRa Field Gateway for Farm Sensors — IrrigTech">
 <meta property="og:description" content="Long-range LoRa coverage, a design target of up to 15km line-of-sight (terrain dependent), with WiFi, Ethernet and 4G LTE backhaul options.">
 <meta property="og:type" content="website">
@@ -57,8 +57,8 @@
   <div class="nav-inner">
     <div class="brand-group">
       <a href="/" class="brand">
-        <img src="/images/irrigtech-logo-header.png" alt="IrrigTech — Smart Water. Smarter Growth." class="brand-logo brand-logo-full">
-        <img src="/images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact">
+        <img src="/images/irrigtech-logo-header.png" alt="IrrigTech — Smart Water. Smarter Growth." class="brand-logo brand-logo-full" width="600" height="201">
+        <img src="/images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact" width="440" height="122">
       </a>
 
     </div>
@@ -81,7 +81,7 @@
 
 <div class="page-hero"><div class="wrap">
   <a href="/devices.html" class="eyebrow">← All devices</a>
-  <h1 style="margin-top:0.6rem;">LoRa Field Gateway</h1>
+  <h1 style="margin-top:0.6rem;">LoRa Field Gateway for farm sensors</h1>
   <p>Reliable connectivity, smarter fields — connects every remote sensor node to the cloud platform for real-time monitoring and control.</p>
 </div></div>
 
@@ -115,6 +115,26 @@
     </div>
   </section>
 
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="s-head"><span class="eyebrow">Quick guide</span><h2>LoRa gateways for farm sensors</h2></div>
+      <div class="explainer" style="max-width:46rem;">
+        <h3>What does a LoRa gateway do?</h3>
+        <p>A gateway is the receiver in the field. It listens for every sensor node and controller within radio range over LoRa and forwards their data to the internet, and passes commands back the other way.</p>
+        <h3>How far does LoRa reach?</h3>
+        <p>Range depends on terrain, antenna height and obstacles such as trees, buildings and hills. The IrrigTech gateway has a design target of up to 15 km line-of-sight; it is not yet field-measured, and range is shorter in varied terrain.</p>
+        <h3>Checking coverage before installation</h3>
+        <p>Before installing, coverage is tested across the field: a test device sends packets from the planned sensor positions and the signal strength at the gateway is recorded. Weak spots are fixed by raising the antenna or adding a second gateway.</p>
+        <h3>LoRa or LoRaWAN?</h3>
+        <p>LoRa is the radio technique; LoRaWAN is a standard network protocol built on it. The gateway's protocol is planned as LoRaWAN / LoRa and is still to be confirmed.</p>
+        <h3>Getting the data out: WiFi, Ethernet or 4G</h3>
+        <p>The gateway is designed to forward data over WiFi, Ethernet or 4G LTE, whichever the farm has, with encrypted, authenticated connections planned. It serves the <a href="/iot-sensor-node.html" class="link">IoT Sensor Node</a>, <a href="/soil-moisture-sensor.html" class="link">Soil Moisture Sensor</a>, <a href="/smart-valve-controller.html" class="link">Smart Valve Controller</a> and <a href="/pump-controller.html" class="link">Pump Controller</a>.</p>
+        <h3>Where is it today?</h3>
+        <p>The gateway is at prototype stage; frequency, backhaul options and power supply are still to be confirmed. Read more in <a href="/blog/lora-for-large-farms.html" class="link">LoRa for large farms</a>, or request a <a href="/contact.html" class="link">project consultation</a>.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="steps">
     <div class="wrap">
       <div class="s-head"><span class="eyebrow">Other devices</span><h2>Pairs with</h2></div>
@@ -144,6 +164,7 @@
     </ul></div>
     <div><h4>Company</h4><ul>
       <li><a href="/about.html">About</a></li>
+      <li><a href="/blog.html">Blog</a></li>
       <li><a href="/contact.html">Contact</a></li>
     </ul></div>
     <div><h4>Get started</h4><ul>

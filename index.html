@@ -26,11 +26,47 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "IrrigTech",
-  "url": "https://irrigtech.com/",
-  "logo": "https://irrigtech.com/images/irrigtech-icon.png",
-  "email": "contact@irrigtech.com"
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://irrigtech.com/#organization",
+      "name": "IrrigTech",
+      "url": "https://irrigtech.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://irrigtech.com/images/irrigtech-icon.png",
+        "width": 128,
+        "height": 127
+      },
+      "description": "IrrigTech is an engineering project by Pak-EL LAB building a connected smart irrigation and field monitoring platform: LoRa soil sensors, valve and pump controllers, a field gateway and farm software.",
+      "email": "contact@irrigtech.com",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Pak-EL LAB"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "contact@irrigtech.com",
+        "telephone": "+92-345-1616967",
+        "availableLanguage": [
+          "English",
+          "German",
+          "French"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://irrigtech.com/#website",
+      "url": "https://irrigtech.com/",
+      "name": "IrrigTech",
+      "inLanguage": "en",
+      "publisher": {
+        "@id": "https://irrigtech.com/#organization"
+      }
+    }
+  ]
 }
 </script>
 <link rel="stylesheet" href="/chat-widget.css">
@@ -41,8 +77,8 @@
   <div class="nav-inner">
     <div class="brand-group">
       <a href="/" class="brand">
-        <img src="/images/irrigtech-logo-header.png" alt="IrrigTech — Smart Water. Smarter Growth." class="brand-logo brand-logo-full">
-        <img src="/images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact">
+        <img src="/images/irrigtech-logo-header.png" alt="IrrigTech — Smart Water. Smarter Growth." class="brand-logo brand-logo-full" width="600" height="201">
+        <img src="/images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact" width="440" height="122">
       </a>
 
     </div>
@@ -66,8 +102,8 @@
 <main>
   <section class="hero">
     <div class="hero-inner">
-      <span class="eyebrow">Smart Field Intelligence</span>
-      <h1 style="margin-top:0.9rem;">See every field. Understand every change.</h1>
+      <span class="eyebrow">See every field. Understand every change.</span>
+      <h1 style="margin-top:0.9rem;">Smart irrigation and field monitoring, from soil to dashboard</h1>
       <p class="dek">IrrigTech, an engineering project by Pak-EL LAB, is building one connected platform for farms: aerial crop scanning, field sensors, smart irrigation control and farm management software.</p>
       <div class="actions">
         <a href="/platform.html" class="btn btn-primary">Explore the Platform</a>
@@ -175,8 +211,8 @@
         </div>
       </div>
       <div class="device-grid">
-        <div class="device-card"><div class="thumb"><img src="/images/ecosystem-fieldnodes.jpg" alt="Concept illustration of a solar-powered field sensor node among crop rows, not the finished product" loading="lazy" decoding="async"><span class="concept-tag">Concept illustration</span></div><span class="glyph">01</span><h3>IoT Sensor Node</h3><p>Planned multi-probe hub for soil moisture, EC, pH, and air temperature/humidity.</p><a href="/iot-sensor-node.html" class="link">Spec sheet →</a></div>
-        <div class="device-card"><div class="thumb"><img src="/images/ecosystem-soil.jpg" alt="Crop seedling and roots in soil, the root zone the Soil Moisture Sensor is designed to measure" loading="lazy" decoding="async" class="thumb-cover"></div><span class="glyph">02</span><h3>Soil Moisture Sensor</h3><p>A dedicated probe for placing many moisture points across one field.</p><a href="/soil-moisture-sensor.html" class="link">Spec sheet →</a></div>
+        <div class="device-card"><div class="thumb"><img width="1000" height="750" src="/images/ecosystem-fieldnodes.jpg" alt="Concept illustration of a solar-powered field sensor node among crop rows, not the finished product" loading="lazy" decoding="async"><span class="concept-tag">Concept illustration</span></div><span class="glyph">01</span><h3>IoT Sensor Node</h3><p>Planned multi-probe hub for soil moisture, EC, pH, and air temperature/humidity.</p><a href="/iot-sensor-node.html" class="link">Spec sheet →</a></div>
+        <div class="device-card"><div class="thumb"><img width="1000" height="750" src="/images/ecosystem-soil.jpg" alt="Crop seedling and roots in soil, the root zone the Soil Moisture Sensor is designed to measure" loading="lazy" decoding="async" class="thumb-cover"></div><span class="glyph">02</span><h3>Soil Moisture Sensor</h3><p>A dedicated probe for placing many moisture points across one field.</p><a href="/soil-moisture-sensor.html" class="link">Spec sheet →</a></div>
         <div class="device-card"><div class="thumb"><span class="photo-pending">Product photo coming soon</span></div><span class="glyph">03</span><h3>Smart Valve Controller</h3><p>Designed to open and close irrigation valves when a threshold is crossed.</p><a href="/smart-valve-controller.html" class="link">Spec sheet →</a></div>
         <div class="device-card"><div class="thumb"><span class="photo-pending">Product photo coming soon</span></div><span class="glyph">04</span><h3>Pump Controller</h3><p>Starts and stops your pump remotely; dry-run and overload protection are design features, not yet field-verified.</p><a href="/pump-controller.html" class="link">Spec sheet →</a></div>
         <div class="device-card"><div class="thumb"><span class="photo-pending">Product photo coming soon</span></div><span class="glyph">05</span><h3>Field Gateway</h3><p>Designed to collect every node on the farm and push it to your dashboard over 4G or WiFi.</p><a href="/field-gateway.html" class="link">Spec sheet →</a></div>
@@ -390,6 +426,7 @@
     </ul></div>
     <div><h4>Company</h4><ul>
       <li><a href="/about.html">About</a></li>
+      <li><a href="/blog.html">Blog</a></li>
       <li><a href="/contact.html">Contact</a></li>
     </ul></div>
     <div><h4>Get started</h4><ul>

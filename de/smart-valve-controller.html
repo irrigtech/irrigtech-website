@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Smarte Ventilsteuerung für die Bewässerung — IrrigTech</title>
-<meta name="description" content="Technische Daten des Ventilcontrollers: LoRa-vernetzte Ventilsteuerung nach Zeitplan, Wetter oder Sensordaten. Prototyp.">
+<meta name="description" content="Smarte Ventilsteuerung für die Bewässerung: LoRa-Bewässerungsventil, gesteuert nach Zeitplan, Wetter oder Bodenfeuchte. Prototyp; Pilotprojekte.">
 <meta property="og:title" content="Smarte Ventilsteuerung für die Bewässerung — IrrigTech">
 <meta property="og:description" content="Soll Bewässerungsventile per Fernsteuerung, zeitgesteuert oder anhand von Sensordaten öffnen und schließen.">
 <meta property="og:type" content="website">
@@ -57,8 +57,8 @@
   <div class="nav-inner">
     <div class="brand-group">
       <a href="/de/" class="brand">
-        <img src="/images/irrigtech-logo-header.png" alt="IrrigTech — Smarte Bewässerung. Smarteres Wachstum." class="brand-logo brand-logo-full">
-        <img src="/images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact">
+        <img src="/images/irrigtech-logo-header.png" alt="IrrigTech — Smarte Bewässerung. Smarteres Wachstum." class="brand-logo brand-logo-full" width="600" height="201">
+        <img src="/images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact" width="440" height="122">
       </a>
 
     </div>
@@ -114,6 +114,26 @@
     </div>
   </section>
 
+  <section style="padding-top:0;">
+    <div class="wrap">
+      <div class="s-head"><span class="eyebrow">Kurz erklärt</span><h2>Smarte Ventilsteuerung für die Bewässerung</h2></div>
+      <div class="explainer" style="max-width:46rem;">
+        <h3>Was macht ein smarter Ventilcontroller?</h3>
+        <p>Er öffnet und schließt Bewässerungsventile automatisch und meldet jede Schaltung zurück. Eine klassische Zeitschaltuhr bewässert nach der Uhr; eine smarte Ventilsteuerung kann bewässern, weil der Boden trocken ist, und einen Zyklus auslassen, weil er es nicht ist.</p>
+        <h3>Drei Wege, die Bewässerung auszulösen</h3>
+        <p>Der IrrigTech-Ventilcontroller soll Ventile nach festem Zeitplan, nach Wetter oder automatisch anhand von Bodenwerten schalten, die ein <a href="/de/iot-sensor-node.html" class="link">IoT-Sensorknoten</a> oder ein <a href="/de/soil-moisture-sensor.html" class="link">Bodenfeuchtesensor</a> liefert. Sensorgesteuert wird bewässert, wenn die Bodenfeuchte im Wurzelraum unter einen Schwellenwert fällt.</p>
+        <h3>Warum ein LoRa-Bewässerungsventil?</h3>
+        <p>Ventile liegen oft weit weg von Gebäuden, Strom und WLAN. Per LoRa-Funk ist ein Controller mit Akku oder Solarmodul über ein einziges <a href="/de/field-gateway.html" class="link">LoRa-Feld-Gateway</a> auch auf großen Flächen erreichbar, und jede Schaltung wird im Dashboard bestätigt. Als Protokoll ist LoRaWAN / LoRa vorgesehen; die Details werden noch bestätigt.</p>
+        <h3>Tropfbewässerung, Beregnung und Gewächshaus</h3>
+        <p>Das Prinzip gilt für Tropfleitungen, Beregnungsblöcke und Gewächshauszonen gleichermaßen: ein Ventil pro Zone, gesteuert vom Sensor, der diese Zone repräsentiert. Mehr dazu: <a href="/de/blog/automate-your-watering-schedule.html" class="link">Bewässerungsplan automatisieren</a> und <a href="/de/blog/drip-irrigation.html" class="link">Tropfbewässerung</a>.</p>
+        <h3>Zusammenspiel mit der Pumpe</h3>
+        <p>Wo eine Pumpe die Ventile versorgt, liefert die <a href="/de/pump-controller.html" class="link">Pumpensteuerung</a> den Druck, und der Ventilcontroller lenkt das Wasser.</p>
+        <h3>Wie weit ist der Ventilcontroller?</h3>
+        <p>Er befindet sich in der Prototypphase; Anzahl der Ventile, Steuerausgang und Stromversorgung werden noch bestätigt. Prototypen werden über eine <a href="/de/contact.html" class="link">Projektberatung</a> angeboten.</p>
+      </div>
+    </div>
+  </section>
+
   <section class="steps">
     <div class="wrap">
       <div class="s-head"><span class="eyebrow">Weitere Geräte</span><h2>Passt zu</h2></div>
@@ -143,6 +163,7 @@
     </ul></div>
     <div><h4>Unternehmen</h4><ul>
       <li><a href="/de/about.html">Über uns</a></li>
+      <li><a href="/de/blog.html">Blog</a></li>
       <li><a href="/de/contact.html">Kontakt</a></li>
     </ul></div>
     <div><h4>Erste Schritte</h4><ul>

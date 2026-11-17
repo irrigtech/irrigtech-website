@@ -26,12 +26,47 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "IrrigTech",
-  "url": "https://irrigtech.com/",
-  "logo": "https://irrigtech.com/images/irrigtech-icon.png",
-  "email": "contact@irrigtech.com",
-  "sameAs": []
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://irrigtech.com/#organization",
+      "name": "IrrigTech",
+      "url": "https://irrigtech.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://irrigtech.com/images/irrigtech-icon.png",
+        "width": 128,
+        "height": 127
+      },
+      "description": "IrrigTech est un projet d'ingénierie de Pak-EL LAB qui développe une plateforme connectée d'irrigation intelligente et de suivi des parcelles : capteurs de sol LoRa, contrôleurs de vanne et de pompe, passerelle et logiciel.",
+      "email": "contact@irrigtech.com",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "Pak-EL LAB"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "contact@irrigtech.com",
+        "telephone": "+92-345-1616967",
+        "availableLanguage": [
+          "English",
+          "German",
+          "French"
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://irrigtech.com/#website",
+      "url": "https://irrigtech.com/",
+      "name": "IrrigTech",
+      "inLanguage": "fr",
+      "publisher": {
+        "@id": "https://irrigtech.com/#organization"
+      }
+    }
+  ]
 }
 </script>
 <link rel="stylesheet" href="/chat-widget.css">
@@ -42,8 +77,8 @@
   <div class="nav-inner">
     <div class="brand-group">
       <a href="/fr/" class="brand">
-        <img src="/images/irrigtech-logo-header.png" alt="IrrigTech — Eau intelligente. Croissance intelligente." class="brand-logo brand-logo-full">
-        <img src="/images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact">
+        <img src="/images/irrigtech-logo-header.png" alt="IrrigTech — Eau intelligente. Croissance intelligente." class="brand-logo brand-logo-full" width="600" height="201">
+        <img src="/images/irrigtech-logo-header-compact.png" alt="IrrigTech" class="brand-logo brand-logo-compact" width="440" height="122">
       </a>
 
     </div>
@@ -67,8 +102,8 @@
 <main>
   <section class="hero">
     <div class="hero-inner">
-      <span class="eyebrow">Intelligence de terrain</span>
-      <h1 style="margin-top:0.9rem;">Des données de terrain à de meilleures décisions.</h1>
+      <span class="eyebrow">Des données de terrain à de meilleures décisions</span>
+      <h1 style="margin-top:0.9rem;">Irrigation intelligente et suivi des parcelles, du sol au tableau de bord</h1>
       <p class="dek">IrrigTech, un projet d'ingénierie de Pak-EL LAB, développe une plateforme connectée pour les exploitations agricoles : scan aérien des cultures, capteurs de terrain, pilotage intelligent de l'irrigation et logiciel de gestion agricole.</p>
       <div class="actions">
         <a href="/fr/platform.html" class="btn btn-primary">Découvrir la plateforme</a>
@@ -171,8 +206,8 @@
         <p>Cinq appareils au stade prototype, conçus pour être étanches et compatibles solaire.</p>
       </div>
       <div class="device-grid">
-        <div class="device-card"><div class="thumb"><img src="/images/ecosystem-fieldnodes.jpg" alt="Illustration conceptuelle d'un nœud de capteurs solaire entre des rangs de culture, pas le produit fini" loading="lazy" decoding="async"><span class="concept-tag">Illustration conceptuelle</span></div><span class="glyph">01</span><h3>Nœud de capteurs IoT</h3><p>Concentrateur multi-sondes prévu pour mesurer l'humidité du sol, la CE, le pH, ainsi que la température et l'humidité de l'air.</p><a href="/fr/iot-sensor-node.html" class="link">Fiche technique →</a></div>
-        <div class="device-card"><div class="thumb"><img src="/images/ecosystem-soil.jpg" alt="Jeune plant et racines dans le sol, la zone racinaire que le capteur d'humidité du sol doit mesurer" loading="lazy" decoding="async" class="thumb-cover"></div><span class="glyph">02</span><h3>Capteur d'humidité du sol</h3><p>Une sonde dédiée, pour multiplier les points de mesure sur un même champ.</p><a href="/fr/soil-moisture-sensor.html" class="link">Fiche technique →</a></div>
+        <div class="device-card"><div class="thumb"><img width="1000" height="750" src="/images/ecosystem-fieldnodes.jpg" alt="Illustration conceptuelle d'un nœud de capteurs solaire entre des rangs de culture, pas le produit fini" loading="lazy" decoding="async"><span class="concept-tag">Illustration conceptuelle</span></div><span class="glyph">01</span><h3>Nœud de capteurs IoT</h3><p>Concentrateur multi-sondes prévu pour mesurer l'humidité du sol, la CE, le pH, ainsi que la température et l'humidité de l'air.</p><a href="/fr/iot-sensor-node.html" class="link">Fiche technique →</a></div>
+        <div class="device-card"><div class="thumb"><img width="1000" height="750" src="/images/ecosystem-soil.jpg" alt="Jeune plant et racines dans le sol, la zone racinaire que le capteur d'humidité du sol doit mesurer" loading="lazy" decoding="async" class="thumb-cover"></div><span class="glyph">02</span><h3>Capteur d'humidité du sol</h3><p>Une sonde dédiée, pour multiplier les points de mesure sur un même champ.</p><a href="/fr/soil-moisture-sensor.html" class="link">Fiche technique →</a></div>
         <div class="device-card"><div class="thumb"><span class="photo-pending">Photo à venir</span></div><span class="glyph">03</span><h3>Contrôleur de vanne intelligent</h3><p>Conçu pour ouvrir et fermer les vannes d'irrigation dès qu'un seuil est franchi.</p><a href="/fr/smart-valve-controller.html" class="link">Fiche technique →</a></div>
         <div class="device-card"><div class="thumb"><span class="photo-pending">Photo à venir</span></div><span class="glyph">04</span><h3>Contrôleur de pompe</h3><p>Démarre et arrête votre pompe à distance ; les protections contre la marche à sec et la surcharge sont prévues, pas encore vérifiées sur le terrain.</p><a href="/fr/pump-controller.html" class="link">Fiche technique →</a></div>
         <div class="device-card"><div class="thumb"><span class="photo-pending">Photo à venir</span></div><span class="glyph">05</span><h3>Passerelle de terrain</h3><p>Conçue pour centraliser tous les nœuds de l'exploitation et les transmettre à votre tableau de bord via 4G ou WiFi.</p><a href="/fr/field-gateway.html" class="link">Fiche technique →</a></div>
@@ -365,6 +400,7 @@
     </ul></div>
     <div><h4>Entreprise</h4><ul>
       <li><a href="/fr/about.html">À propos</a></li>
+      <li><a href="/fr/blog.html">Blog</a></li>
       <li><a href="/fr/contact.html">Contact</a></li>
     </ul></div>
     <div><h4>Commencer</h4><ul>
