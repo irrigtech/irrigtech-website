@@ -1225,4 +1225,14 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://irrigtech.com/blog/field-gateway-explained.html"/>
     <lastmod>2026-11-17</lastmod>
   </url>
+  <url>
+    <loc>https://irrigtech.com/de/blog/bodenfeuchte-messen.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://irrigtech.com/de/blog/bodenfeuchte-messen.html"/>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://irrigtech.com/de/blog/lorawan-abdeckung-pruefen.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://irrigtech.com/de/blog/lorawan-abdeckung-pruefen.html"/>
+    <lastmod>2026-11-19</lastmod>
+  </url>
 </urlset>
