@@ -1235,4 +1235,28 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://irrigtech.com/de/blog/lorawan-abdeckung-pruefen.html"/>
     <lastmod>2026-11-19</lastmod>
   </url>
+  <url>
+    <loc>https://irrigtech.com/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irrigtech.com/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://irrigtech.com/de/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://irrigtech.com/fr/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irrigtech.com/impressum.html"/>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://irrigtech.com/de/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irrigtech.com/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://irrigtech.com/de/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://irrigtech.com/fr/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irrigtech.com/impressum.html"/>
+    <lastmod>2026-11-19</lastmod>
+  </url>
+  <url>
+    <loc>https://irrigtech.com/fr/impressum.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irrigtech.com/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://irrigtech.com/de/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://irrigtech.com/fr/impressum.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://irrigtech.com/impressum.html"/>
+    <lastmod>2026-11-19</lastmod>
+  </url>
 </urlset>
