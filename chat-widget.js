@@ -1,3 +1,28 @@
+/* Main menu: add a "Blog" entry (before About) on every page. */
+(function () {
+  "use strict";
+  function addBlogLink() {
+    var nav = document.getElementById("primary-nav");
+    if (!nav || nav.querySelector('a[data-nav="blog"]')) return;
+    var path = location.pathname;
+    var lang = /^\/de(\/|$)/.test(path) ? "de" : /^\/fr(\/|$)/.test(path) ? "fr" : "en";
+    var href = { en: "/blog.html", de: "/de/blog.html", fr: "/fr/blog.html" }[lang];
+    var a = document.createElement("a");
+    a.href = href;
+    a.textContent = "Blog";
+    a.setAttribute("data-nav", "blog");
+    if (/\/blog(\.html|\/|$)/.test(path)) {
+      var cur = nav.querySelectorAll("a.active");
+      for (var i = 0; i < cur.length; i++) cur[i].classList.remove("active");
+      a.className = "active";
+    }
+    var about = nav.querySelector('a[href$="about.html"]');
+    nav.insertBefore(a, about || null);
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", addBlogLink);
+  else addBlogLink();
+})();
+
 /* IrrigTech website assistant — front end.
  * No API keys or secrets here: it only talks to this site's own /api/chat function
  * and submits inquiries to Netlify Forms ("chat-inquiry"), like the contact page. */
