@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f8f5b"/></marker></defs>
+<rect width="800" height="450" rx="14" fill="#f4f7f2"/>
+<text x="400" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1d3b2a">So arbeitet ein intelligentes Bewässerungssystem</text>
+<text x="400" y="66" text-anchor="middle" font-size="13" fill="#4a5f52">Messen → Übertragen → Entscheiden → Handeln</text>
+<g font-size="15" text-anchor="middle" fill="#1d3b2a">
+<rect x="30" y="110" width="160" height="110" rx="12" fill="#fff" stroke="#2f8f5b" stroke-width="2"/>
+<text x="110" y="150" font-weight="bold">1 · Messen</text><text x="110" y="175" font-size="13">Bodenfeuchte,</text><text x="110" y="193" font-size="13">Temperatur, EC,</text><text x="110" y="211" font-size="13">Wetter</text>
+<rect x="225" y="110" width="160" height="110" rx="12" fill="#fff" stroke="#2f8f5b" stroke-width="2"/>
+<text x="305" y="150" font-weight="bold">2 · Übertragen</text><text x="305" y="175" font-size="13">Funk (z. B. LoRa)</text><text x="305" y="193" font-size="13">zum Gateway</text><text x="305" y="211" font-size="13">und in die Cloud</text>
+<rect x="420" y="110" width="160" height="110" rx="12" fill="#fff" stroke="#2f8f5b" stroke-width="2"/>
+<text x="500" y="150" font-weight="bold">3 · Entscheiden</text><text x="500" y="175" font-size="13">Schwellenwerte,</text><text x="500" y="193" font-size="13">Zeitplan, Wetter,</text><text x="500" y="211" font-size="13">Freigabe im Dashboard</text>
+<rect x="615" y="110" width="160" height="110" rx="12" fill="#fff" stroke="#2f8f5b" stroke-width="2"/>
+<text x="695" y="150" font-weight="bold">4 · Handeln</text><text x="695" y="175" font-size="13">Ventile öffnen,</text><text x="695" y="193" font-size="13">Pumpe starten,</text><text x="695" y="211" font-size="13">Warnung senden</text>
+</g>
+<g stroke="#2f8f5b" stroke-width="3" marker-end="url(#a)"><line x1="192" y1="165" x2="222" y2="165"/><line x1="387" y1="165" x2="417" y2="165"/><line x1="582" y1="165" x2="612" y2="165"/></g>
+<path d="M695,222 C695,330 110,330 110,224" fill="none" stroke="#9fb3a6" stroke-width="2.5" stroke-dasharray="7 6" marker-end="url(#a)"/>
+<text x="400" y="318" text-anchor="middle" font-size="14" fill="#4a5f52">Rückmeldung: Die Wirkung jeder Bewässerung wird wieder gemessen</text>
+<rect x="150" y="355" width="500" height="58" rx="10" fill="#e3efe7"/>
+<text x="400" y="380" text-anchor="middle" font-size="14" fill="#1d3b2a">Ziel: bewässern, wenn der Boden Wasser braucht –</text>
+<text x="400" y="400" text-anchor="middle" font-size="14" fill="#1d3b2a">nicht, wenn die Uhr es sagt.</text>
+</svg>
