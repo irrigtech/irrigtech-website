@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Arial, Helvetica, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f8f5b"/></marker></defs>
+<rect width="800" height="450" rx="14" fill="#f4f7f2"/>
+<text x="400" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1d3b2a">How a smart irrigation valve controller decides</text>
+<g font-size="15" fill="#1d3b2a">
+<rect x="30" y="90" width="200" height="70" rx="10" fill="#fff" stroke="#9fb3a6"/><text x="130" y="120" text-anchor="middle" font-weight="bold">Schedule</text><text x="130" y="142" text-anchor="middle" font-size="12">fixed days and times</text>
+<rect x="30" y="190" width="200" height="70" rx="10" fill="#fff" stroke="#9fb3a6"/><text x="130" y="220" text-anchor="middle" font-weight="bold">Weather</text><text x="130" y="242" text-anchor="middle" font-size="12">rain or heat adjusts cycles</text>
+<rect x="30" y="290" width="200" height="70" rx="10" fill="#fff" stroke="#2f8f5b" stroke-width="2"/><text x="130" y="320" text-anchor="middle" font-weight="bold">Soil moisture</text><text x="130" y="342" text-anchor="middle" font-size="12">water below a threshold</text>
+<rect x="300" y="170" width="200" height="110" rx="14" fill="#2f8f5b"/><text x="400" y="215" text-anchor="middle" fill="#fff" font-weight="bold" font-size="17">Valve controller</text><text x="400" y="240" text-anchor="middle" fill="#e3efe7" font-size="12">IoT / LoRa connected</text><text x="400" y="258" text-anchor="middle" fill="#e3efe7" font-size="12">confirms every action</text>
+<rect x="570" y="90" width="200" height="60" rx="10" fill="#fff" stroke="#9fb3a6"/><text x="670" y="126" text-anchor="middle">Zone 1 · drip lines</text>
+<rect x="570" y="195" width="200" height="60" rx="10" fill="#fff" stroke="#9fb3a6"/><text x="670" y="231" text-anchor="middle">Zone 2 · sprinklers</text>
+<rect x="570" y="300" width="200" height="60" rx="10" fill="#fff" stroke="#9fb3a6"/><text x="670" y="336" text-anchor="middle">Zone 3 · greenhouse</text>
+</g>
+<g stroke="#2f8f5b" stroke-width="2.5" marker-end="url(#a)" fill="none"><path d="M232,125 C270,125 270,195 298,205"/><path d="M232,225 L298,225"/><path d="M232,325 C270,325 270,255 298,245"/><path d="M502,205 C535,190 540,125 568,120"/><path d="M502,225 L568,225"/><path d="M502,245 C535,260 540,330 568,330"/></g>
+<text x="400" y="410" text-anchor="middle" font-size="14" fill="#4a5f52">One valve per zone, each driven by the sensor that represents it.</text>
+</svg>
