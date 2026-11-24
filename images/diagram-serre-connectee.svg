@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Arial, Helvetica, sans-serif">
+<rect width="800" height="450" rx="14" fill="#f4f7f2"/>
+<text x="400" y="42" text-anchor="middle" font-size="22" font-weight="bold" fill="#1d3b2a">Une serre connectée, de la sonde à la vanne</text>
+<path d="M120,360 L120,170 L330,95 L540,170 L540,360 Z" fill="#e6f1ea" stroke="#5b8a52" stroke-width="3"/>
+<line x1="330" y1="95" x2="330" y2="360" stroke="#9fb3a6" stroke-width="1.5"/>
+<rect x="100" y="360" width="460" height="22" fill="#b98a5a"/>
+<g fill="#5b8a52"><path d="M175,355 q10,-40 20,0z"/><path d="M235,355 q10,-40 20,0z"/><path d="M395,355 q10,-40 20,0z"/><path d="M455,355 q10,-40 20,0z"/></g>
+<line x1="150" y1="352" x2="510" y2="352" stroke="#3d7ac2" stroke-width="3"/>
+<g font-size="12" fill="#1d3b2a">
+<circle cx="230" cy="200" r="11" fill="#e0a43a"/><text x="230" y="185" text-anchor="middle">air</text>
+<rect x="282" y="335" width="10" height="34" fill="#2f8f5b"/><text x="287" y="398" text-anchor="middle">sonde sol</text>
+<rect x="448" y="330" width="22" height="18" rx="3" fill="#3d7ac2"/><text x="459" y="322" text-anchor="middle">vanne</text>
+<rect x="370" y="205" width="40" height="24" rx="4" fill="#2f8f5b"/><text x="390" y="198" text-anchor="middle">nœud</text>
+</g>
+<rect x="590" y="90" width="190" height="290" rx="12" fill="#fff" stroke="#9fb3a6"/>
+<g font-size="13" fill="#1d3b2a"><text x="605" y="118" font-weight="bold">Ce qu'on mesure</text>
+<text x="605" y="142">• température et humidité</text>
+<text x="605" y="164">• humidité du sol (substrat)</text>
+<text x="605" y="186">• EC : sels / fertirrigation</text>
+<text x="605" y="222" font-weight="bold">Ce qu'on pilote</text>
+<text x="605" y="246">• vannes par zone</text>
+<text x="605" y="268">• alertes de chaleur</text>
+<text x="605" y="304" font-weight="bold">Comment</text>
+<text x="605" y="328">• radio LoRa → passerelle</text>
+<text x="605" y="350">• tableau de bord web</text></g>
+<text x="770" y="438" text-anchor="end" font-size="11" fill="#4a5f52">Schéma de principe</text>
+</svg>
