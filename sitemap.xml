@@ -1259,4 +1259,29 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://irrigtech.com/impressum.html"/>
     <lastmod>2026-11-19</lastmod>
   </url>
+  <url>
+    <loc>https://irrigtech.com/de/blog/bodenfeuchtesensor-vergleich.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://irrigtech.com/de/blog/bodenfeuchtesensor-vergleich.html"/>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://irrigtech.com/de/blog/intelligente-bewaesserungssysteme.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://irrigtech.com/de/blog/intelligente-bewaesserungssysteme.html"/>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://irrigtech.com/de/blog/lora-gateway-landwirtschaft.html</loc>
+    <xhtml:link rel="alternate" hreflang="de" href="https://irrigtech.com/de/blog/lora-gateway-landwirtschaft.html"/>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://irrigtech.com/blog/smart-irrigation-valve-controllers.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://irrigtech.com/blog/smart-irrigation-valve-controllers.html"/>
+    <lastmod>2026-11-24</lastmod>
+  </url>
+  <url>
+    <loc>https://irrigtech.com/fr/blog/serre-connectee.html</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://irrigtech.com/fr/blog/serre-connectee.html"/>
+    <lastmod>2026-11-24</lastmod>
+  </url>
 </urlset>
